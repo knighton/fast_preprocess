@@ -13,7 +13,7 @@ typedef uint32_t CodePoint;
 // Returns false if the code point is invalid.
 bool AppendUTF8(CodePoint chr, string* append_to);
 
-// Returns false when it hits the end of the string.
+// Returns true iff it read a code point.
 bool ReadNextUTF8(const string& input_string, size_t* byte_index,
                   CodePoint* chr);
 

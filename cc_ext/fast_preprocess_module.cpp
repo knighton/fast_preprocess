@@ -100,10 +100,7 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
     unicode::CodePoint prev_c = c;
     int run_length = 1;
     string r;
-    bool loop;
-    do {
-        loop = unicode::ReadNextUTF8(input_s, &byte_index, &c);
-
+    while (unicode::ReadNextUTF8(input_s, &byte_index, &c)) {
         if (c != prev_c) {
             prev_c = c;
             run_length = 1;
@@ -121,7 +118,7 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
         if (!increment(chr2dropcount, key)) {
             return NULL;
         }
-    } while (loop);
+    }
 
     return PyString_FromStringAndSize(r.data(), r.size());
 }

@@ -49,7 +49,7 @@ bool ReadNextUTF8(const string& s, size_t* x, CodePoint* n) {
 
     if (c0 < 0x80) {
         *n = c0;
-        return *x < s.size();
+        return true;
     } else if (c0 < 0xC2) {
         // Continuation or overlong 2-byte sequence.
         goto ERROR1;
@@ -61,7 +61,7 @@ bool ReadNextUTF8(const string& s, size_t* x, CodePoint* n) {
             goto ERROR2;
         }
         *n = (uint32_t)(c0 << 6) + c1 - 0x3080;
-        return *x < s.size();
+        return true;
     } else if (c0 < 0xF0) {
         // 3-byte sequence.
         c1 = (uint8_t)s[*x];
@@ -78,7 +78,7 @@ bool ReadNextUTF8(const string& s, size_t* x, CodePoint* n) {
             goto ERROR3;
         }
         *n = (uint32_t)(c0 << 12) + (uint32_t)(c1 << 6) + c2 - 0xE2080;
-        return *x < s.size();
+        return true;
     } else if (c0 < 0xF5) {
         // 4-byte sequence.
         c1 = (uint8_t)s[*x];
@@ -104,7 +104,7 @@ bool ReadNextUTF8(const string& s, size_t* x, CodePoint* n) {
         }
         *n = (uint32_t)(c0 << 18) + (uint32_t)(c1 << 12) + (uint32_t)(c2 << 6) + c3
             - 0x3C82080;
-        return *x < s.size();
+        return true;
     } else {
         // U+10FFFF.
         goto ERROR1;
@@ -118,7 +118,7 @@ bool ReadNextUTF8(const string& s, size_t* x, CodePoint* n) {
         --(*x);
     ERROR1:
         *n = c0 + 0xDC00;
-    return *x < s.size();
+    return true;
 }
 
 } // namespace unicode
