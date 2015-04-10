@@ -44,6 +44,7 @@ static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
     char prev_c = input_str[0];
     int run_length = 1;
     string r;
+    r += input_str[0];
     for (int i = 1; i < input_str_len; ++i) {
         char c = input_str[i];
 
@@ -100,17 +101,24 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
     unicode::CodePoint prev_c = c;
     int run_length = 1;
     string r;
+    if (!unicode::AppendUTF8(c, &r)) {
+        return NULL;
+    }
     while (unicode::ReadNextUTF8(input_s, &byte_index, &c)) {
         if (c != prev_c) {
             prev_c = c;
             run_length = 1;
-            r += c;
+            if (!unicode::AppendUTF8(c, &r)) {
+                return NULL;
+            }
             continue;
         }
 
         ++run_length;
         if (run_length <= max_repeat_count) {
-            r += c;
+            if (!unicode::AppendUTF8(c, &r)) {
+                return NULL;
+            }
             continue;
         }
 
