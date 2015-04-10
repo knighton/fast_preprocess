@@ -173,6 +173,7 @@ static PyObject* destutter_utf8_encoded_bytes(PyObject* self, PyObject* args) {
     size_t r_used = 0;
     size_t r_capacity = input_str_len;
     if (append_utf8(c, r, &r_used, r_capacity) != AUR_OK) {
+        free(r);
         return NULL;
     }
     while (read_next_utf8(input_str, input_str_len, &byte_index, &c)) {
