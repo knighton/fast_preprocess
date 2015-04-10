@@ -1,5 +1,6 @@
 go:
-	python setup.py build_ext -i
+	#CFLAGS="-std=c++0x" python setup.py build_ext -i
+	CFLAGS="-std=c++11" python setup.py build_ext -i
 	python go.py
 
 run_test:
