@@ -16,13 +16,13 @@ bool increment(PyObject* key2count, PyObject* key) {
     return !PyDict_SetItem(key2count, key, new_value);
 }
 
-static char STRIP_EXCESSIVE_REPEATS_ASCII_DOC[] =
+static char DESTUTTER_ASCII_STR_DOC[] =
     "(ASCII string, max char repeat count, dict) -> string with excessive "
     "repeats removed.\n"
     "\n"
     "Saves code point -> drop count to the dict.";
 
-static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
+static PyObject* destutter_ascii_str(PyObject* self, PyObject* args) {
     char* input_str;
     int input_str_len;
     int max_repeat_count;
@@ -71,13 +71,13 @@ static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
     return ret;
 }
 
-static char STRIP_EXCESSIVE_REPEATS_UTF8_DOC[] =
+static char DESTUTTER_UTF8_ENCODED_STR_DOC[] =
     "(raw bytes of a UTF-8 string, max chr repeat count, dict) -> string with "
     "excessive repeats removed.\n"
     "\n"
     "Saves code point -> drop count to the dict.";
 
-static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
+static PyObject* destutter_utf8_encoded_str(PyObject* self, PyObject* args) {
     char* input_str;
     int input_str_len;
     int max_repeat_count;
@@ -139,10 +139,10 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
 }
 
 static PyMethodDef FAST_PREPROCESS_METHODS[] = {
-    {"strip_excessive_repeats_ascii", strip_excessive_repeats_ascii,
-     METH_VARARGS, STRIP_EXCESSIVE_REPEATS_ASCII_DOC},
-    {"strip_excessive_repeats_utf8", strip_excessive_repeats_utf8,
-     METH_VARARGS, STRIP_EXCESSIVE_REPEATS_UTF8_DOC},
+    {"destutter_ascii_str", destutter_ascii_str, METH_VARARGS,
+     DESTUTTER_ASCII_STR_DOC},
+    {"destutter_utf8_encoded_str", destutter_utf8_encoded_str, METH_VARARGS,
+     DESTUTTER_UTF8_ENCODED_STR_DOC},
     {NULL, NULL, 0, NULL},
 };
 
