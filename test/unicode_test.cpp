@@ -5,7 +5,7 @@
 
 #define TEST_PAGE_LEN_ASCII 40553
 #define TEST_PAGE_LEN_UTF8 22692
-#define TEST_PAGE_LEN_MAC_UTF8 23823
+#define TEST_PAGE_LEN_MAC_PYTHON_UTF8 23823
 
 int main() {
     string s;
