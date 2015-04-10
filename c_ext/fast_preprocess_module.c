@@ -1,10 +1,6 @@
-#include <cstdio>
 #include <Python.h>
-#include <string>
 
 #include "unicode.h"
-
-using std::string;
 
 static char FAST_PREPROCESS_DOC[] =
     "C++ extension that does preprocessing.";
@@ -43,7 +39,8 @@ static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
 
     char prev_c = input_str[0];
     int run_length = 1;
-    string r;
+    char* r = (char*)malloc(input_str_len);
+    size_t r_used = 0;
     r += input_str[0];
     for (int i = 1; i < input_str_len; ++i) {
         char c = input_str[i];
@@ -51,13 +48,13 @@ static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
         if (c != prev_c) {
             prev_c = c;
             run_length = 1;
-            r += c;
+            r[r_used++] = c;
             continue;
         }
 
         ++run_length;
         if (run_length <= max_repeat_count) {
-            r += c;
+            r[r_used++] = c;
             continue;
         }
 
@@ -67,7 +64,9 @@ static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
         }
     }
 
-    return PyString_FromStringAndSize(r.data(), r.size());
+    PyObject* ret = PyString_FromStringAndSize(r, r_used);
+    free(r);
+    return ret;
 }
 
 static char STRIP_EXCESSIVE_REPEATS_UTF8_DOC[] =
@@ -91,24 +90,25 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
         return PyString_FromString("");
     }
 
-    string input_s = string(input_str, input_str_len);
     size_t byte_index = 0;
-    unicode::CodePoint c;
-    if (!unicode::ReadNextUTF8(input_s, &byte_index, &c)) {
+    unicode_code_point_t c;
+    if (!read_next_utf8(input_str, input_str_len, &byte_index, &c)) {
         return PyString_FromString("");
     }
 
-    unicode::CodePoint prev_c = c;
+    unicode_code_point_t prev_c = c;
     int run_length = 1;
-    string r;
-    if (!unicode::AppendUTF8(c, &r)) {
+    char* r = (char*)malloc(input_str_len);
+    size_t r_used = 0;
+    size_t r_capacity = input_str_len;
+    if (append_utf8(c, r, &r_used, r_capacity) != AUR_OK) {
         return NULL;
     }
-    while (unicode::ReadNextUTF8(input_s, &byte_index, &c)) {
+    while (read_next_utf8(input_str, input_str_len, &byte_index, &c)) {
         if (c != prev_c) {
             prev_c = c;
             run_length = 1;
-            if (!unicode::AppendUTF8(c, &r)) {
+            if (append_utf8(c, r, &r_used, r_capacity) != AUR_OK) {
                 return NULL;
             }
             continue;
@@ -116,7 +116,7 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
 
         ++run_length;
         if (run_length <= max_repeat_count) {
-            if (!unicode::AppendUTF8(c, &r)) {
+            if (append_utf8(c, r, &r_used, r_capacity) != AUR_OK) {
                 return NULL;
             }
             continue;
@@ -128,7 +128,9 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
         }
     }
 
-    return PyString_FromStringAndSize(r.data(), r.size());
+    PyObject* ret = PyString_FromStringAndSize(r, r_used);
+    free(r);
+    return ret;
 }
 
 static PyMethodDef FAST_PREPROCESS_METHODS[] = {
