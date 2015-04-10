@@ -42,7 +42,8 @@ static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
     char* r = (char*)malloc(input_str_len);
     size_t r_used = 0;
     r += input_str[0];
-    for (int i = 1; i < input_str_len; ++i) {
+    int i;
+    for (i = 1; i < input_str_len; ++i) {
         char c = input_str[i];
 
         if (c != prev_c) {

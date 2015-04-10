@@ -1,0 +1,8 @@
+
+# C libraries
+*.so
+
+# We give binary test executables "test" extension
+*.test
+
+build/
