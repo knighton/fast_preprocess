@@ -2,6 +2,7 @@
 #define CC_BASE_UNICODE_H_
 
 #include <string>
+#include <cstdint>
 
 using std::string;
 
