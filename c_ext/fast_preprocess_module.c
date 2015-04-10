@@ -60,6 +60,7 @@ static PyObject* strip_excessive_repeats_ascii(PyObject* self, PyObject* args) {
 
         PyObject* key = PyString_FromFormat("%c", c);
         if (!increment(chr2dropcount, key)) {
+            free(r);
             return NULL;
         }
     }
@@ -109,6 +110,7 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
             prev_c = c;
             run_length = 1;
             if (append_utf8(c, r, &r_used, r_capacity) != AUR_OK) {
+                free(r);
                 return NULL;
             }
             continue;
@@ -117,6 +119,7 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
         ++run_length;
         if (run_length <= max_repeat_count) {
             if (append_utf8(c, r, &r_used, r_capacity) != AUR_OK) {
+                free(r);
                 return NULL;
             }
             continue;
@@ -124,6 +127,7 @@ static PyObject* strip_excessive_repeats_utf8(PyObject* self, PyObject* args) {
 
         PyObject* key = PyInt_FromLong(c);
         if (!increment(chr2dropcount, key)) {
+            free(r);
             return NULL;
         }
     }
