@@ -41,7 +41,7 @@ static PyObject* destutter_ascii_str(PyObject* self, PyObject* args) {
     int run_length = 1;
     char* r = (char*)malloc(input_str_len);
     size_t r_used = 0;
-    r += input_str[0];
+    r[r_used++] = input_str[0];
     int i;
     for (i = 1; i < input_str_len; ++i) {
         char c = input_str[i];
