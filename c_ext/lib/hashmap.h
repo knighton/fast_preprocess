@@ -102,20 +102,6 @@ void hashmapForEach(Hashmap* map,
         void* context);
 
 /**
- * Concurrency support.
- */
-
-/**
- * Locks the hash map so only the current thread can access it.
- */
-void hashmapLock(Hashmap* map);
-
-/**
- * Unlocks the hash map so other threads can access it.
- */
-void hashmapUnlock(Hashmap* map);
-
-/**
  * Key utilities.
  */
 

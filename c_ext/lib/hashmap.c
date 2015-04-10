@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#include <cutils/hashmap.h>
 #include <assert.h>
 #include <errno.h>
-#include <cutils/threads.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 #include <sys/types.h>
+
+#include "hashmap.h"
 
 typedef struct Entry Entry;
 struct Entry {
@@ -36,7 +36,6 @@ struct Hashmap {
     size_t bucketCount;
     int (*hash)(void* key);
     bool (*equals)(void* keyA, void* keyB);
-    mutex_t lock; 
     size_t size;
 };
 
@@ -68,8 +67,6 @@ Hashmap* hashmapCreate(size_t initialCapacity,
 
     map->hash = hash;
     map->equals = equals;
-    
-    mutex_init(&map->lock);
     
     return map;
 }
@@ -129,14 +126,6 @@ static void expandIfNecessary(Hashmap* map) {
     }
 }
 
-void hashmapLock(Hashmap* map) {
-    mutex_lock(&map->lock);
-}
-
-void hashmapUnlock(Hashmap* map) {
-    mutex_unlock(&map->lock);
-}
-
 void hashmapFree(Hashmap* map) {
     size_t i;
     for (i = 0; i < map->bucketCount; i++) {
@@ -148,7 +137,6 @@ void hashmapFree(Hashmap* map) {
         }
     }
     free(map->buckets);
-    mutex_destroy(&map->lock);
     free(map);
 }
 
