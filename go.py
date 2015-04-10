@@ -3,6 +3,9 @@
 from fast_preprocess import (destutter_unicode, destutter_utf8_encoded_bytes)
 
 
+DEBUG = False
+
+
 def show_table(s, indent):
     head = ['idx', 'dec', 'hex', 'chr']
     rows = [head]
@@ -26,12 +29,15 @@ def show_table(s, indent):
         print ''.join(ss)
 
 
-def show_bytes(s, max_repeat, new_s, drop_counts):
+def show_bytes(s, max_repeat, new_s, drop_counts, debug=False):
     u = s.decode('utf-8')
     new_u = new_s.decode('utf-8')
     print 'Test:'
     print '  %s (%d chrs in %d bytes), max_repeat=%d -> %s (%d chrs in %d bytes), %s' % (
         s, len(u), len(s), max_repeat, new_s, len(new_u), len(new_s), drop_counts)
+    if not debug:
+        return True
+
     print '  Input as UTF-8:'
     show_table(u, 4)
     print '  Output as UTF-8:'
@@ -39,10 +45,13 @@ def show_bytes(s, max_repeat, new_s, drop_counts):
     print
 
 
-def show_unicode(u, max_repeat, new_u, drop_counts):
+def show_unicode(u, max_repeat, new_u, drop_counts, debug=False):
     print 'Test:'
     print '  %s (%d chrs), max_repeat=%d -> %s (%d chrs), %s' % (
         u, len(u), max_repeat, new_u, len(new_u), drop_counts)
+    if not debug:
+        return
+
     print '  Input:'
     show_table(u, 4)
     print '  Output:'
@@ -54,6 +63,7 @@ def main():
     max_repeat = 2
 
     asc = 'abcccdddccce'
+    dig = '1111aaaa2222bbbb3333'
     uni = '☃☃☃☃☃☃ fuuuuu'
     uni2 = u'\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2'.encode('utf-8')
 
@@ -63,19 +73,19 @@ def main():
     print
 
     for f in [destutter_utf8_encoded_bytes]:
-        for s in [asc, uni, uni2]:
+        for s in [asc, dig, uni, uni2]:
             drop_counts = {}
             new_s = f(s, max_repeat, drop_counts)
-            show_bytes(s, max_repeat, new_s, drop_counts)
+            show_bytes(s, max_repeat, new_s, drop_counts, DEBUG)
 
     print '-' * 80
     print 'unicode objects:'
     print
 
-    for u in map(lambda s: s.decode('utf-8'), [asc, uni, uni2]):
+    for u in map(lambda s: s.decode('utf-8'), [asc, dig, uni, uni2]):
         drop_counts = {}
         new_u = destutter_unicode(u, max_repeat, drop_counts)
-        show_unicode(u, max_repeat, new_u, drop_counts)
+        show_unicode(u, max_repeat, new_u, drop_counts, DEBUG)
 
     print '-' * 80
     print 'retry 32-bit unicode:'
@@ -85,7 +95,7 @@ def main():
         uni3 = u'\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2\U0001f4f2'
         drop_counts = {}
         new_uni3 = destutter_unicode(uni3, max_repeat, drop_counts)
-        show_unicode(uni3, max_repeat, new_uni3, drop_counts)
+        show_unicode(uni3, max_repeat, new_uni3, drop_counts, DEBUG)
 
 
 if __name__ == '__main__':

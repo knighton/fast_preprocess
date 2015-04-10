@@ -66,7 +66,8 @@ static PyObject* destutter_unicode(PyObject* self, PyObject* args) {
     for (i = 1; i < input_str_len; ++i) {
         Py_UNICODE c = input_str[i];
 
-        if (c != prev_c) {
+        unicode_code_point_t code_point = c;
+        if (c != prev_c || hashmapContainsKey(DIGITS, &code_point)) {
             prev_c = c;
             run_length = 1;
             r[r_used++] = c;
@@ -123,7 +124,8 @@ static PyObject* destutter_ascii_bytes(PyObject* self, PyObject* args) {
     for (i = 1; i < input_str_len; ++i) {
         char c = input_str[i];
 
-        if (c != prev_c) {
+        unicode_code_point_t code_point = c;
+        if (c != prev_c || hashmapContainsKey(DIGITS, &code_point)) {
             prev_c = c;
             run_length = 1;
             r[r_used++] = c;
@@ -187,7 +189,7 @@ static PyObject* destutter_utf8_encoded_bytes(PyObject* self, PyObject* args) {
         return NULL;
     }
     while (read_next_utf8(input_str, input_str_len, &byte_index, &c)) {
-        if (c != prev_c) {
+        if (c != prev_c || hashmapContainsKey(DIGITS, &c)) {
             prev_c = c;
             run_length = 1;
             if (append_utf8(c, r, &r_used, r_capacity) != AUR_OK) {
