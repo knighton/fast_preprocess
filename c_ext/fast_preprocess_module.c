@@ -1,8 +1,16 @@
+#include <assert.h>
 #include <Python.h>
 
+#include "lib/hashmap.h"
 #include "lib/unicode.h"
+#include "lib/util.h"
 
-#define UNUSED(a)
+#define UNUSED(a) &(a)
+
+// A file listing the decimal integer code points of all digit-like Unicode
+// characters.
+#define FILE_DIGITS "c_ext/config/digits.txt"
+#define APPROX_NUM_DIGITS 400
 
 static char FAST_PREPROCESS_DOC[] =
     "C++ extension that does preprocessing.\n"
@@ -29,6 +37,8 @@ static char DESTUTTER_UNICODE_DOC[] =
     "(unicode, max repeat, dict) -> unicode without excessive repeats.\n"
     "\n"
     "Saves code point -> drop count to the dict.";
+
+static Hashmap* DIGITS;
 
 static PyObject* destutter_unicode(PyObject* self, PyObject* args) {
     UNUSED(self);
@@ -218,7 +228,39 @@ static PyMethodDef FAST_PREPROCESS_METHODS[] = {
     {NULL, NULL, 0, NULL},
 };
 
+bool fast_preprocess_init_digits() {
+    // Load the file.
+    char* text;
+    size_t text_size;
+    if (!util_read_file(FILE_DIGITS, &text, &text_size)) {
+        fprintf(stderr, "Could not read \"%s\".\n", FILE_DIGITS);
+        return false;
+    }
+
+    // Create the hashmap.
+    int num_expected_entries = APPROX_NUM_DIGITS;
+    DIGITS = hashmapCreate(
+        num_expected_entries, &hashmapIntHash, &hashmapIntEquals);
+
+    // Load each code point into the hashmap.
+    size_t index = 0;
+    unicode_code_point_t value;
+    int count = 0;
+    while (util_extract_int_from_ascii(text, text_size, &index, &value)) {
+        unicode_code_point_t* key = malloc(sizeof(unicode_code_point_t));
+        *key = value;
+        hashmapPut(DIGITS, key, NULL);
+        ++count;
+    }
+
+    return true;
+}
+
 PyMODINIT_FUNC initfast_preprocess(void) {
+    if (!fast_preprocess_init_digits()) {
+        return;
+    }
+
 	Py_InitModule3(
         "fast_preprocess", FAST_PREPROCESS_METHODS, FAST_PREPROCESS_DOC);
 }
