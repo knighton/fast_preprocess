@@ -4,7 +4,7 @@ c_ext = Extension(
     'fast_preprocess',
     [
         'cc_ext/fast_preprocess_module.cpp',
-        'cc_ext/utf8.cpp',
+        'cc_ext/unicode.cpp',
     ]
 )
  
