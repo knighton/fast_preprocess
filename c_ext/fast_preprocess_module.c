@@ -263,6 +263,6 @@ PyMODINIT_FUNC initfast_preprocess(void) {
         return;
     }
 
-	Py_InitModule3(
+    Py_InitModule3(
         "fast_preprocess", FAST_PREPROCESS_METHODS, FAST_PREPROCESS_DOC);
 }
