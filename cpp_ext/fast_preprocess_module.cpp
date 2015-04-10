@@ -139,7 +139,7 @@ static PyMethodDef FAST_PREPROCESS_METHODS[] = {
     {NULL, NULL, 0, NULL},
 };
 
-PyMODINIT_FUNC initfast_preprocess(void) {
+PyMODINIT_FUNC initfast_preprocess_cpp(void) {
 	Py_InitModule3(
-        "fast_preprocess", FAST_PREPROCESS_METHODS, FAST_PREPROCESS_DOC);
+        "fast_preprocess_cpp", FAST_PREPROCESS_METHODS, FAST_PREPROCESS_DOC);
 }
