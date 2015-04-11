@@ -1,5 +1,5 @@
 go:
-	CFLAGS="-Wall -Wextra -Werror" python setup.py build_ext -i
+	CFLAGS="-Wall -Wextra -Werror -Wno-unused-parameter -Wno-strict-prototypes -fdiagnostics-color" python setup.py build_ext -i
 	python go.py
 
 run_test:

@@ -5,8 +5,6 @@
 #include "lib/unicode.h"
 #include "lib/util.h"
 
-#define UNUSED(a) &(a)
-
 // A file listing the decimal integer code points of all digit-like Unicode
 // characters.
 #define FILE_DIGITS "c_ext/config/digits.txt"
@@ -41,8 +39,6 @@ static char DESTUTTER_UNICODE_DOC[] =
 static Hashmap* DIGITS;
 
 static PyObject* destutter_unicode(PyObject* self, PyObject* args) {
-    UNUSED(self);
-
     Py_UNICODE* input_str;
     int input_str_len;
     int max_repeat_count;
@@ -99,8 +95,6 @@ static char DESTUTTER_ASCII_BYTES_DOC[] =
     "Saves code point -> drop count to the dict.";
 
 static PyObject* destutter_ascii_bytes(PyObject* self, PyObject* args) {
-    UNUSED(self);
-
     char* input_str;
     int input_str_len;
     int max_repeat_count;
@@ -157,8 +151,6 @@ static char DESTUTTER_UTF8_ENCODED_BYTES_DOC[] =
     "Saves code point -> drop count to the dict.";
 
 static PyObject* destutter_utf8_encoded_bytes(PyObject* self, PyObject* args) {
-    UNUSED(self);
-
     char* input_str;
     int input_str_len;
     int max_repeat_count;
