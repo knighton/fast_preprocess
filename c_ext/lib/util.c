@@ -3,7 +3,7 @@
 
 #include "util.h"
 
-bool util_extract_int_from_ascii(
+bool util_read_next_uint32_from_ascii(
         const char* text, size_t text_size, size_t* index, uint32_t* value) {
     if (!(*index < text_size)) {
         return false;
@@ -15,7 +15,7 @@ bool util_extract_int_from_ascii(
         ++(*index);
 
         if ('0' <= c && c <= '9') {
-            *value = c - '0';
+            *value = (uint32_t)(c - '0');
             break;
         }
 
@@ -33,8 +33,8 @@ bool util_extract_int_from_ascii(
             return true;
         }
 
-        *value *= 10;
-        *value += c - '0';
+        *value *= 10u;
+        *value += (uint32_t)(c - '0');
     }
 
     return true;
@@ -49,7 +49,7 @@ bool util_read_file(const char* file_name, char** text, size_t* text_size) {
     }
 
     fseek(f, 0, SEEK_END);
-    *text_size = ftell(f);
+    *text_size = (size_t)ftell(f);
     rewind(f);
     
     *text = malloc(*text_size);

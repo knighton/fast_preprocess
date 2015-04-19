@@ -141,7 +141,7 @@ void hashmapFree(Hashmap* map) {
 }
 
 int hashmapHash(void* key, size_t keySize) {
-    int h = keySize;
+    int h = (int)keySize;
     char* data = (char*) key;
     size_t i;
     for (i = 0; i < keySize; i++) {

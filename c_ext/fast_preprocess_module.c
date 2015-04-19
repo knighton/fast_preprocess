@@ -8,7 +8,9 @@
 // A file listing the decimal integer code points of all digit-like Unicode
 // characters.
 #define FILE_DIGITS "c_ext/config/digits.txt"
-#define APPROX_NUM_DIGITS 400
+#define APPROX_NUM_DIGITS 400ul
+
+#define UNUSED(a) (void)a
 
 static char FAST_PREPROCESS_DOC[] =
     "C++ extension that does preprocessing.\n"
@@ -20,7 +22,7 @@ static char FAST_PREPROCESS_DOC[] =
     "- destutter_ascii_bytes\n"
     "- destutter_utf8_encoded_bytes\n";
 
-bool increment(PyObject* key2count, PyObject* key) {
+static bool increment(PyObject* key2count, PyObject* key) {
     PyObject* value = PyDict_GetItem(key2count, key);
     PyObject* new_value;
     if (!value) {
@@ -39,16 +41,19 @@ static char DESTUTTER_UNICODE_DOC[] =
 static Hashmap* DIGITS;
 
 static PyObject* destutter_unicode(PyObject* self, PyObject* args) {
+    UNUSED(self);
+
     Py_UNICODE* input_str;
-    int input_str_len;
+    int input_str_len_int;
     int max_repeat_count;
     PyObject* chr2dropcount;
     if (!PyArg_ParseTuple(
-            args, "u#IO!", &input_str, &input_str_len, &max_repeat_count,
+            args, "u#IO!", &input_str, &input_str_len_int, &max_repeat_count,
             &PyDict_Type, &chr2dropcount)) {
         return NULL;
     }
 
+    size_t input_str_len = (size_t)input_str_len_int;
     if (!input_str_len) {
         return PyUnicode_FromStringAndSize("", 0);
     }
@@ -58,7 +63,7 @@ static PyObject* destutter_unicode(PyObject* self, PyObject* args) {
     Py_UNICODE* r = (Py_UNICODE*)malloc(input_str_len * sizeof(Py_UNICODE));
     int r_used = 0;
     r[r_used++] = input_str[0];
-    int i;
+    size_t i;
     for (i = 1; i < input_str_len; ++i) {
         Py_UNICODE c = input_str[i];
 
@@ -95,16 +100,19 @@ static char DESTUTTER_ASCII_BYTES_DOC[] =
     "Saves code point -> drop count to the dict.";
 
 static PyObject* destutter_ascii_bytes(PyObject* self, PyObject* args) {
+    UNUSED(self);
+
     char* input_str;
-    int input_str_len;
+    int input_str_len_int;
     int max_repeat_count;
     PyObject* chr2dropcount;
     if (!PyArg_ParseTuple(
-            args, "s#IO!", &input_str, &input_str_len, &max_repeat_count,
+            args, "s#IO!", &input_str, &input_str_len_int, &max_repeat_count,
             &PyDict_Type, &chr2dropcount)) {
         return NULL;
     }
 
+    size_t input_str_len = (size_t)input_str_len_int;
     if (!input_str_len) {
         return PyString_FromString("");
     }
@@ -112,13 +120,13 @@ static PyObject* destutter_ascii_bytes(PyObject* self, PyObject* args) {
     char prev_c = input_str[0];
     int run_length = 1;
     char* r = (char*)malloc(input_str_len);
-    size_t r_used = 0;
+    Py_ssize_t r_used = 0;
     r[r_used++] = input_str[0];
-    int i;
+    size_t i;
     for (i = 1; i < input_str_len; ++i) {
         char c = input_str[i];
 
-        unicode_code_point_t code_point = c;
+        unicode_code_point_t code_point = (unicode_code_point_t)c;
         if (c != prev_c || hashmapContainsKey(DIGITS, &code_point)) {
             prev_c = c;
             run_length = 1;
@@ -151,16 +159,19 @@ static char DESTUTTER_UTF8_ENCODED_BYTES_DOC[] =
     "Saves code point -> drop count to the dict.";
 
 static PyObject* destutter_utf8_encoded_bytes(PyObject* self, PyObject* args) {
+    UNUSED(self);
+
     char* input_str;
-    int input_str_len;
+    int input_str_len_int;
     int max_repeat_count;
     PyObject* chr2dropcount;
     if (!PyArg_ParseTuple(
-            args, "s#IO!", &input_str, &input_str_len, &max_repeat_count,
+            args, "s#IO!", &input_str, &input_str_len_int, &max_repeat_count,
             &PyDict_Type, &chr2dropcount)) {
         return NULL;
     }
 
+    size_t input_str_len = (size_t)input_str_len_int;
     if (!input_str_len) {
         return PyString_FromString("");
     }
@@ -207,7 +218,8 @@ static PyObject* destutter_utf8_encoded_bytes(PyObject* self, PyObject* args) {
         }
     }
 
-    PyObject* ret = PyString_FromStringAndSize(r, r_used);
+    Py_ssize_t r_used_pst = (Py_ssize_t)r_used;
+    PyObject* ret = PyString_FromStringAndSize(r, r_used_pst);
     free(r);
     return ret;
 }
@@ -222,7 +234,7 @@ static PyMethodDef FAST_PREPROCESS_METHODS[] = {
     {NULL, NULL, 0, NULL},
 };
 
-bool fast_preprocess_init_digits() {
+static bool fast_preprocess_init_digits() {
     // Load the file.
     char* text;
     size_t text_size;
@@ -232,7 +244,7 @@ bool fast_preprocess_init_digits() {
     }
 
     // Create the hashmap.
-    int num_expected_entries = APPROX_NUM_DIGITS;
+    size_t num_expected_entries = APPROX_NUM_DIGITS;
     DIGITS = hashmapCreate(
         num_expected_entries, &hashmapIntHash, &hashmapIntEquals);
 
@@ -240,7 +252,7 @@ bool fast_preprocess_init_digits() {
     size_t index = 0;
     unicode_code_point_t value;
     int count = 0;
-    while (util_extract_int_from_ascii(text, text_size, &index, &value)) {
+    while (util_read_next_uint32_from_ascii(text, text_size, &index, &value)) {
         unicode_code_point_t* key = malloc(sizeof(unicode_code_point_t));
         *key = value;
         hashmapPut(DIGITS, key, NULL);
@@ -249,6 +261,8 @@ bool fast_preprocess_init_digits() {
 
     return true;
 }
+
+PyMODINIT_FUNC initfast_preprocess(void);
 
 PyMODINIT_FUNC initfast_preprocess(void) {
     if (!fast_preprocess_init_digits()) {

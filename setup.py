@@ -1,4 +1,10 @@
 from distutils.core import setup, Extension
+import os
+
+
+os.environ['CC'] = 'clang'
+os.environ['CXX'] = 'clang++'
+
  
 c_ext = Extension(
     'fast_preprocess',

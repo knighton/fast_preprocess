@@ -3,60 +3,50 @@
 // Based on https://en.wikipedia.org/wiki/UTF-8.
 
 append_utf8_result_t append_utf8(
-        unicode_code_point_t n, char* s, size_t* s_used, size_t s_capacity) {
-    if (!(*s_used <= s_capacity)) {
+        unicode_code_point_t n, char* s, size_t* s_size, size_t s_capacity) {
+    if (!(*s_size <= s_capacity)) {
         return AUR_INVALID_STRING;
     }
 
     if (n < 0x80) {
-        if (!(*s_used + 1 <= s_capacity)) {
-            return *s_used + 1 - s_capacity;
+        if (!(*s_size + 1ul <= s_capacity)) {
+            return (append_utf8_result_t)(*s_size + 1ul - s_capacity);
         }
 
-        s[*s_used] = (char)n;
-        ++(*s_used);
+        s[(*s_size)++] = (char)n;
         return AUR_OK;
     }
 
     if (n < 0x800) {
-        if (!(*s_used + 2 <= s_capacity)) {
-            return *s_used + 2 - s_capacity;
+        if (!(*s_size + 2ul <= s_capacity)) {
+            return (append_utf8_result_t)(*s_size + 2ul - s_capacity);
         }
 
-        s[*s_used] = (char)((n >> 6) + 0xC0);
-        ++(*s_used);
-        s[*s_used] = (char)((n & 0x3F) + 0x80);
-        ++(*s_used);
+        s[(*s_size)++] = (char)((n >> 6) + 0xC0);
+        s[(*s_size)++] = (char)((n & 0x3F) + 0x80);
         return AUR_OK;
     }
 
     if (n < 0x10000) {
-        if (!(*s_used + 3 <= s_capacity)) {
-            return *s_used + 3 - s_capacity;
+        if (!(*s_size + 3ul <= s_capacity)) {
+            return (append_utf8_result_t)(*s_size + 3ul - s_capacity);
         }
 
-        s[*s_used] = (char)((n >> 12) + 0xE0);
-        ++(*s_used);
-        s[*s_used] = (char)(((n >> 6) & 0x3F) + 0x80);
-        ++(*s_used);
-        s[*s_used] = (char)((n & 0x3F) + 0x80);
-        ++(*s_used);
+        s[(*s_size)++] = (char)((n >> 12) + 0xE0);
+        s[(*s_size)++] = (char)(((n >> 6) & 0x3F) + 0x80);
+        s[(*s_size)++] = (char)((n & 0x3F) + 0x80);
         return AUR_OK;
     }
 
     if (n < 0x110000) {
-        if (!(*s_used + 4 <= s_capacity)) {
-            return *s_used + 4 - s_capacity;
+        if (!(*s_size + 4ul <= s_capacity)) {
+            return (append_utf8_result_t)(*s_size + 4ul - s_capacity);
         }
 
-        s[*s_used] = (char)((n >> 18) + 0xF0);
-        ++(*s_used);
-        s[*s_used] = (char)(((n >> 12) & 0x3F) + 0x80);
-        ++(*s_used);
-        s[*s_used] = (char)(((n >> 6) & 0x3F) + 0x80);
-        ++(*s_used);
-        s[*s_used] = (char)((n & 0x3F) + 0x80);
-        ++(*s_used);
+        s[(*s_size)++] = (char)((n >> 18) + 0xF0);
+        s[(*s_size)++] = (char)(((n >> 12) & 0x3F) + 0x80);
+        s[(*s_size)++] = (char)(((n >> 6) & 0x3F) + 0x80);
+        s[(*s_size)++] = (char)((n & 0x3F) + 0x80);
         return AUR_OK;
     }
 
@@ -64,8 +54,8 @@ append_utf8_result_t append_utf8(
 }
 
 bool read_next_utf8(
-        const char* s, size_t s_used, size_t* x, unicode_code_point_t* n) {
-    if (!(*x < s_used)) {
+        const char* s, size_t s_size, size_t* x, unicode_code_point_t* n) {
+    if (!(*x < s_size)) {
         return false;
     }
 

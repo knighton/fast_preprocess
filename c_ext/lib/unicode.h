@@ -22,18 +22,18 @@ typedef enum append_utf8_result {
     // The code point was invalid.
     AUR_INVALID_CODE_POINT = 5,
 
-    // The string to append to was invalid (used > capacity).
+    // The string to append to was invalid (size > capacity).
     AUR_INVALID_STRING = 6,
 } append_utf8_result_t;
 
 // Append the code point's UTF-8 representation to the string.
 append_utf8_result_t append_utf8(
-    unicode_code_point_t chr, char* str, size_t* str_used, size_t str_capacity);
+    unicode_code_point_t chr, char* str, size_t* str_size, size_t str_capacity);
 
 // Read the next code point from that point in the string.
 // Returns true iff it read a code point.
 bool read_next_utf8(
-    const char* str, size_t str_used, size_t* byte_index,
+    const char* str, size_t str_size, size_t* byte_index,
     unicode_code_point_t* chr);
 
 #endif  // UNICODE_H_
