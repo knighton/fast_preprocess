@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+
+<title>A Unicode Test Page</title>
+
+<meta name="description" content="A test for the Unicode rendering capabilities of your browser" lang="en" />
+
+<meta name="keywords" content="Unicode, test, browser, font" lang="en" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+
+<meta http-equiv="Content-Language" content="en" />
+
+</head>
+
+<body>
+
+<h1>A Unicode Test Page</h1>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#spaces">Spaces and related</a></li>
+<li><a href="#genpunct">General punctuation</a></li>
+<li><a href="#accents">A table of (some) accents</a></li>
+<li><a href="#combining">Combining diacritics</a></li>
+<li><a href="#symbols">Various symbols</a></li>
+<li><a href="#pushkin">Some verses in Russian</a></li>
+<li><a href="#sophocles">Some verses in ancient Greek</a></li>
+<li><a href="#kalidasa">Some verses in Sanskrit</a></li>
+<li><a href="#confucius">Some Chinese</a></li>
+<li><a href="#ramanujan">A Tamil name</a></li>
+<li><a href="#quran">Some Arabic</a></li>
+</ul>
+
+<h2 id="spaces"><a name="spaces">Spaces and related</a></h2>
+
+<p>The following should all appear as spaces of various widths:</p>
+
+<ul>
+<li>X X X X Y (space; breakable)</li>
+<li>X&#xa0;X&#xa0;X&#xa0;X&#xa0;Y (no-break space; unbreakable)</li>
+<li>X&#x2000;X&#x2000;X&#x2000;X&#x2000;Y (en quad; breakable)</li>
+<li>X&#x2001;X&#x2001;X&#x2001;X&#x2001;Y (em quad; breakable)</li>
+<li>X&#x2002;X&#x2002;X&#x2002;X&#x2002;Y (en space; breakable)</li>
+<li>X&#x2003;X&#x2003;X&#x2003;X&#x2003;Y (em space; breakable)</li>
+<li>X&#x2004;X&#x2004;X&#x2004;X&#x2004;Y (three-per-em space; breakable)</li>
+<li>X&#x2005;X&#x2005;X&#x2005;X&#x2005;Y (four-per-em space; breakable)</li>
+<li>X&#x2006;X&#x2006;X&#x2006;X&#x2006;Y (six-per-em space; breakable)</li>
+<li>X&#x2007;X&#x2007;X&#x2007;X&#x2007;Y (figure space; unbreakable)</li>
+<li>X&#x2008;X&#x2008;X&#x2008;X&#x2008;Y (punctuation space; same width as a period)</li>
+<li>X&#x2009;X&#x2009;X&#x2009;X&#x2009;Y (thin space)</li>
+<li>X&#x200a;X&#x200a;X&#x200a;X&#x200a;Y (hair space)</li>
+<li>X&#x200b;X&#x200b;X&#x200b;X&#x200b;Y (zero width space; breakable)</li>
+<li>X&#xfeff;X&#xfeff;X&#xfeff;X&#xfeff;Y (zero width no-break space; unbreakable)</li>
+</ul>
+
+<h2 id="genpunct"><a name="genpunct">General punctuation</a></h2>
+
+<p>The convention in English is &#x201c;to use double quotation marks
+to indicate quotation, and &#x2018;single quotation marks&#x2019; for
+nested quotations.&#x201d;</p>
+
+<p xml:lang="fr" lang="fr">En fran&#xe7;ais la convention est
+&#xab;&#xa0;d'utiliser les guillemets fran&#xe7;ais doubles pour les
+citations, et &#x201c;&#xa0;les guillemets anglais doubles&#xa0;&#x201d;
+ou bien &#x2039;&#xa0;les guillemets fran&#xe7;ais simples&#xa0;&#x203a;
+pour les citations imbriqu&#xe9;es.&#xa0;&#xbb;</p>
+
+<p xml:lang="de" lang="de">Auf Deutsch ist die Vereinbarung
+&#xbb;umgekehrte zweifache Anf&#xfc;hrungszeichen f&#xfc;r die Zitate
+zu benutzen, sogar &#x203a;einfache Anf&#xfc;hrungszeichen&#x2039;
+f&#xfc;r die verschachtelte Zitate&#xab;; diese Anf&#xfc;hrungszeichen
+&#x201e;d&#xfc;rfen auch solche &#x201a;englische&#x2018;
+Anf&#xfc;hrungszeichen sein.&#x201c;</p>
+
+<p>The en-dash is used between numbers such as in: 1685&#x2013;1750
+(J.&#xa0;S.&#xa0;Bach).  It is longer than the hyphen (as in
+&#x201c;en-dash&#x201d;, or, more properly, &#x201c;en&#x2010;dash&#x201d;)
+but shorter than the em-dash, which is used &#x2014; like this &#x2014;
+as a sort of parenthesis.  Neither should be confused with the
+horizontal bar which is used to introduce quotation in some cases.<br
+/>&#x2015;&#xa0;Like this?<br />&#x2015;&#xa0;Right.</p>
+
+<p>The ellipsis is&#x2026; well, it just is.</p>
+
+<h2 id="accents"><a name="accents">A table of (some) accents</a></h2>
+
+<p>In the following table, characters that are missing from Unicode as
+of version 3.0, latest draft (i.e. that cannot be represented as a
+<em>single</em> character but must use the more general form of
+combining diacritics) have been replaced by <code>X</code>, so you can
+tell they are not your browser's fault.</p>
+
+<table>
+<tr><th>Base</th><th>Grave</th><th>Acute</th><th>Circumflex</th><th>Tilde</th><th>Diaeresis</th>
+<th>Macron</th><th>Breve</th><th>Ogonek</th><th>Dot</th><th>Double acute</th><th>Caron</th>
+<th>Double grave</th><th>Inverted breve</th></tr>
+<tr><td>a</td><td>&#xe0;</td><td>&#xe1;</td><td>&#xe2;</td><td>&#xe3;</td><td>&#xe4;</td>
+<td>&#x101;</td><td>&#x103;</td><td>&#x105;</td><td>&#x227;</td><td>X</td><td>&#x1ce;</td>
+<td>&#x201;</td><td>&#x203;</td></tr>
+<tr><td>e</td><td>&#xe8;</td><td>&#xe9;</td><td>&#xea;</td><td>&#x1ebd;</td><td>&#xeb;</td>
+<td>&#x113;</td><td>&#x115;</td><td>&#x119;</td><td>&#x117;</td><td>X</td><td>&#x11b;</td>
+<td>&#x205;</td><td>&#x207;</td></tr>
+<tr><td>i</td><td>&#xec;</td><td>&#xed;</td><td>&#xee;</td><td>&#x129;</td><td>&#xef;</td>
+<td>&#x12b;</td><td>&#x12d;</td><td>&#x12f;</td><td>i</td><td>X</td><td>&#x1d0;</td>
+<td>&#x209;</td><td>&#x20b;</td></tr>
+<tr><td>o</td><td>&#xf2;</td><td>&#xf3;</td><td>&#xf4;</td><td>&#xf5;</td><td>&#xf6;</td>
+<td>&#x14d;</td><td>&#x14f;</td><td>&#x1eb;</td><td>&#x22f;</td><td>&#x151;</td><td>&#x1d2;</td>
+<td>&#x20d;</td><td>&#x20f;</td></tr>
+<tr><td>u</td><td>&#xf9;</td><td>&#xfa;</td><td>&#xfb;</td><td>&#x169;</td><td>&#xfc;</td>
+<td>&#x16b;</td><td>&#x16d;</td><td>&#x173;</td><td>X</td><td>&#x171;</td><td>&#x1d4;</td>
+<td>&#x215;</td><td>&#x217;</td></tr>
+<tr><td>y</td><td>&#x1ef3;</td><td>&#xfd;</td><td>&#x177;</td><td>&#x1ef9;</td><td>&#xff;</td>
+<td>&#x233;</td><td>X</td><td>X</td><td>&#x1e8f;</td><td>X</td><td>X</td>
+<td>X</td><td>X</td></tr>
+</table>
+
+<p>Note that the three characters &#x201c;LATIN SMALL LETTER A WITH DOT
+ABOVE&#x201d;, &#x201c;LATIN SMALL LETTER O WITH DOT ABOVE&#x201d; and
+&#x201c;LATIN SMALL LETTER Y WITH MACRON&#x201d; were not present in
+version 2.0 of the Unicode standard.  So it is quite understandable if
+you do not see the corresponding entries.</p>
+
+<h2 id="combining"><a name="combining">Combining diacritics</a></h2>
+
+<p>The following paragraph gives a few forms formed by using combining
+diacritics.  The equal sign means that the combined form on the left
+should be identical in all respects (and in particular, represented
+identically) to the atomic form on the right.  To emphasize even more:
+you should <strong>not</strong> see <em>two</em> signs on the left of
+the equal sign but <em>one</em>, the same as on the right.</p>
+
+<p>
+a&#x300;=&#xe0;;
+e&#x301;=&#xe9;;
+i&#x302;=&#xee; (not the same as &#x131;&#x302; but may be graphically
+identical);
+o&#x303;=&#xf5;;
+u&#x304;=&#x16b; (whereas u&#xaf; is two different symbols);
+a&#x306;=&#x103;;
+e&#x307;=&#x117; (also note i&#x307; should be essentially i);
+i&#x308;=&#xef; (whereas i&#x307;&#x308; has three dots on the i);
+a&#x30a;=&#xe5; (not to be confused with a&#xb0; (read &#x201c;a
+degrees&#x201d;) nor a&#x2da;);
+o&#x30b;=&#x151;;
+c&#x30c;=&#x10d;
+<br />
+c&#x327;=&#xe7;;
+b&#x323;=&#x1e05;;
+d&#x331;=&#x1e0f; (this is supposedly different from d&#x320; but may be
+graphically identical);
+e&#x32d;=&#x1e19;
+<br />
+u&#x308;&#x304;=&#xfc;&#x304;=&#x1d6; (not the same as u&#x304;&#x308; which
+has the diaeresis on top of the macron);
+a&#x307;&#x304;=&#x227;&#x304;=&#x1e1;
+<br />
+o&#x328;&#x304;=&#x1eb;&#x304;=&#x1ed; (also o&#x304;&#x328; but the latter
+is not so canonical);
+o&#x337;&#x301;=&#xf8;&#x301;=&#x1ff; (not so sure about this one)
+</p>
+
+
+<h2 id="symbols"><a name="symbols">Various symbols</a></h2>
+
+<p>Here is a table of the constellations of the Zodiac, in which the
+first column should contain the relevant astrological symbol:</p>
+
+<table border="1">
+<tr><th>Sym.</th><th>English name</th><th>Latin name</th><th>Latin genitive</th><th>&#x3b1; star</th></tr>
+<tr><td>&#x2648;</td><td>The Ram</td><td>Aries</td><td>Arietis</td><td>Hamal</td></tr>
+<tr><td>&#x2649;</td><td>The Bull</td><td>Taurus</td><td>Tauri</td><td>Aldebaran</td></tr>
+<tr><td>&#x264a;</td><td>The Twins</td><td>Gemini</td><td>Geminorum</td><td>Castor</td></tr>
+<tr><td>&#x264b;</td><td>The Crab</td><td>Cancer</td><td>Cancri</td><td>Acubens</td></tr>
+<tr><td>&#x264c;</td><td>The Lion</td><td>Leo</td><td>Leonis</td><td>Regulus</td></tr>
+<tr><td>&#x264d;</td><td>The Virgin</td><td>Virgo</td><td>Virginis</td><td>Spica</td></tr>
+<tr><td>&#x264e;</td><td>The Scales</td><td>Libra</td><td>Libr&#xe6;</td><td>Zumen el Genubi</td></tr>
+<tr><td>&#x264f;</td><td>The Scorpion</td><td>Scorpius</td><td>Scorpii</td><td>Antares</td></tr>
+<tr><td>&#x2650;</td><td>The Archer</td><td>Sagittarius</td><td>Sagittarii</td><td>Rubkat</td></tr>
+<tr><td>&#x2651;</td><td>The Sea Goat</td><td>Capricornus</td><td>Capricorni</td><td>Giedi</td></tr>
+<tr><td>&#x2652;</td><td>The Water Bearer</td><td>Aquarius</td><td>Aquarii</td><td>Sadalmelik</td></tr>
+<tr><td>&#x2653;</td><td>The Fishes</td><td>Pisces</td><td>Piscium</td><td>El Rischa</td></tr>
+</table>
+
+<p>The following table should show a chessboard, with a pictorial
+representation of the pieces:</p>
+
+<table>
+<tr><th /><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr>
+<tr><th>8</th><td>&#x265c;</td><td>&#x265e;</td><td>&#x265d;</td><td>&#x265b;</td><td>&#x265a;</td><td>&#x265d;</td><td>&#x265e;</td><td>&#x265c;</td></tr>
+<tr><th>7</th><td>&#x265f;</td><td>&#x265f;</td><td>&#x265f;</td><td>&#x265f;</td><td>&#x265f;</td><td>&#x265f;</td><td>&#x265f;</td><td>&#x265f;</td></tr>
+<tr><th>6</th><td /><td /><td /><td /><td /><td /><td /><td /></tr>
+<tr><th>5</th><td /><td /><td /><td /><td /><td /><td /><td /></tr>
+<tr><th>4</th><td /><td /><td /><td /><td /><td /><td /><td /></tr>
+<tr><th>3</th><td /><td /><td /><td /><td /><td /><td /><td /></tr>
+<tr><th>2</th><td>&#x2659;</td><td>&#x2659;</td><td>&#x2659;</td><td>&#x2659;</td><td>&#x2659;</td><td>&#x2659;</td><td>&#x2659;</td><td>&#x2659;</td></tr>
+<tr><th>1</th><td>&#x2656;</td><td>&#x2658;</td><td>&#x2657;</td><td>&#x2655;</td><td>&#x2654;</td><td>&#x2657;</td><td>&#x2658;</td><td>&#x2656;</td></tr>
+</table>
+
+<p>Here is a snowflake: &#x2744;.</p>
+
+
+<h2 id="pushkin"><a name="pushkin">Some verses in Russian</a></h2>
+
+<p>The following is a five-verse extract of introduction of the poem
+<cite xml:lang="ru" lang="ru">Mednyj Vsadnik</cite>; by A. S. Pushkin
+(in Russian):</p>
+
+<blockquote xml:lang="ru" lang="ru">
+
+<p>&#x41f;&#x43e; &#x43e;&#x436;&#x438;&#x432;&#x43b;&#x451;&#x43d;&#x43d;&#x44b;&#x43c; &#x431;&#x435;&#x440;&#x435;&#x433;&#x430;&#x43c;
+<br />&#x413;&#x440;&#x43e;&#x43c;&#x430;&#x434;&#x44b; &#x441;&#x442;&#x440;&#x43e;&#x439;&#x43d;&#x44b;&#x435; &#x442;&#x435;&#x441;&#x43d;&#x44f;&#x442;&#x441;&#x44f;
+<br />&#x414;&#x432;&#x43e;&#x440;&#x446;&#x43e;&#x432; &#x438; &#x431;&#x430;&#x448;&#x435;&#x43d;; &#x43a;&#x43e;&#x440;&#x430;&#x431;&#x43b;&#x438;
+<br />&#x422;&#x43e;&#x43b;&#x43f;&#x43e;&#x439; &#x441;&#x43e; &#x432;&#x441;&#x435;&#x445; &#x43a;&#x43e;&#x43d;&#x446;&#x43e;&#x432; &#x437;&#x435;&#x43c;&#x43b;&#x438;
+<br />&#x41a; &#x431;&#x43e;&#x433;&#x430;&#x442;&#x44b;&#x43c; &#x43f;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43d;&#x44f;&#x43c; &#x441;&#x442;&#x440;&#x435;&#x43c;&#x44f;&#x442;&#x441;&#x44f;;</p>
+
+</blockquote>
+
+<p>Here is what the above might look like if your browser supports the
+cyrillic block of Unicode:</p>
+
+<blockquote>
+
+<p><img src="pushkin.png" alt="[Five verses in Russian]" /></p>
+
+</blockquote>
+
+<p>And here is a transcription of it:</p>
+
+<blockquote xml:lang="ru" lang="ru">
+
+<p>Po o&#x17e;ivl&#xeb;nnym beregam
+<br />Gromady strojnye tesn&#xe2;ts&#xe2;
+<br />Dvorcov i ba&#x161;en; korabli
+<br />Tolpoj so vseh koncov zemli
+<br />K bogatym pristan&#xe2;m strem&#xe2;ts&#xe2;;</p>
+
+</blockquote>
+
+<p>A rough translation might be:</p>
+
+<blockquote>
+
+<p>Along the animated banks [of the Neva] / the shapely masses press /
+of palaces and towers; ships / in crowd from all corners of the Earth
+/ rush toward its rich quays.</p>
+
+</blockquote>
+
+
+<h2 id="sophocles"><a name="sophocles">Some verses in ancient Greek</a></h2>
+
+<p>The following verses are lines 1182&#x2013;1185 of the tragedy
+<cite>Oedipus Rex</cite> by Sophocles (in ancient Greek):</p>
+
+<blockquote xml:lang="el-ancient" lang="el-ancient">
+
+<p>&#x1f38;&#x3bf;&#x1f7a; &#x1f30;&#x3bf;&#x1f7b;&#x387; &#x3c4;&#x1f70; &#x3c0;&#x1f71;&#x3bd;&#x3c4;&#x2bc; &#x1f02;&#x3bd; &#x1f10;&#x3be;&#x1f75;&#x3ba;&#x3bf;&#x3b9; &#x3c3;&#x3b1;&#x3c6;&#x1fc6;.
+<br />&#x1f6e; &#x3c6;&#x1ff6;&#x3c2;, &#x3c4;&#x3b5;&#x3bb;&#x3b5;&#x3c5;&#x3c4;&#x3b1;&#x1fd6;&#x1f79;&#x3bd; &#x3c3;&#x3b5; &#x3c0;&#x3c1;&#x3bf;&#x3c3;&#x3d0;&#x3bb;&#x1f73;&#x3c8;&#x3b1;&#x3b9;&#x3bc;&#x3b9; &#x3bd;&#x1fe6;&#x3bd;,
+<br />&#x1f45;&#x3c3;&#x3c4;&#x3b9;&#x3c2; &#x3c0;&#x1f73;&#x3c6;&#x3b1;&#x3c3;&#x3bc;&#x3b1;&#x3b9; &#x3c6;&#x1f7b;&#x3c2; &#x3c4;&#x2bc; &#x1f00;&#x3c6;&#x2bc; &#x1f67;&#x3bd; &#x3bf;&#x1f50; &#x3c7;&#x3c1;&#x1fc6;&#x3bd;, &#x3be;&#x1f7a;&#x3bd; &#x3bf;&#x1f37;&#x3c2; &#x3c4;&#x2bc;
+<br />&#x3bf;&#x1f50; &#x3c7;&#x3c1;&#x1fc6;&#x3bd; &#x1f41;&#x3bc;&#x3b9;&#x3bb;&#x1ff6;&#x3bd;, &#x3bf;&#x1f55;&#x3c2; &#x3c4;&#x1f73; &#x3bc;&#x2bc; &#x3bf;&#x1f50;&#x3ba; &#x1f14;&#x3b4;&#x3b5;&#x3b9; &#x3ba;&#x3c4;&#x3b1;&#x3bd;&#x1f7d;&#x3bd;.</p>
+
+</blockquote>
+
+<p>Here is what the above might look like if your browser supports the
+greek and greek extended blocks of Unicode (note that this
+representation uses the wrong shape of beta on the second line,
+because I didn't have the right one in the font I used):</p>
+
+<blockquote>
+
+<p><img src="sophocles.png" alt="[Four verses in Greek]" /></p>
+
+</blockquote>
+
+<p>And here is the transcription of it:</p>
+
+<blockquote xml:lang="el-ancient" lang="el-ancient">
+
+<p>Iou iou; ta pant' an ex&#x113;koi saph&#x113;.
+<br />&#x14c; ph&#x14d;s, teleutaion se prosblepsaimi nun,
+<br />hostis pephasmai phus t' aph' h&#x14d;n ou khr&#x113;n, xun hois t'
+<br />ou khr&#x113;n homil&#x14d;n, hous te m' ouk edei ktan&#x14d;n.</p>
+
+</blockquote>
+
+<p>A rough translation might be:</p>
+
+<blockquote>
+
+<p>Alas!  All would become clear. / O light, may I see you for the
+last time, / I who was born of these of which it is a crime to be
+born, who live with these / which which it is a crime to live, and who
+killed these whom I must not kill.</p>
+
+</blockquote>
+
+
+<h2 id="kalidasa"><a name="kalidasa">Some verses in Sanskrit</a></h2>
+
+<p>The following is one stanza of canto &#x2165; of the <cite
+xml:lang="sa" lang="sa">Kum&#x101;ra-sa&#x1e43;bhava</cite> (&#x201c;the
+birth of Kum&#x101;ra&#x201d;) by the great Sanskrit poet
+K&#x101;lid&#x101;sa:</p>
+
+<blockquote xml:lang="sa" lang="sa">
+
+<p>&#x92a;&#x936;&#x941;&#x92a;&#x924;&#x93f;&#x930;&#x92a;&#x93f; &#x924;&#x93e;&#x928;&#x94d;&#x92f;&#x939;&#x93e;&#x928;&#x93f; &#x915;&#x943;&#x91a;&#x94d;&#x91b;&#x94d;&#x930;&#x93e;&#x926;&#x94d;
+<br />&#x905;&#x917;&#x92e;&#x92f;&#x926;&#x926;&#x94d;&#x930;&#x93f;&#x938;&#x941;&#x924;&#x93e;&#x938;&#x92e;&#x93e;&#x917;&#x92e;&#x94b;&#x924;&#x94d;&#x915;&#x903; &#x964;
+<br />&#x915;&#x92e;&#x92a;&#x930;&#x92e;&#x935;&#x936;&#x902; &#x928; &#x935;&#x93f;&#x92a;&#x94d;&#x930;&#x915;&#x941;&#x930;&#x94d;&#x92f;&#x941;&#x930;&#x94d;
+<br />&#x935;&#x93f;&#x92d;&#x941;&#x92e;&#x92a;&#x93f; &#x924;&#x902; &#x92f;&#x926;&#x92e;&#x940; &#x938;&#x94d;&#x92a;&#x943;&#x936;&#x928;&#x94d;&#x924;&#x93f; &#x92d;&#x93e;&#x935;&#x93e;&#x903; &#x965;</p>
+
+</blockquote>
+
+<p>Here is what the above might look like if your browser supports the
+devan&#x101;gar&#x12b; block of Unicode:</p>
+
+<blockquote>
+
+<p><img src="kalidasa.png" alt="[A stanza in Sanskrit]" /></p>
+
+</blockquote>
+
+<p>And here is the transcription of it:</p>
+
+<blockquote xml:lang="sa" lang="sa">
+
+<p>Pa&#x15b;upatirapi t&#x101;nyah&#x101;ni k&#x1e5b;cchr&#x101;d
+<br />agamayadadrisut&#x101;sam&#x101;gamotka&#x1e25;;
+<br />kamaparamava&#x15b;a&#x1e43; na viprakuryur
+<br />vibhumapi ta&#x1e43; yadam&#x12b; sp&#x1e5b;&#x15b;anti bh&#x101;v&#x101;&#x1e25;?</p>
+
+</blockquote>
+
+<p>A rough translation might be:</p>
+
+<blockquote>
+
+<p>And Pa&#x15b;upati passed those days with hardship, / eager for
+union with the daughter of the mountain. / Which other powerless
+[creature] would they not torment, / such emotions, when they affect
+even the powerful [&#x15a;iva]?</p>
+
+</blockquote>
+
+
+<h2 id="confucius"><a name="confucius">Some Chinese</a></h2>
+
+<p>The following are the two first lines of the <cite>Analects</cite>
+by Confucius:</p>
+
+<blockquote xml:lang="zh" lang="zh">
+
+<p>&#x5b50;&#x66f0;&#xff1a;&#x300c;&#x5b78;&#x800c;&#x6642;&#x7fd2;&#x4e4b;&#xff0c;&#x4e0d;&#x4ea6;&#x8aaa;&#x4e4e;&#xff1f;&#x6709;&#x670b;&#x81ea;&#x9060;&#x65b9;&#x4f86;&#xff0c;&#x4e0d;&#x4ea6;&#x6a02;&#x4e4e;&#xff1f;
+<br />&#x4eba;&#x4e0d;&#x77e5;&#x800c;&#x4e0d;&#x614d;&#xff0c;&#x4e0d;&#x4ea6;&#x541b;&#x5b50;&#x4e4e;&#xff1f;&#x300d;</p>
+<p>&#x6709;&#x5b50;&#x66f0;&#xff1a;&#x300c;&#x5176;&#x70ba;&#x4eba;&#x4e5f;&#x5b5d;&#x5f1f;&#xff0c;&#x800c;&#x597d;&#x72af;&#x4e0a;&#x8005;&#xff0c;&#x9bae;&#x77e3;&#xff1b;
+<br />&#x4e0d;&#x597d;&#x72af;&#x4e0a;&#xff0c;&#x800c;&#x597d;&#x4f5c;&#x4e82;&#x8005;&#xff0c;&#x672a;&#x4e4b;&#x6709;&#x4e5f;&#x3002;&#x541b;&#x5b50;&#x52d9;&#x672c;&#xff0c;&#x672c;&#x7acb;&#x800c;&#x9053;&#x751f;&#x3002;
+<br />&#x5b5d;&#x5f1f;&#x4e5f;&#x8005;&#xff0c;&#x5176;&#x70ba;&#x4ec1;&#x4e4b;&#x672c;&#x8207;&#xff01;&#x300d;</p>
+
+</blockquote>
+
+<p>Here is what the above might look like if your browser supports the
+CJK block of Unicode:</p>
+
+<blockquote>
+
+<p><img src="confucius.png" alt="[Two lines in Chinese]" /></p>
+
+</blockquote>
+
+<p>And here is the transcription of it:</p>
+
+<blockquote xml:lang="zh" lang="zh">
+
+<p>Z&#x1d0; yu&#x113;: &#x201c;Xu&#xe9; &#xe9;r sh&#x12b; x&#xed;
+zh&#x12b;, b&#xfa; y&#xec; yu&#xe8; h&#x16b;?  Yo&#x1d4; p&#xe9;ng
+z&#xec; y&#x1d4;an f&#x101;ngl&#xe1;i, b&#xfa; y&#xec; l&#xe8;
+h&#x16b;? R&#xe9;n b&#xf9; zh&#x12b;, &#xe9;r b&#xfa; y&#xf9;n,
+b&#xfa; y&#xec; j&#x16b;nz&#x1d0; h&#x16b;?&#x201d;</p>
+<p>Y&#xf3;uz&#x1d0; yu&#x113;: &#x201c;Q&#xed; w&#xe8;i r&#xe9;n
+y&#x11b; xi&#xe0;od&#xec;, &#xe9;r
+h&#xe0;of&#xe0;nsh&#xe0;ngzh&#x11b;, xi&#x101;n y&#x1d0;; b&#xfa;
+h&#xe0;o f&#xe0;nsh&#xe0;ng, &#xe9;r
+h&#xe0;ozu&#xf2;lu&#xe0;nzh&#x11b;, w&#xe8;i zh&#x12b; y&#xf3;u
+y&#x11b;. J&#x16b;nz&#x1d0; w&#xf9; b&#x11b;n, b&#x11b;n l&#xec;
+&#xe9;r d&#xe0;o sh&#x113;ng. Xi&#xe0;od&#xec; y&#xe9; zh&#x11b;,
+q&#xed; w&#xe8;i r&#xe9;n zh&#x12b; b&#xe9;n y&#x1d4;!&#x201d;</p>
+
+
+</blockquote>
+
+<p>A rough translation might be:</p>
+
+<blockquote>
+
+<p>The Master [Confucius] said: &ldquo;To study and to practice, it is
+is a joy, isn't it?  When friends come from afar, it is a pleasure,
+isn't it?  If one remains unknown and isn't hurt, isn't one an
+honorable man?&rdquo;</p>
+<p>Master You said: &ldquo;Few of the men who act well filially and
+fraternally are also fond of offending their superiors; men who are
+not fond of offending their superiors, but who like to cause trouble,
+such do not exist.  The honorable man concerns himself with the
+foundations.  Once the foundations are established, the Way is born.
+Is not acting well filially and fraternally the foundation of
+humanity?&rdquo;</p>
+
+</blockquote>
+
+
+<h2 id="ramanujan"><a name="ramanujan">A Tamil name</a></h2>
+
+<p>The following is the original (Tamil) name of a famous
+mathematician:</p>
+
+<blockquote xml:lang="ta" lang="ta">
+
+<p>&#xbb8;&#xbcd;&#xbb1;&#xbc0;&#xba9;&#xbbf;&#xbb5;&#xbbe;&#xbb8;
+&#xbb0;&#xbbe;&#xbae;&#xbbe;&#xba9;&#xbc1;&#xb9c;&#xba9;&#xbcd;
+&#xb90;&#xbaf;&#xb99;&#xbcd;&#xb95;&#xbbe;&#xbb0;&#xbcd;</p>
+
+</blockquote>
+
+<p>Here is what the above might look like if your browser supports the
+Tamil block of Unicode (note, however, that this representation is
+less than optimal, since the font I used didn't have the
+&lsquo;sr&rsquo; ligature; so if the first two characters are replaced
+by a single one which looks very different, it is probably
+normal):</p>
+
+<blockquote>
+
+<p><img src="ramanujan.png" alt="[A name in Tamil]" /></p>
+
+</blockquote>
+
+<p>And here is a transcription of it:</p>
+
+<blockquote xml:lang="ta" lang="ta">
+
+<p>S&#x1e5f;&#x12b;&#x1e49;iv&#x101;sa
+R&#x101;m&#x101;&#x1e49;uja&#x1e49; Aiya&#x1e45;k&#x101;r</p>
+
+</blockquote>
+
+<p>Here there can be no translation, of course, since this is a proper
+noun.  But I note that the mathematician in question (1887&ndash;1920)
+is typically named &ldquo;Srinivasa Ramanujan Iyengar&rdquo; in
+English.</p>
+
+
+<h2 id="quran"><a name="quran">Some Arabic</a></h2>
+
+<p>The following lines are the first chapter of the Qur'an (note that
+the text runs right to left, and should probably be aligned on the
+right margin):</p>
+
+<blockquote xml:lang="ar" lang="ar" dir="rtl">
+
+<p>&#x628;&#x650;&#x633;&#x652;&#x645;&#x650;
+&#x671;&#x644;&#x644;&#x651;&#x670;&#x647;&#x650;
+&#x671;&#x644;&#x631;&#x651;&#x64e;&#x62d;&#x652;&#x645;&#x640;&#x64e;&#x628;&#x646;&#x650;
+&#x671;&#x644;&#x631;&#x651;&#x64e;&#x62d;&#x650;&#x64a;&#x645;&#x650;</p>
+<p>&#x671;&#x644;&#x652;&#x62d;&#x64e;&#x645;&#x652;&#x62f;&#x64f;
+&#x644;&#x650;&#x644;&#x651;&#x670;&#x647;&#x650;
+&#x631;&#x64e;&#x628;&#x651;&#x650;
+&#x671;&#x644;&#x652;&#x639;&#x64e;&#x627;&#x644;&#x64e;&#x645;&#x650;&#x64a;&#x646;&#x64e;</p>
+<p>&#x671;&#x644;&#x631;&#x651;&#x64e;&#x62d;&#x652;&#x645;&#x640;&#x64e;&#x628;&#x646;&#x650;
+&#x671;&#x644;&#x631;&#x651;&#x64e;&#x62d;&#x650;&#x64a;&#x645;&#x650;</p>
+<p>&#x645;&#x64e;&#x640;&#x627;&#x644;&#x650;&#x643;&#x650;
+&#x64a;&#x64e;&#x648;&#x652;&#x645;&#x650;
+&#x671;&#x644;&#x62f;&#x651;&#x650;&#x64a;&#x646;&#x650;</p>
+<p>&#x625;&#x650;&#x64a;&#x651;&#x64e;&#x627;&#x643;&#x64e;
+&#x646;&#x64e;&#x639;&#x652;&#x628;&#x64f;&#x62f;&#x64f;
+&#x648;&#x64e;&#x625;&#x650;&#x64a;&#x651;&#x64e;&#x627;&#x643;&#x64e;
+&#x646;&#x64e;&#x633;&#x652;&#x62a;&#x64e;&#x639;&#x650;&#x64a;&#x646;&#x64f;</p>
+<p>&#x671;&#x647;&#x652;&#x62f;&#x650;&#x646;&#x64e;&#x640;&#x640;&#x640;&#x640;&#x627;
+&#x671;&#x644;&#x635;&#x651;&#x650;&#x631;&#x64e;&#x627;&#x637;&#x64e;
+&#x671;&#x644;&#x645;&#x64f;&#x633;&#x652;&#x62a;&#x64e;&#x642;&#x650;&#x64a;&#x645;&#x64e;</p>
+<p>&#x635;&#x650;&#x631;&#x64e;&#x627;&#x637;&#x64e;
+&#x671;&#x644;&#x651;&#x64e;&#x630;&#x650;&#x64a;&#x646;&#x64e;
+&#x623;&#x64e;&#x646;&#x639;&#x64e;&#x645;&#x652;&#x62a;&#x64e;
+&#x639;&#x64e;&#x644;&#x64e;&#x64a;&#x647;&#x650;&#x645;&#x652;
+&#x63a;&#x64e;&#x64a;&#x631;&#x650;
+&#x671;&#x644;&#x645;&#x64e;&#x63a;&#x636;&#x64f;&#x648;&#x628;&#x650;
+&#x639;&#x64e;&#x644;&#x64e;&#x64a;&#x647;&#x650;&#x645;&#x652;
+&#x648;&#x64e;&#x644;&#x627;&#x64e;
+&#x671;&#x644;&#x636;&#x651;&#x64e;&#x627;&#x644;&#x651;&#x650;&#x64a;&#x646;&#x64e;</p>
+
+</blockquote>
+
+<p>Here is what the above might look like if your browser supports the
+Arabic block of Unicode:</p>
+
+<blockquote dir="rtl">
+
+<p><img src="quran.png" alt="[Seven verses in Arabic]" /></p>
+
+</blockquote>
+
+<p>And here is a transcription of it:</p>
+
+<blockquote xml:lang="ar" lang="ar" dir="ltr">
+
+<p>bismi &#x103;l-la'hi &#x103;r-ra&#x1e25;ma'ni &#x103;r-ra&#x1e25;iymi</p>
+<p>&#x103;l-&#x1e25;amdu li-lla'hi rabbi &#x103;l-`a'lamiyna</p>
+<p>&#x103;r-ra&#x1e25;ma'ni &#x103;r-ra&#x1e25;iymi</p>
+<p>ma'liki yawmi &#x103;d-diyni</p>
+<p>'iyya'ka na`budu wa-'iyya'ka nasta`iynu</p>
+<p>&#x12d;hdina' &#x103;&#x1e63;-&#x1e63;ira'&#x1e6d;a &#x103;l-mustaqiyma</p>
+<p>&#x1e63;ira'&#x1e6d;a &#x103;lla&#x1e0f;iyna 'an`amta `alayhim
+&#x121;ayri &#x103;l-ma&#x121;&#x1e0d;uwbi `alayhim wala'
+&#x103;&#x1e0d;-&#x1e0d;a'lliyna</p>
+
+</blockquote>
+
+<p>A rough translation might be:</p>
+
+<blockquote>
+
+<p>In the name of God, the beneficient, the merciful.</p>
+<p>Praise be to God, lord of the worlds.</p>
+<p>The beneficient, the merciful.</p>
+<p>Master of the day of judgment.</p>
+<p>Thee do we worship, and Thine aid we seek.</p>
+<p>Lead us on the right path.</p>
+<p>The path of those on whom Thou hast bestowed favors.  Not of those
+who have earned Thy wrath, nor of those who go astray.</p>
+
+</blockquote>
+
+
+</body>
+</html>

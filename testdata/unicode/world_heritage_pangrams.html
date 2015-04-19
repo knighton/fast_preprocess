@@ -1,0 +1,2948 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="ctl00_Head"><title>
+	List of pangrams | World Heritage Encyclopedia
+</title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta id="ctl00_MetaKeywords" name="keywords" content="World Heritage Encyclopedia, world heritage, heritage encyclopedia, world encyclopedia, encyclopedia, article, articles, encyclopedias" /><meta id="ctl00_MetaDescription" name="description" content="World Heritage Encyclopedia, the aggregation of the largest online encyclopedias available, and the most definitive collection ever assembled." /><meta id="ctl00_MetaAuthor" name="author" content="World Heritage Encyclopedia" /><meta id="ctl00_MetaRating" name="Rating" /><meta id="ctl00_MetaCopyRight" name="copyright" /><meta id="ctl00_MetaDistribution" name="Distribution" /><meta id="ctl00_MetaRevisit" name="Revisit-after" /><meta id="ctl00_MetaExpires" name="expires" /><meta id="ctl00_MetaTranslate" name="google-translate-customization" /><meta name="msvalidate.01" content="14E21CCE9967B1D38088FE1874F66527" /><meta charset="UTF-8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta property="og:title" content="World Heritage Encyclopedia" /><meta property="og:image" content="http://cdn.worldheritage.org/images/logo.png" /><meta name="robots" content="index, follow" /><link rel="icon" type="image/ico" href="/favicon.ico" />
+	<link href="http://cdn.worldheritage.org/css/bootstrap_14_04_14.min.css" rel="stylesheet" />
+	<link href="http://cdn.worldheritage.org/css/style_14_12_23.css" rel="stylesheet" />
+	<link href="http://cdn.worldheritage.org/css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+	<link href="http://cdn.worldheritage.org/css/prettyPhoto_14_04_14.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="http://cdn.worldheritage.org/css/jquery.bxslider.4.2.3.css" rel="stylesheet" />
+	<link href="/css/font-awesome_14_04_14.min.css" rel="stylesheet" />
+	<link href="/css/font_opensans_14_04_14.css" rel="stylesheet" type="text/css">
+	<link href="/css/font_montserrat_14_04_14.css" rel="stylesheet" type="text/css">
+	<link href="http://cdn.worldheritage.org/css/mgstyle_14_10_18.css" rel="stylesheet" />
+
+
+	<script src='http://cdn.worldheritage.org/js/jQuery/jquery-1.8.3.min.js'></script>
+	<script src='http://cdn.worldheritage.org/js/jQuery/jquery-ui-1.10.4.custom.min.js'></script>
+	<script src="http://cdn.worldheritage.org/js/jquery.sticky.js"></script>
+	<script src="http://cdn.worldheritage.org/js/jquery.easing-1.3.pack.js" type="text/javascript"></script>
+	<script src="http://cdn.worldheritage.org/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="http://cdn.worldheritage.org/js/jquery.parallax-1.1.3.js" type="text/javascript"></script>
+	<script src="http://cdn.worldheritage.org/js/appear.js" type="text/javascript" ></script>
+	<script src="http://cdn.worldheritage.org/js/modernizr.js" type="text/javascript"></script>
+	<script src="http://cdn.worldheritage.org/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="http://cdn.worldheritage.org/js/isotope.js" type="text/javascript"></script>
+	<script src="http://cdn.worldheritage.org/js/jquery.bxslider.min.4.2.3.js"></script>
+	<script src="http://cdn.worldheritage.org/js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdn.worldheritage.org/js/jquery.maximage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdn.worldheritage.org/js/sscr.js"></script>
+	<script src="http://cdn.worldheritage.org/js/skrollr.js"></script>
+	<script src="http://cdn.worldheritage.org/js/scripts_0_0_1.js"></script>
+	<script src="http://cdn.worldheritage.org/js/jQuery/jquery.lazyload.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="75">
+	<!-- Preloader -->
+		<div class="mask"></div>
+		<span id="ctl00_lblDebugText"></span>
+	<!--/Preloader -->
+
+
+	<!-- Navigation -->
+	
+
+<script type="text/javascript" src='http://cdn.worldheritage.org/js/jQuery/Greybox/greybox.js'></script>
+
+<script>
+	function submitForm(f) {
+		var searchVal = $("#search").val();
+
+		var url = "";
+		if ($("#hidBookUrl").val())
+		{
+			url = $("#hidBookUrl").val();
+		}
+		else if (f != true)
+		{
+			if (searchVal != "Search..." && searchVal != "" && $("#hidSearch").val() != searchVal)
+			{
+				url = '/Find/' + searchVal;
+			}
+		}
+		else
+		{
+			if (searchVal != "Search..." && searchVal != "")
+			{
+				url = '/Find/' + searchVal;
+			}
+		}
+		
+		if (url)
+		{
+			window.location = url;
+		}
+	}
+</script>
+<script>
+	//  Code for keypress behavior to capture the enter key
+	KeyListener = {
+		init : function() {
+			$('#navigation').bind('keydown', function(e) {
+				var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+
+				if (key === 13) {
+					e.preventDefault();
+					submitForm(true);
+				}
+			});
+		}
+	};
+
+	$(document).ready(function() {
+		KeyListener.init()
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		$( "#search" ).catcomplete({
+			source: "/Services/AutoSuggest.aspx",
+			dataType: "jsonp",
+			minLength: 1,
+			delay: 0,
+			select: function( event, ui ) {
+				$("#hidCategory").val(ui.item.category);
+				$("#hidBookUrl").val(ui.item.bookurl);
+				$("#search").val(ui.item.value);
+				submitForm(true);
+			}
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(document).mouseup(function (e)
+	{
+		var container = $(".nav-collapse");
+		
+		if (!container.is(e.target) && container.has(e.target).length === 0)
+		{
+			if (container.hasClass("collapse") && container.hasClass("in"))
+			{
+				$(".show-menu").click();
+			}
+		}
+	});
+</script>
+<script type="text/javascript">
+	$.widget( "custom.catcomplete", $.ui.autocomplete, {
+		_renderMenu: function( ul, items ) {
+			var that = this,
+			currentCategory = "";
+			$.each( items, function( index, item ) {
+				if ( item.category != currentCategory ) {
+					ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+					currentCategory = item.category;
+				}
+				that._renderItemData( ul, item );
+			});
+		}
+	});
+</script>
+<style type="text/css">
+	.ui-autocomplete {
+		z-index: 10000;
+	}
+	.ui-autocomplete-category{
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.ui-autocomplete .ui-menu-item {
+		width: 100% !important;
+	}
+	.ui-dialog {
+		z-index: 10000;
+	}
+	.ui-dialog-titlebar-close {
+		background-color: rgb(215, 235, 249);
+		background-image: url(http://ebook2.worldlibrary.net/app_themes/default/css/header_cupertino/images/ui-icons_3d80b3_256x240.png);
+		background-position: -96px -128px;
+		background-repeat: no-repeat;
+		border-bottom-color: rgb(174, 208, 234);
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-image-outset: 0px;
+		border-image-repeat: stretch;
+		border-image-slice: 100%;
+		border-image-source: none;
+		border-image-width: 1;
+		border-left-color: rgb(174, 208, 234);
+		border-left-style: solid;
+		border-left-width: 1px;
+		border-right-color: rgb(174, 208, 234);
+		border-right-style: solid;
+		border-right-width: 1px;
+		border-top-color: rgb(174, 208, 234);
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		border-top-style: solid;
+		border-top-width: 1px;
+	}
+	.goog-te-gadget-icon {
+		background-image: url('/favicon.ico') !important;
+		background-position: 0px 0px !important;
+		background-repeat: no-repeat !important;
+	}
+	.goog-te-gadget-simple {
+		border: 0;
+		height: 24px;
+		padding: 0px;
+	}
+	#navigation {
+		position: fixed !important; 
+		top: 0px !important; 
+	}
+	#breadcrumb {
+		position: fixed !important; 
+		z-index: 10;
+	}
+</style>
+
+	<input type="hidden" id="hidCategory" Value="">
+	<input type="hidden" id="hidBookUrl" Value="">
+	<input type="hidden" id="hidSearch" Value="">
+	<div id="navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="navbar-inner ">
+	       		<div class="container no-padding">
+				<a class="show-menu" data-toggle="collapse" data-target=".nav-collapse">
+				<a class="brand hidden-desktop" href="/#about">
+				<img alt="School eBook Library" src="http://cdn.worldheritage.org/images/brandlogo.png" align="left" width="220px">
+				</a>
+				<span class="show-menu-bar"></span>
+				<div class="nav-collapse collapse" style="z-index: 100;">
+					
+							<ul class="nav">
+								<li align="left" class="hidden-phone" style="float: left;"><a href="/#top"><img alt="World Heritage Encyclopedia" src="http://cdn.worldheritage.org/images/brandlogo.png" width="220px"></a></li>
+								<li class="menu-1"><a class="colapse-menu1" href="/#top"></a></li>
+								<li class="menu-2"><a class="colapse-menu1" href="/#about">About</a></li>
+								<li class="menu-2"><a class="colapse-menu1" href="/#portfolio">Encyclopedia</a></li>
+								<li class="menu-2"><a class="colapse-menu1" href="/Contact">Contact</a></li>
+								<li class="menu-2" style="padding-top: 15px;"><input name="search" class="submit" type="text" id="search" size="30"  onfocus="if(this.value == 'Search...') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search...'; } else { $('#hidSearch').val($('#search').val()); }" value="Search..." onclick="submitForm(false);return false;"></li>
+								<li class="menu-2" style="margin-bottom: 5px; float: right; ">
+									<div style="float: left;">
+										<div style="display: block; margin-left: 35px;">
+											<a class="selsigninbtn greyboxlogin" href="/login.aspx" style="padding: 0px;" onclick="OpenGreyBox('/Login.aspx');return false;"><button type="button" class="btn btn-default navbar-btn" onclick="OpenGreyBox('/Login.aspx');return false;">Sign in / Register</button></a>
+										</div>
+										<div class="hidden-phone" id="google_translate_element" style="height: 24px; line-height: 24px; float: right; margin-top: 5px;"></div> &nbsp;&nbsp;
+									</div>
+								</li>
+							</ul>
+
+							<script type="text/javascript">
+								$(document).ready(function(){
+									$("a.greyboxlogin").click(function() {
+										OpenGreyBox(this.href);
+										return false;
+									});
+								});
+
+								function OpenGreyBox(url) {
+									$("#login_frame" ).attr("src","/LoginGreyBox.aspx?ReturnUrl="+encodeURIComponent(url.substr(url.lastIndexOf("/")+1)));
+									$("#dialog-login").dialog({
+										resizable: false,
+										modal: true,
+										height:460,
+										width: 800
+									});
+								}
+							</script>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display: none;">
+		<div id="dialog-login" title="Sign in with your eLibrary Card" style="background: white !important; padding: 0; margin: 0; overflow: hidden;">
+			<iframe id="login_frame"  height="100%" style="height: 100%; width: 100%; border: none; background: white !important;"></iframe>
+		</div>
+	</div>
+
+	<!--/Navigation -->
+
+	<div itemprop='breadcrumb' style=''><ul id='breadcrumb'><li><a href='/' title='Home'><img src='/images/home.png' alt='Home' class='home' /></a></li><li><a href='/Find' title='Find'>Find</a></li>
+	<li>List of pangrams</li>
+</ul></div>
+
+	<!-- Begin ContentWrap -->
+		
+	<style type="text/css">
+		body {
+			background-color: #FFFFFF !important;
+		}
+		pre {
+			white-space: pre-wrap;
+		}
+		.infobox {
+			border: none !important;
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 15px;
+		}
+		.toc {
+			float: right;
+			margin-left: 50px;
+			margin-right: 20px;
+			margin-bottom: 30px;
+		}
+		.navbox {
+			background-color: #FFFFFF !important;
+		}
+		.navbox-title {
+			background-color: #FFFFFF !important;
+		}
+		.navbox-abovebelow {
+			background-color: #FFFFFF !important;
+		}
+		.navbox-group {
+			background-color: #FFFFFF !important;
+		}
+		.nv-view {
+			display: none !important;
+		}
+		.nv-talk {
+			display: none !important;
+		}
+		.nv-edit {
+			display: none !important;
+		}
+		.mbox-small {
+			display: none !important;
+		}
+		.ambox {
+			display: none !important;
+		}
+		.highlight {
+			background-color: #dfdfdf;
+			font-weight: bold;
+		}
+		.bx-wrapper {
+			max-width: 360px !important; 
+		}
+		.blog-slider {
+			margin-left: 0px !important; 
+		}
+		.suggestion {
+			padding: 0;
+			cursor: pointer;
+			border: 0;
+			line-height: 1; 
+			font-family: arial,sans-serif;
+			margin: 0;
+		}
+		.suggestion a {
+			text-decoration: none; 
+			position: relative; 
+			padding: 0 5px; 
+			display: block; 
+			overflow: hidden;
+		}
+		.suggestionParent {
+			width: 380px; 
+			max-height: 155px; 
+			position: relative; 
+			margin-bottom: 15px; 
+			text-align: left;
+		}
+		.suggestionImage {
+			float: left; 
+			margin: 0 8px 0 0;
+			max-height: 155px;
+			width: 120px;
+		}
+		.suggestionTitle {
+			display: block; 
+			line-height: 1.2; 
+			max-height: 2.4em; 
+			margin-bottom: 2px; 
+			overflow: hidden;
+		}
+		.suggestionSubTitle {
+			color: #999; 
+			font-size: 11px; 
+			display: block; 
+			line-height: 1.4em; 
+			white-space: nowrap;
+			width: 97%;
+			white-space: normal;
+		}
+		#coordinates {
+			float: none;
+			position: inherit;
+		}
+		.portal { 
+			display: none; 
+		}
+		.navbox-abovebelow { 
+			display: none; 
+		}
+		.navbox-image { 
+			display: none; 
+		}
+		
+		.content p {
+			text-align: left;
+			padding-bottom: 10px;
+		}
+		
+		.blog-content {
+			text-align: left;
+		}
+		
+		h1, h2, h3, h4, h5, h6 {
+			text-align: center;
+		}
+		
+		.headlinks {
+			font-family: Arial !important;
+			line-height: 14px;
+		}
+		#mainheadertabstrip {
+			font-family: Arial !important;
+			line-height: 14px;
+		}
+		#mainheadertabstrip li {
+			line-height: 14px;
+		}
+		div.tright, div.floatright, table.floatright {
+			float: left;
+			display: none;
+		}
+		div.tleft, div.floatleft, table.floatleft {
+			float: right;
+			display: none;
+		}
+		.gallerybox {
+			float: left;
+			margin-left: 15px;
+			margin-right: 15px;
+			overflow: hidden;
+		}
+		h2 {
+			display: block;
+		}
+		.hlist li {
+			display: inline-block;
+		}
+		.container td {
+			padding-left: 10px;
+			padding-right: 15px;
+			padding-top: 5px;
+		}
+		.container table {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.gallery {
+			display: inline-block;
+		}
+		.hlist dd dd:first-child:before, .hlist dd dt:first-child:before, .hlist dd li:first-child:before, .hlist dt dd:first-child:before, .hlist dt dt:first-child:before, .hlist dt li:first-child:before, .hlist li dd:first-child:before, .hlist li dt:first-child:before, .hlist li li:first-child:before {
+			content: " (";
+			font-weight: normal;
+		}
+		.hlist dd dd:last-child:after, .hlist dd dt:last-child:after, .hlist dd li:last-child:after, .hlist dt dd:last-child:after, .hlist dt dt:last-child:after, .hlist dt li:last-child:after, .hlist li dd:last-child:after, .hlist li dt:last-child:after, .hlist li li:last-child:after {
+			content: ") ";
+			font-weight: normal;
+		}
+		.hlist.inline, .hlist.inline dl, .hlist.inline ol, .hlist.inline ul, .hlist dl dl, .hlist dl ol, .hlist dl ul, .hlist ol dl, .hlist ol ol, .hlist ol ul, .hlist ul dl, .hlist ul ol, .hlist ul ul {
+			display: inline;
+		}
+		.hlist dd:after, .hlist li:after{
+			content: " | ";
+			font-weight: bold;
+		}
+		.hlist dd:last-child:after,.hlist dt:last-child:after,.hlist li:last-child:after {
+			content:none
+		}
+		th.navbox-title {
+			text-align: center;
+			font-weight: bold;
+			font-size: 25px;
+		}
+/*
+		th {
+			min-width: 150px;
+		}
+*/
+		.hlist ul, .catlinks {
+			background-color: #fafafa;
+		}
+.catlinks, .internal {display: none;}
+		.catlinks ul {
+			display: inline;
+		}
+		.catlinks li {
+			display: inline-block;
+		}
+		.catlinks li:before {
+			content: " | ";
+			font-weight: bold;
+		}
+		.stub {
+			display: none;
+		}
+		.vertical-navbox td, .vertical-navbox th {
+			background-color: #FFFFFF !important;
+		}
+		.vertical-navbox th {
+			background-color: #FFFFFF !important;
+			color: #000000 !important;
+		}
+		.vertical-navbox th span {
+			color: #000000 !important;
+		}
+		hr {
+			margin: 0;
+		}
+		.thumb img {
+			/* height: 260px; */
+		}
+
+		table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr > th, table.wikitable > * > tr > td {
+			border: 1px solid #aaa;
+		}
+
+		.widget {
+			padding-left: 10px;
+
+		}
+		#sidebar
+		{
+			padding-top: 70px;
+		}
+	</style>
+
+
+
+
+	<!-- Blog Content -->
+		<div id="blog" class="clearfix">
+			<!-- Container -->
+				<div class="container" style="width: 95% !important; padding-left: 40px; padding-right: 40px; ">
+					<!-- Sidebar -->
+						<div id="sidebar" style="width: 30%; float: right;" >
+							<!-- Suggestion Widget -->
+								<div class="widget widget_search clearfix">
+									
+								</div>
+								<div class="widget widget_search clearfix">
+									<div class='heading'><h5>Suggestions</h5></div>		<div class='suggestion suggestionParent'>
+											<a href='/article/WHEBN0000054383/Pangram' >
+												<span class='suggestionImage'>
+													<img src='http://read.images.worldlibrary.net/imagerectangle/Pangram_en_Baskerville.png' width='120px' alt='Pangram' style='float:left'>
+												</span>
+												<span title='Pangram' class='suggestionTitle'>
+													Pangram
+												</span>
+												<span class='suggestionSubTitle'>
+													<span>
+														The quick brown fox jumps over the lazy dog, ß, English language, Baskerville, Greek language, Afrikaans
+													</span>		
+												</span>
+											</a>
+										</div>		<div class='suggestion suggestionParent'>
+											<a href='/article/WHEBN0003220620/List of Russian language topics' >
+												<span class='suggestionImage'>
+													<img src='http://read.images.worldlibrary.net/imagerectangle/WHEBN0003220620.jpg' width='120px' alt='List of Russian language topics' style='float:left'>
+												</span>
+												<span title='List of Russian language topics' class='suggestionTitle'>
+													List of Russian language topics
+												</span>
+												<span class='suggestionSubTitle'>
+													<span>
+														Russian language, Assimilation (linguistics), Barbarism (linguistics), Capitalization, Clitic, Code-switching
+													</span>		
+												</span>
+											</a>
+										</div>		<div class='suggestion suggestionParent'>
+											<a href='/article/WHEBN0022830172/The quick brown fox jumps over the lazy dog' >
+												<span class='suggestionImage'>
+													<img src='http://read.images.worldlibrary.net/imagerectangle/MetalTypeZoomIn.JPG' width='120px' alt='The quick brown fox jumps over the lazy dog' style='float:left'>
+												</span>
+												<span title='The quick brown fox jumps over the lazy dog' class='suggestionTitle'>
+													The quick brown fox jumps over the lazy dog
+												</span>
+												<span class='suggestionSubTitle'>
+													<span>
+														English language, English alphabet, Robert Baden-Powell, 1st Baron Baden-Powell, Scouting for Boys, Moscow–Washington hotline, Ella Minnow Pea
+													</span>		
+												</span>
+											</a>
+										</div>
+								</div>
+							<!--/Suggestion Widget -->
+							<!-- BookSuggestion Widget -->
+								<div class="widget widget_search clearfix">
+									<div class="heading"><h5>Related Books</h5></div>
+									
+								</div>
+							<!--/BookSuggestion Widget -->
+
+
+
+
+
+						</div>
+					<!--/Sidebar -->
+					<div style="width: 70%;" >
+	<!-- Blog Header -->
+		<div id="blog-header">
+			<h1>List of pangrams</h1>
+			<span id="ctl00_cphMain_lblDebugText"></span>
+			<div style="text-align: center; float: right;">
+				
+							Sourced from World Heritage Encyclopedia&trade; licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_top' rel='nofollow' alt='CC BY-SA 3.0'>CC BY-SA 3.0</a> <br>
+							Help to improve this article, make contributions at the <a href='http://en.wikipedia.org/wiki/List of pangrams?action=history' target='_top' rel='nofollow' alt='Citational Source' title='Citational Source'>Citational Source</a>
+		
+			</div>
+		</div>
+	<!--/Blog Header -->
+
+						<!-- Blog Posts Content -->
+							<div class="blog-posts-content" style="width: 100%; min-width: 475px; margin: 0px;">
+								<!-- Blog Post -->
+									<div class="blog-post">
+
+
+
+
+
+									</div>
+								<!-- Blog Post -->
+								<!-- Post Content -->
+									<div class="post-content" style="width: 100%;" >
+										
+
+										<h3 class="blog-title" >List of pangrams</h3>
+
+
+
+
+
+										<div class="blog-border"></div>
+										<!-- Blog Content -->
+											<div class="blog-content">
+												<p>This is a <b>list of <a href="/articles/Pangram" title="Pangram">pangrams</a></b>, which are sentences using every letter of the <a href="/articles/Alphabet" title="Alphabet">alphabet</a> at least once.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Perfect_pangrams_in_English_.2826_letters.29"><span class="tocnumber">1</span> <span class="toctext">Perfect pangrams in English (26 letters)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Without_abbreviations.2C_acronyms.2C_contractions.2C_initialisms.2C_proper_nouns_or_Roman_numerals"><span class="tocnumber">1.1</span> <span class="toctext">Without abbreviations, acronyms, contractions, initialisms, proper nouns or Roman numerals</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#With_abbreviations.2C_acronyms.2C_initialisms_or_proper_nouns.2C_all_restricted_to_dictionary_words"><span class="tocnumber">1.2</span> <span class="toctext">With abbreviations, acronyms, initialisms or proper nouns, all restricted to dictionary words</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#With_abbreviations.2C_acronyms.2C_contractions.2C_initialisms.2C_proper_nouns_or_Roman_numerals"><span class="tocnumber">1.3</span> <span class="toctext">With abbreviations, acronyms, contractions, initialisms, proper nouns or Roman numerals</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Longer_pangrams_in_English_.28in_order_of_fewest_letters_used.29"><span class="tocnumber">2</span> <span class="toctext">Longer pangrams in English (in order of fewest letters used)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#English_pangrams_having_grammar_for_coherent_prose.2C_without_proper_nouns.2C_all_restricted_to_dictionary_words."><span class="tocnumber">3</span> <span class="toctext">English pangrams having grammar for coherent prose, without proper nouns, all restricted to dictionary words.</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#English_phonetic_pangrams"><span class="tocnumber">4</span> <span class="toctext">English phonetic pangrams</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Other_languages"><span class="tocnumber">5</span> <span class="toctext">Other languages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#All_letters"><span class="tocnumber">5.1</span> <span class="toctext">All letters</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Arabic"><span class="tocnumber">5.1.1</span> <span class="toctext">Arabic</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Azeri"><span class="tocnumber">5.1.2</span> <span class="toctext">Azeri</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Breton"><span class="tocnumber">5.1.3</span> <span class="toctext">Breton</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Bulgarian"><span class="tocnumber">5.1.4</span> <span class="toctext">Bulgarian</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Catalan"><span class="tocnumber">5.1.5</span> <span class="toctext">Catalan</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Croatian"><span class="tocnumber">5.1.6</span> <span class="toctext">Croatian</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Czech"><span class="tocnumber">5.1.7</span> <span class="toctext">Czech</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Danish"><span class="tocnumber">5.1.8</span> <span class="toctext">Danish</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Divehi"><span class="tocnumber">5.1.9</span> <span class="toctext">Divehi</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Dutch"><span class="tocnumber">5.1.10</span> <span class="toctext">Dutch</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Dzongkha"><span class="tocnumber">5.1.11</span> <span class="toctext">Dzongkha</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Esperanto"><span class="tocnumber">5.1.12</span> <span class="toctext">Esperanto</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Estonian"><span class="tocnumber">5.1.13</span> <span class="toctext">Estonian</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Eesti"><span class="tocnumber">5.1.14</span> <span class="toctext">Eesti</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Finnish"><span class="tocnumber">5.1.15</span> <span class="toctext">Finnish</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#French"><span class="tocnumber">5.1.16</span> <span class="toctext">French</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#West_Frisian"><span class="tocnumber">5.1.17</span> <span class="toctext">West Frisian</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#German"><span class="tocnumber">5.1.18</span> <span class="toctext">German</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Greek"><span class="tocnumber">5.1.19</span> <span class="toctext">Greek</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#Hebrew"><span class="tocnumber">5.1.20</span> <span class="toctext">Hebrew</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#Hungarian"><span class="tocnumber">5.1.21</span> <span class="toctext">Hungarian</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Icelandic"><span class="tocnumber">5.1.22</span> <span class="toctext">Icelandic</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Indonesian"><span class="tocnumber">5.1.23</span> <span class="toctext">Indonesian</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#Irish"><span class="tocnumber">5.1.24</span> <span class="toctext">Irish</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#Italian"><span class="tocnumber">5.1.25</span> <span class="toctext">Italian</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Japanese"><span class="tocnumber">5.1.26</span> <span class="toctext">Japanese</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#Javanese"><span class="tocnumber">5.1.27</span> <span class="toctext">Javanese</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#Klingon"><span class="tocnumber">5.1.28</span> <span class="toctext">Klingon</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#Korean"><span class="tocnumber">5.1.29</span> <span class="toctext">Korean</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Latin"><span class="tocnumber">5.1.30</span> <span class="toctext">Latin</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Latvian"><span class="tocnumber">5.1.31</span> <span class="toctext">Latvian</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Lithuanian"><span class="tocnumber">5.1.32</span> <span class="toctext">Lithuanian</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#Lojban"><span class="tocnumber">5.1.33</span> <span class="toctext">Lojban</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#Macedonian"><span class="tocnumber">5.1.34</span> <span class="toctext">Macedonian</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="#Mapudungun"><span class="tocnumber">5.1.35</span> <span class="toctext">Mapudungun</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="#Mongolian"><span class="tocnumber">5.1.36</span> <span class="toctext">Mongolian</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="#Myanmar"><span class="tocnumber">5.1.37</span> <span class="toctext">Myanmar</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="#Norwegian"><span class="tocnumber">5.1.38</span> <span class="toctext">Norwegian</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="#Polish"><span class="tocnumber">5.1.39</span> <span class="toctext">Polish</span></a></li>
+<li class="toclevel-3 tocsection-49"><a href="#Portuguese"><span class="tocnumber">5.1.40</span> <span class="toctext">Portuguese</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="#Romanian"><span class="tocnumber">5.1.41</span> <span class="toctext">Romanian</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#Russian"><span class="tocnumber">5.1.42</span> <span class="toctext">Russian</span></a></li>
+<li class="toclevel-3 tocsection-52"><a href="#Scottish_Gaelic"><span class="tocnumber">5.1.43</span> <span class="toctext">Scottish Gaelic</span></a></li>
+<li class="toclevel-3 tocsection-53"><a href="#Serbian"><span class="tocnumber">5.1.44</span> <span class="toctext">Serbian</span></a></li>
+<li class="toclevel-3 tocsection-54"><a href="#Slovak"><span class="tocnumber">5.1.45</span> <span class="toctext">Slovak</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="#Slovenian"><span class="tocnumber">5.1.46</span> <span class="toctext">Slovenian</span></a></li>
+<li class="toclevel-3 tocsection-56"><a href="#Spanish"><span class="tocnumber">5.1.47</span> <span class="toctext">Spanish</span></a></li>
+<li class="toclevel-3 tocsection-57"><a href="#Swedish"><span class="tocnumber">5.1.48</span> <span class="toctext">Swedish</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="#Thai"><span class="tocnumber">5.1.49</span> <span class="toctext">Thai</span></a></li>
+<li class="toclevel-3 tocsection-59"><a href="#Tibetan"><span class="tocnumber">5.1.50</span> <span class="toctext">Tibetan</span></a></li>
+<li class="toclevel-3 tocsection-60"><a href="#Turkish"><span class="tocnumber">5.1.51</span> <span class="toctext">Turkish</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="#Ukrainian"><span class="tocnumber">5.1.52</span> <span class="toctext">Ukrainian</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="#Urdu"><span class="tocnumber">5.1.53</span> <span class="toctext">Urdu</span></a></li>
+<li class="toclevel-3 tocsection-63"><a href="#Uyghur"><span class="tocnumber">5.1.54</span> <span class="toctext">Uyghur</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-64"><a href="#Only_letters_with_diacritical_marks_and_other_national_specific_letters"><span class="tocnumber">5.2</span> <span class="toctext">Only letters with diacritical marks and other national specific letters</span></a></li>
+<li class="toclevel-2 tocsection-65"><a href="#Sample_font_displays_in_other_languages_using_pangrams"><span class="tocnumber">5.3</span> <span class="toctext">Sample font displays in other languages using pangrams</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-66"><a href="#Perfect_pangrams_from_restricted_sets"><span class="tocnumber">6</span> <span class="toctext">Perfect pangrams from restricted sets</span></a>
+<ul>
+<li class="toclevel-2 tocsection-67"><a href="#Chemical_element_symbols"><span class="tocnumber">6.1</span> <span class="toctext">Chemical element symbols</span></a></li>
+<li class="toclevel-2 tocsection-68"><a href="#Country_codes"><span class="tocnumber">6.2</span> <span class="toctext">Country codes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-69"><a href="#Self-enumerating_pangrams"><span class="tocnumber">7</span> <span class="toctext">Self-enumerating pangrams</span></a></li>
+<li class="toclevel-1 tocsection-70"><a href="#Initial_letter_pangrams"><span class="tocnumber">8</span> <span class="toctext">Initial letter pangrams</span></a></li>
+<li class="toclevel-1 tocsection-71"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-72"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-73"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Perfect_pangrams_in_English_.2826_letters.29">Perfect pangrams in English (26 letters)</span></h2>
+<h3><span class="mw-headline" id="Without_abbreviations.2C_acronyms.2C_contractions.2C_initialisms.2C_proper_nouns_or_Roman_numerals">Without abbreviations, acronyms, contractions, initialisms, proper nouns or Roman numerals</span></h3>
+<ul>
+<li> Cwm fjord veg balks nth pyx quiz. (<i>Relaxing in basins at the end of inlets terminates the endless tests from the box.</i>)
+</li>
+<li> Cwm fjordbank glyphs vext quiz. (<i>Carved symbols in a mountain hollow on the bank of an inlet irritated an eccentric person.</i>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup>
+</li>
+<li> Jink cwm, zag veldt, fob qursh pyx. (<i>Cross valley and plain to steal coins from Saudi mint.</i> – created by Stephen Wagner)
+</li>
+<li> Junky qoph-flags vext crwd zimb. (<i>An Abyssinian fly playing a Celtic violin was annoyed by trashy flags on which were the Hebrew letter qoph.</i>)
+</li>
+<li> <a href="/articles/Veld" title="Veld">Veldt</a> <a href="/articles/Wryneck" title="Wryneck">jynx</a> grimps <a href="/articles/Waqf" title="Waqf">waqf</a> <a href="/articles/Zho" title="Zho" class="mw-redirect">zho</a> buck (<i>A grass-plains wryneck climbs upon a male yak-cattle hybrid that was donated under Islamic law.</i>)
+</li>
+<li> Bortz waqf glyphs vex muck djin.  (<i>Signage indicating endowments for industrial diamonds annoy filth-spreading genies.</i> – created by Ed Spargo)
+</li>
+<li> Kat veld zubr gif cwm jynx qophs. (<i>European bison of a shrubby African plain make digital image files of Semitic letters from valley wrynecks.</i> – discovered by Da-Shih Hu)
+</li>
+</ul>
+<h3><span class="mw-headline" id="With_abbreviations.2C_acronyms.2C_initialisms_or_proper_nouns.2C_all_restricted_to_dictionary_words">With abbreviations, acronyms, initialisms or proper nouns, all restricted to dictionary words</span></h3>
+<ul>
+<li> Jumbling vext frowzy hacks <a href="/articles/PDQ" class="extiw" title="wikt:PDQ">PDQ</a>. (<i>Being bounced around quickly annoyed the disheveled taxi drivers.</i> – all words in high school dictionary)
+</li>
+<li> <a href="/articles/PR" class="extiw" title="wikt:PR">PR</a> flacks quiz gym: TV DJ box when? (<i>Public relations agent asks sports room, when do television disc jockeys fight?</i>)
+</li>
+<li> Zing, dwarf jocks vex lymph, <a href="/articles/Qutb" class="extiw" title="wikt:Qutb">Qutb</a>.  (<i>Making a high-pitched sound, short athletes annoy their white blood plasma and an Islamic saint.</i> – created by Peter M. Lella)
+</li>
+<li> Zing, vext <a href="/articles/cwm" class="extiw" title="wikt:cwm">cwm</a> fly jabs Kurd <a href="/articles/qoph" class="extiw" title="wikt:qoph">qoph</a>. (<i>Making a high-pitched sound, annoyed mountain basin insect sticks Hebrew letter.</i>)
+</li>
+</ul>
+<h3><span class="mw-headline" id="With_abbreviations.2C_acronyms.2C_contractions.2C_initialisms.2C_proper_nouns_or_Roman_numerals">With abbreviations, acronyms, contractions, initialisms, proper nouns or Roman numerals</span></h3>
+<ul>
+<li> Blowzy night-frumps vex'd Jack Q.
+</li>
+<li> Dwarf mobs quiz lynx.jpg, kvetch! (<i>crowd of midgets question picture of wildcat, then complain.</i>)
+</li>
+<li> Fjord Nymphs XV beg quick waltz.
+</li>
+<li> Fjord q-klutz bahs given cwm pyx.
+</li>
+<li> Frowzy things plumb vex'd Jack Q.
+</li>
+<li> G.B. fjords vex quick waltz nymph.
+</li>
+<li> Glum Schwartzkopf vex'd by NJ IQ.
+</li>
+<li> Jerk gawps foxy Qum Blvd. chintz.
+</li>
+<li> JFK got my VHS, PC and XLR web quiz.
+</li>
+<li> Jocks find quartz glyph, vex BMW.
+</li>
+<li> J.Q. Vandz struck my big fox whelp.
+</li>
+<li> J.Q. Schwartz flung D.V. Pike my box.
+</li>
+<li> Jump dogs, why vex Fritz Blank QC?
+</li>
+<li> Mr. Jock, TV quiz PhD, bags few lynx.
+</li>
+<li> New job: fix Mr. Gluck's hazy TV, PDQ! (includes 5 <a href="/articles/Punctuation_symbol" title="Punctuation symbol" class="mw-redirect">punctuation symbols</a>)
+</li>
+<li> Quartz glyph job vex'd cwm finks. (<i>The act of carving symbols into quartz irritated ruffians from a Welsh river valley.</i>)
+</li>
+<li> Quartz jock vends BMW glyph fix.
+</li>
+<li> The glib czar junks my VW Fox PDQ.
+</li>
+<li> TV quiz jock, Mr. PhD, bags few lynx.
+</li>
+<li> Gym DJ Beck vows phiz tranq flux.  (<i>Beck, the gymnasium DJ, promises a change in facial tranquilizers.</i>)
+</li>
+</ul>
+<h2><span class="mw-headline" id="Longer_pangrams_in_English_.28in_order_of_fewest_letters_used.29">Longer pangrams in English (in order of fewest letters used)</span></h2>
+<ul>
+<li> Nymphs blitz quick vex dwarf jog. (27 letters)
+</li>
+<li> DJs flock by when MTV ax quiz prog. (27 letters) (2 abbreviations and a US spelling)
+</li>
+<li> Big fjords vex quick waltz nymph.  (27 letters)
+</li>
+<li> Bawds jog, flick quartz, vex nymph. (27 letters)
+</li>
+<li> Waltz job vexed quick frog nymphs. (28 letters) (new variation on 29 letter version)
+</li>
+<li> Junk MTV quiz graced by fox whelps. (28 letters) (Includes proper noun)
+</li>
+<li> Bawds jog, flick quartz, vex <a href="/articles/Nymph" title="Nymph">nymphs</a>. (28 letters)
+</li>
+<li> Waltz, bad nymph, for quick jigs vex! (28 letters)
+</li>
+<li> Fox nymphs grab quick-jived waltz. (28 letters)
+</li>
+<li> Brick quiz whangs jumpy veldt fox. (28 letters)
+</li>
+<li> Glib jocks quiz nymph to vex dwarf. (28 letters)
+</li>
+<li> Bright vixens jump; dozy fowl quack. (29 letters)
+</li>
+<li> Vexed nymphs go for quick waltz job. (29 letters)
+</li>
+<li> Quick wafting <a href="/articles/zephyr" class="extiw" title="wikt:zephyr">zephyrs</a> vex bold Jim. (29 letters) (Includes proper noun)
+</li>
+<li> Quick zephyrs blow, vexing daft Jim. (29 letters) (Includes proper noun)
+</li>
+<li> Quick blowing zephyrs vex daft Jim. (29 letters) (Includes proper noun)
+</li>
+<li> <a href="/articles/Sphinx" title="Sphinx">Sphinx</a> of black quartz, judge my vow. (29 letters) (Used by <a href="/articles/Adobe_InDesign" title="Adobe InDesign">Adobe InDesign</a> when providing samples of all fonts.)
+</li>
+<li> Sex-charged <a href="/articles/Fop" title="Fop">fop</a> blew my junk TV quiz. (29 letters)
+</li>
+<li> Both fickle dwarves jinx my pig quiz. (30 letters)
+</li>
+<li> Fat hag dwarves quickly zap jinx mob. (30 letters)
+</li>
+<li> Hick dwarves jam blitzing foxy quip. (30 letters)
+</li>
+<li> Fox dwarves chop my talking quiz job. (30 letters)
+</li>
+<li> Public junk dwarves quiz mighty fox. (30 letters)
+</li>
+<li> Jack fox bids ivy-strewn phlegm quiz. (30 letters)
+</li>
+<li> How quickly daft jumping zebras vex. (30 letters)
+</li>
+<li> Two driven jocks help fax my big quiz. (30 letters)
+</li>
+<li> "Now fax quiz Jack!" my brave ghost pled. (30 letters)
+</li>
+<li> Jack, love my big wad of sphinx quartz! (30 letters) (Includes proper noun)
+</li>
+<li> Do wafting zephyrs quickly vex Jumbo? (31 letters)  (Includes proper noun)
+</li>
+<li> Fickle jinx bog dwarves spy math quiz. (31 letters)
+</li>
+<li> Big dwarves heckle my top quiz of jinx. (31 letters)
+</li>
+<li> Fickle bog dwarves jinx empathy quiz. (31 letters)
+</li>
+<li> Public junk dwarves hug my quartz fox. (31 letters)
+</li>
+<li> Jumping hay dwarves flock quartz box. (31 letters)
+</li>
+<li> Five jumping wizards hex bolty quick. (31 letters)
+</li>
+<li> Five hexing wizard bots jump quickly. (31 letters)
+</li>
+<li> Quick fox jumps nightly above wizard. (31 letters)
+</li>
+<li> Vamp fox held quartz duck just by wing. (31 letters)
+</li>
+<li> Five quacking zephyrs jolt my wax bed. (31 letters) (Used by <span>Mac OS X</span> when previewing TrueType fonts.)
+</li>
+<li> The five boxing wizards jump quickly. (31 letters) (Used by <span>XXDiff</span> as sample text)
+</li>
+<li> <span>Jackdaws</span> love my big sphinx of quartz. (31 letters) (Used by <a href="/articles/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows XP</a> when previewing some non-TrueType/OpenType fonts. It is interesting that the set of digits afterwards omits the numeral 7.)
+</li>
+<li> Show mangled quartz flip vibe exactly. (32 letters)
+</li>
+<li> My jocks box, get hard, unzip, quiver, flow. (32 letters)
+</li>
+<li> Kvetching, flummoxed by job, <a href="/articles/George_W._Bush" title="George W. Bush">W.</a> zaps Iraq. (32 letters) (Includes proper noun)
+</li>
+<li> My ex pub quiz crowd gave joyful thanks. (32 letters)
+</li>
+<li> Cozy sphinx waves quart jug of bad milk. (32 letters)
+</li>
+<li> A very bad quack might jinx zippy fowls. (32 letters) (Contains all 26 letters in lower case)
+</li>
+<li> Pack my box with five dozen liquor jugs. (32 letters) (Used for font samples by <a href="/articles/Beagle_Bros" title="Beagle Bros">Beagle Bros</a> and in <a href="/articles/Space_Shuttle" title="Space Shuttle">Space Shuttle</a>, Featured in <a href="/articles/Ella_Minnow_Pea" title="Ella Minnow Pea">Ella Minnow Pea</a>)
+</li>
+<li> Few quips galvanized the mock jury box. (32 letters)
+</li>
+<li> Quick brown fox jumps over the lazy dog. (32 letters) (Not attested as frequently as the traditional, and better-formed, <a href="/articles/The_quick_brown_fox_jumps_over_a_lazy_dog" title="The quick brown fox jumps over a lazy dog" class="mw-redirect">The quick brown fox...</a>, below).
+</li>
+<li> Jumpy halfling dwarves pick quartz box. (33 letters)
+</li>
+<li> Schwarzkopf vexed Iraq big-time in July. (33 letters)
+</li>
+<li> Vex quest wizard, judge my backflop hand. (33 letters)
+</li>
+<li> The jay, pig, fox, zebra and my wolves quack! (33 letters)
+</li>
+<li> Blowzy red vixens fight for a quick jump. (33 letters)
+</li>
+<li> Sex prof gives back no quiz with mild joy. (33 letters)
+</li>
+<li> <a href="/articles/The_quick_brown_fox_jumps_over_a_lazy_dog" title="The quick brown fox jumps over a lazy dog" class="mw-redirect">The quick brown fox jumps over a lazy dog</a>. (33 letters) (Used to test typewriters and computer keyboards, and as sample text; famous for its coherency, dating back to 1888) (Often misquoted as "jumped" making it no longer a pangram, and over "the" lazy dog making it a slightly longer pangram)
+</li>
+<li> A quick brown fox jumps over the lazy dog. (33 letters) (This variation contains all 26 letters in lower case)
+</li>
+<li> Squdgy fez, blank jimp crddsdadawth vox! (33 letters) (<i>A short brimless felt hat barely blocks out the sound of a Celtic violin.</i> – created by <a href="/articles/Claude_Shannon" title="Claude Shannon">Claude Shannon</a>)
+</li>
+<li> Quest judge wizard bonks foxy chimp love. (34 letters)
+</li>
+<li> Boxers had zap of gay jock love, quit women. (34 letters, each consonant used only once)
+</li>
+<li> Joaquin Phoenix was gazed by MTV for luck. (34 letters) (Includes two proper nouns)
+</li>
+<li> <a href="/articles/JCVD" title="JCVD" class="mw-redirect">JCVD</a> might pique a sleazy boxer with funk.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> (34 letters) (Includes initials of proper noun)
+</li>
+<li> Quizzical twins proved my hijack-bug fix. (34 letters)
+</li>
+<li> Fix problem quickly with galvanized jets. (35 letters)
+</li>
+<li> The quick brown fox jumps over the lazy dog. (35 letters)
+</li>
+<li> Waxy and quivering, jocks fumble the pizza. (35 letters)
+</li>
+<li> When zombies arrive, quickly fax judge Pat. (35 letters) (Includes proper noun)
+</li>
+<li> Heavy boxes perform quick waltzes and jigs. (36 letters)
+</li>
+<li> A quick chop jolted my big sexy frozen wives. (36 letters)
+</li>
+<li> Thieving Jews quickly formed big prize tax. (36 letters) (Includes proper noun, also <a href="/articles/Racist" title="Racist" class="mw-redirect">racist</a>)
+</li>
+<li> A wizard's job is to vex chumps quickly in fog. (36 letters)
+</li>
+<li> Sympathizing would fix Quaker objectives. (36 letters) (Includes proper noun)
+</li>
+<li> Pack my red box with five dozen quality jugs. (36 letters)
+</li>
+<li> Quads of blowzy fjord ignite map vex'd chicks. (37 letters)
+</li>
+<li> Fake bugs put in wax jonquils drive him crazy. (37 letters)
+</li>
+<li> Watch "Jeopardy!", Alex Trebek's fun TV quiz game. (37 letters) (Includes proper noun)
+</li>
+<li> GQ jock wears vinyl tuxedo for showbiz promo. (37 letters) (Includes proper noun)
+</li>
+<li> The quick brown fox jumped over the lazy dogs. (37 letters)
+</li>
+<li> Woven silk pyjamas exchanged for blue quartz. (38 letters) (Used for font samples by <a href="/articles/Scribus" title="Scribus">Scribus</a>)
+</li>
+<li> Brawny gods just flocked up to quiz and vex him. (38 letters)
+</li>
+<li> Twelve ziggurats quickly jumped a finch box. (38 letters)
+</li>
+<li> Prating jokers quizzically vexed me with fibs. (39 letters)
+</li>
+<li> My faxed joke won a pager in the cable TV quiz show. (39 letters)
+</li>
+<li> The quick onyx goblin jumps over the lazy dwarf. (39 letters) (From flavor text in a card in the <a href="/articles/Magic:_the_Gathering" title="Magic: the Gathering" class="mw-redirect">Magic: the Gathering</a> card game<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup>)
+</li>
+<li> The lazy major was fixing Cupid's broken quiver. (39 letters) (Includes proper noun)
+</li>
+<li> Amazingly few <a href="/articles/Discotheque" title="Discotheque" class="mw-redirect">discotheques</a> provide <a href="/articles/Jukeboxes" title="Jukeboxes" class="mw-redirect">jukeboxes</a>. (40 letters) (only 5 words – shortest of these longer panagrams; also contains all 26 letters in lower case)
+</li>
+<li> Foxy diva Jennifer Lopez wasn't baking my quiche. (41 letters) (Includes proper noun)
+</li>
+<li> Cozy lummox gives smart squid who asks for job pen. (41 letters) (Used for font samples by the <a href="/articles/Apple_Macintosh" title="Apple Macintosh" class="mw-redirect">Macintosh</a>, post-<a href="/articles/System_7_(Macintosh)" title="System 7 (Macintosh)" class="mw-redirect">System 7</a>, as well as on certain <a href="/articles/PalmOne" title="PalmOne" class="mw-redirect">Palm</a> products)
+</li>
+<li> By Jove, my quick study of lexicography won a prize. (41 letters) (Includes proper noun)
+</li>
+<li> Painful zombies quickly watch a jinxed graveyard. (42 letters)
+</li>
+<li> Fax back Jim's Gwyneth Paltrow video quiz. (42 letters) (Includes proper noun)
+</li>
+<li> My girl wove six dozen plaid jackets before she quit. (43 letters)
+</li>
+<li> Then a cop quizzed Mick Jagger's ex-wives briefly. (43 letters) (Includes proper noun) 
+</li>
+<li> Six big devils from Japan quickly forgot how to waltz. (44 letters)
+</li>
+<li> "Who am taking the ebonics quiz?", the prof jovially axed. (44 letters)
+</li>
+<li> Why shouldn't a quixotic Kazakh vampire jog barefoot? (44 letters) (Includes proper noun)
+</li>
+<li> Grumpy wizards make a toxic brew for the jovial queen. (44 letters)
+</li>
+<li> Sixty zips were quickly picked from the woven jute bag. (45 letters)
+</li>
+<li> Big July earthquakes confound zany experimental vow. (45 letters)
+</li>
+<li> Foxy parsons quiz and cajole the lovably dim wiki-girl. (45 letters)
+</li>
+<li> Cute, kind, jovial, foxy physique, amazing beauty? Wowser! (45 letters)
+</li>
+<li> Have a pick: twenty six letters — no forcing a jumbled quiz! (46 letters)
+</li>
+<li> A very big box sailed up then whizzed quickly from Japan. (46 letters)
+</li>
+<li> <a href="/articles/Battle_of_Thermopylae" title="Battle of Thermopylae">Battle of Thermopylae</a>: Quick javelin grazed wry <span>Xerxes</span>. (46 letters) (Includes proper nouns)
+</li>
+<li> Jack quietly moved up front and seized the big ball of wax. (47 letters) (Includes proper noun)
+</li>
+<li> Few black taxis drive up major roads on quiet hazy nights. (47 letters)
+</li>
+<li> Just poets wax boldly as kings and queens march over fuzz. (47 letters)
+</li>
+<li> Bored? Craving a pub quiz fix? Why, just come to the Royal Oak! (47 letters) (Used to advertise a pub quiz in <a href="/articles/Bowness-on-Windermere" title="Bowness-on-Windermere">Bowness-on-Windermere</a>)
+</li>
+<li> <a href="/articles/Quincy_Pondexter" title="Quincy Pondexter">Quincy Pondexter</a> blocked five jams against the <a href="/articles/Washington_Wizards" title="Washington Wizards">Wizards</a>! (47 letters) (Includes proper nouns, also best <a href="/articles/NBA" title="NBA" class="mw-redirect">NBA</a>-related pangram)
+</li>
+<li> Crazy Fredericka bought many very exquisite opal jewels. (48 letters) (Includes proper noun)
+</li>
+<li> The job of waxing linoleum frequently peeves chintzy kids. (49 letters)
+</li>
+<li> Back in June we delivered oxygen equipment of the same size. (49 letters) (Includes proper noun)
+</li>
+<li> Just keep examining every low bid quoted for zinc etchings. (49 letters) (Used in many type specimen books for letterpress printers)
+</li>
+<li> How razorback-jumping frogs can level six piqued gymnasts! (49 letters) (Used for font samples by the <a href="/articles/Apple_Macintosh" title="Apple Macintosh" class="mw-redirect">Macintosh</a>, <a href="/articles/System_7_(Macintosh)" title="System 7 (Macintosh)" class="mw-redirect">System 7</a> era)
+</li>
+<li> A quick movement of the enemy will jeopardize six gunboats. (49 letters)
+</li>
+<li> All questions asked by five watched experts amaze the judge. (49 letters)
+</li>
+<li> The wizard quickly jinxed the gnomes before they vaporized. (50 letters)
+</li>
+<li> Quirky spud boys can jam after zapping five worthy <a href="/articles/Korg_Polysix" title="Korg Polysix">Polysixes</a>. (52 letters) (Includes proper noun)
+</li>
+<li> Grumpy wizards make toxic brew for the evil Queen and Jack. (Includes proper noun) Used by <span>Google Fonts</span>
+</li>
+</ul>
+<h2><span class="mw-headline" id="English_pangrams_having_grammar_for_coherent_prose.2C_without_proper_nouns.2C_all_restricted_to_dictionary_words.">English pangrams having grammar for coherent prose, without proper nouns, all restricted to dictionary words.</span></h2>
+<ul>
+<li> The five boxing wizards jumped quickly. (31 letters) (Used by <span>XXDiff</span> as sample text)
+</li>
+<li> Pack my box with five dozen liquor jugs. (32 letters) (Used for font samples by <a href="/articles/Beagle_Bros" title="Beagle Bros">Beagle Bros</a>, Featured in <a href="/articles/Ella_Minnow_Pea" title="Ella Minnow Pea">Ella Minnow Pea</a>)
+</li>
+<li> A quick brown fox jumps over the lazy dog. (33 letters)
+</li>
+<li> <a href="/articles/The_quick_brown_fox_jumps_over_the_lazy_dog" title="The quick brown fox jumps over the lazy dog">The quick brown fox jumps over the lazy dog</a>. (35 letters)
+</li>
+<li> Pack my red box with five dozen quality jugs. (36 letters)
+</li>
+<li> The quick brown fox jumped over the lazy dogs. (37 letters)
+</li>
+<li> Who packed five dozen old quart jugs in my box? (37 letters)
+</li>
+<li> My girl wove six dozen plaid jackets before she quit. (43 letters)
+</li>
+<li> Few black taxis drive up major roads on quiet hazy nights. (47 letters)
+</li>
+<li> A quick movement of the enemy will jeopardize six gunboats. (49 letters)
+</li>
+</ul>
+<h2><span class="mw-headline" id="English_phonetic_pangrams">English phonetic pangrams</span></h2>
+<p>Pangrams which use all the phonemes, or phones, of English (rather than alphabetic characters):
+</p>
+<ul>
+<li> "With tenure, Suzie'd have all the more leisure for yachting, but her publications are no good." (for certain US accents and phonological analyses)
+</li>
+<li> "Shaw, those twelve beige hooks are joined if I patch a young, gooey mouth." (<i>perfect</i> for certain accents with the <a href="/articles/Cot-caught_merger" title="Cot-caught merger" class="mw-redirect">cot-caught merger</a>)
+</li>
+<li> "Are those shy Eurasian footwear, cowboy chaps, or jolly earthmoving headgear?" (<i>perfect</i> for certain <a href="/articles/Received_Pronunciation" title="Received Pronunciation">Received Pronunciation</a> accents)
+</li>
+<li> "The beige hue on the waters of the loch impressed all, including the French queen, before she heard that symphony again, just as young Arthur wanted." (a <i>phonetic</i>, not merely phonemic, pangram.  It contains both nasals <span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA">[m]</span> and <span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA">[ɱ]</span> (as in 'symphony'), the fricatives <span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA">[x]</span> (as in 'loch') and <span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA">[ç]</span> (as in 'hue'), the 'dark L' <span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA">[ɫ]</span> (as in 'all'), and the unvoiced labio-velar approximant <span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA">[ʍ]</span> (as in 'queen') - in other words, it contains different allophones.)
+</li>
+</ul>
+<h2><span class="mw-headline" id="Other_languages">Other languages</span></h2>
+<h3><span class="mw-headline" id="All_letters">All letters</span></h3>
+<h4><span class="mw-headline" id="Arabic"><a href="/articles/Arabic_language" title="Arabic language">Arabic</a></span></h4>
+<ul>
+<li> صِف خَلقَ خَودِ كَمِثلِ الشَمسِ إِذ بَزَغَت — يَحظى الضَجيعُ بِها نَجلاءَ مِعطارِ (A poem by <span>Al Farāhīdi</span>)
+</li>
+<li> هلا سكنت بذي ضغثٍ فقد زعموا — شخصت تطلب ظبياً راح مجتازا
+</li>
+<li> اصبر على حفظ خضر واستشر فطنا، وزج همك في بغداذ منثملا
+</li>
+<li> نصٌّ حكيمٌ لهُ سِرٌّ قاطِعٌ وَذُو شَأنٍ عَظيمٍ مكتوبٌ على ثوبٍ أخضرَ ومُغلفٌ بجلدٍ أزرق<br/><i>naṣun ḥakymun lahu syrun qāṭiʿun wa ḏu šānin ʿẓymin maktubun ʿala ṯubin aẖḍra wa muġalafun biǧildin azraq</i>
+<ul>
+<li> A wise text which has an absolute secret and great importance, written on a green cloth and covered with blue leather (it has a riddle built into it)
+</li>
+</ul>
+</li>
+<li> ابجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+</li>
+</ul>
+<p>أبجد هوز ترتيب الحروف العبرية والعربية من اللغات الساميَّة
+</p>
+<h4><span class="mw-headline" id="Azeri"><a href="/articles/Azeri_language" title="Azeri language" class="mw-redirect">Azeri</a></span></h4>
+<ul>
+<li> Zəfər, jaketini də papağını da götür, bu axşam hava çox soyuq olacaq.
+<ul>
+<li> Zafer (male name), take your jacket and cap, it will be very cold tonight.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Breton"><a href="/articles/Breton_language" title="Breton language">Breton</a></span></h4>
+<ul>
+<li> Yec'hed mat Jakez ! Skarzhit ar gwerennoù-mañ, kavet e vo gwin betek fin ho puhez.
+</li>
+</ul>
+<h4><span class="mw-headline" id="Bulgarian"><a href="/articles/Bulgarian_language" title="Bulgarian language">Bulgarian</a></span></h4>
+<ul>
+<li> Ах чудна българска земьо, полюшквай цъфтящи жита.
+<ul>
+<li> Wonderful Bulgarian land, shake the blooming wheat-fields
+</li>
+</ul>
+</li>
+<li> Жълтата дюля беше щастлива, че пухът, който цъфна, замръзна като гьон.
+<ul>
+<li> The yellow quince was happy that the fluff, which bloomed, froze like sole-leather
+</li>
+</ul>
+</li>
+<li> За миг бях в чужд плюшен скърцащ фотьойл. (Used for font samples by the <a href="/articles/Apple_Macintosh" title="Apple Macintosh" class="mw-redirect">Macintosh</a>, in the <a href="/articles/Software_localization" title="Software localization" class="mw-redirect">localized</a> <a href="/articles/System_7_(Macintosh)" title="System 7 (Macintosh)" class="mw-redirect">System 7</a>)
+<ul>
+<li> For a moment I was in someone else's plush squeaking armchair
+</li>
+</ul>
+</li>
+<li> Вкъщи не яж сьомга с фиде без ракийка и хапка люта чушчица!
+<ul>
+<li> At home do not eat salmon with soup noodles without rakia and a bit of hot paprika!
+</li>
+</ul>
+</li>
+<li> Под южно дърво, цъфтящо в синьо, бягаше малко пухкаво зайче.
+<ul>
+<li> А little fluffy young rabbit ran under a southern tree blooming in blue
+</li>
+</ul>
+</li>
+<li> Шугав льохман, държащ птицечовка без сейф и ютия.
+</li>
+<li> Я, пазачът Вальо уж бди, а скришом хапва кюфтенца зад щайгите.
+<ul>
+<li> Oh, Valio the Guard watched and secretly ate meatballs behind crates.
+</li>
+</ul>
+</li>
+<li> Хълцайки много, въздесъщият позьор, Юрий жабока, фучеше.
+</li>
+<li> Гномът Доцьо приключи спящ в шейна за жаби.
+<ul>
+<li> Dotsyo the Gnome ended up sleeping in a carriage for frogs.
+</li>
+</ul>
+</li>
+<li> Щиглецът се яде само пържен в юфка без чушки и хвойна.
+<ul>
+<li> Goldfinch only eat fried noodles without peppers and juniper.
+</li>
+</ul>
+</li>
+<li> Фучейки и хълцайки, кьоравият грухтящ шопар жадно стъпка зюмбюлите
+<ul>
+<li> Rushing and whimpering, the grunting blind boar hungrily stepped the  Hyacinths
+</li>
+</ul>
+</li>
+<li> Хълцащ змей плюе шофьор стигнал чуждия бивак.
+<ul>
+<li> A hiccuping dragon spits upon a driver reaching someone else's campsite.
+</li>
+</ul>
+</li>
+<li> Щурчо Цоньо хапваше ловджийско кюфте с бяла гъмза.
+<ul>
+<li> The cricket Tsonyo was nibbling a hunter-style meatball with white Gamza wine.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Catalan"><a href="/articles/Catalan_language" title="Catalan language">Catalan</a></span></h4>
+<ul>
+<li> (with <a href="/articles/%C3%87" title="Ç">ç</a>) Jove xef, porti whisky amb quinze glaçons d'hidrogen, coi!
+<ul>
+<li> Young chef, bring whisky with fifteen hydrogen ice cubes, darn!
+</li>
+</ul>
+</li>
+<li> Aqueix betzol, Jan, comprava whisky de figa
+<ul>
+<li> That idiot, Jan, was buying fig whisky
+</li>
+</ul>
+</li>
+<li> Zel de grum: quetxup, whisky, cafè, bon vi; ja!
+<ul>
+<li>
+</li>
+</ul>
+</li>
+<li>Coi! quinze jans golafres de Xàtiva, beuen whisky a pams
+</li>
+</ul>
+<h4><span class="mw-headline" id="Croatian"><a href="/articles/Croatian_language" title="Croatian language">Croatian</a></span></h4>
+<ul>
+<li> Gojazni đačić s biciklom drži hmelj i finu vatu u džepu nošnje. (Used by Microsoft Office as sample text for Croatian language.)
+<ul>
+<li> The overweight little schoolboy with a bike is holding hops and fine cotton in the pocket of his attire.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Czech"><a href="/articles/Czech_language" title="Czech language">Czech</a></span></h4>
+<ul>
+<li> Nechť již hříšné saxofony ďáblů rozezvučí síň úděsnými tóny waltzu, tanga a quickstepu. (All 42 letters of the Czech alphabet, 72 letters in total)
+<ul>
+<li> Let the sinful saxophones of devils finally make the hall resonate with the frightful tones of waltz, tango and quickstep.
+</li>
+</ul>
+</li>
+<li> Příliš žluťoučký kůň úpěl ďábelské ódy. (All the non-ASCII letters of the Czech alphabet – popular sentence for character sets testing)
+<ul>
+<li> Unduly yellowish horse was groaning devilish odes.
+</li>
+</ul>
+</li>
+<li> Hleď, toť přízračný kůň v mátožné póze šíleně úpí.
+<ul>
+<li> Behold, tis the eerie horse in tottering affectation groaning like crazy.
+</li>
+</ul>
+</li>
+<li> Zvlášť zákeřný učeň s ďolíčky běží podél zóny úlů.
+<ul>
+<li> Particularly insidious apprentice with dimples is running along the zone of hives.
+</li>
+</ul>
+</li>
+<li> Loď čeří kýlem tůň obzvlášť v Grónské úžině.
+<ul>
+<li> A vessel ripples a pool by its keel, especially in the strait of Greenland.
+</li>
+</ul>
+</li>
+<li> Ó, náhlý déšť již zvířil prach a čilá laň teď běží s houfcem gazel k úkrytům.
+<ul>
+<li> Oh, sudden rain has already whirled the dust and a spry doe now gallops with a flock of gazelles for the shelter.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Danish"><a href="/articles/Danish_language" title="Danish language">Danish</a></span></h4>
+<ul>
+<li> (Each letter exactly once) Høj bly gom vandt fræk sexquiz på wc
+<ul>
+<li> Tall shy groom won dirty sex quiz on W.C.
+</li>
+</ul>
+</li>
+<li> Quizdeltagerne spiste jordbær med fløde, mens cirkusklovnen Walther spillede på xylofon.
+<ul>
+<li> The quiz contestants ate strawberry with cream while Walter the circus clown played the xylophone.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Divehi"><a href="/articles/Divehi_language" title="Divehi language" class="mw-redirect">Divehi</a></span></h4>
+<ul>
+<li> (Each letter exactly once) ވިލިފުށީ ބާރްތްޑޭ ޕާޓީގެ ރަމްޒަކީ ޗިޅިޔާޖެހި އަސްދޫންޏޭ
+</li>
+<li> ބޮޑު ބުޅާ ދުވެގޮސް ސަޅި ޒުވާން މޮޔަ މީދާ ވައްޓައި މަރާ ޗިސްކޮށް ފުންޏަކައް ޖަހައްޕޯ
+</li>
+</ul>
+<h4><span class="mw-headline" id="Dutch"><a href="/articles/Dutch_language" title="Dutch language">Dutch</a></span></h4>
+<ul>
+<li>Lynx c.q. vos prikt bh: dag zwemjuf! (Perfect pangram, 26 letters)
+<ul>
+<li>Lynx , in this case fox, stings bra: hello swim teacher!
+</li>
+</ul>
+</li>
+<li> Doch Bep, flink sexy qua vorm, zwijgt
+<ul>
+<li> But Bep, thoroughly sexy of shape, keeps silent
+</li>
+</ul>
+</li>
+<li> Sexy qua lijf, doch bang voor 't zwempak
+<ul>
+<li> Sexy of body, yet scared of the swimsuit
+</li>
+</ul>
+</li>
+<li> <span lang="nl">Pa's wijze lynx bezag vroom het fikse aquaduct</span>
+<ul>
+<li> Dad's wise lynx piously observed the sturdy aqueduct.
+</li>
+</ul>
+</li>
+<li> <span lang="nl">Filmquiz bracht knappe ex-yogi van de wijs</span>
+<ul>
+<li> <span lang="en">Film Quiz startled handsome ex-yogi</span>
+</li>
+</ul>
+</li>
+<li> <span lang="nl">Max boft: z'n vrouw is qua type degelijk</span>
+<ul>
+<li> <span lang="en">Max is lucky: his wife's type is right</span>
+</li>
+</ul>
+</li>
+<li> Several Others: "Lex bederft Uw quiz met typisch vakjargon", "Sexy dame bezorgt chique volkje fijne wip".
+</li>
+</ul>
+<h4><span class="mw-headline" id="Dzongkha"><a href="/articles/Dzongkha" title="Dzongkha">Dzongkha</a></span></h4>
+<ul>
+<li> <span lang="dz">ཨ་ཡིག་དཀར་མཛེས་ལས་འཁྲུངས་ཤེས་བློའི་གཏེར༎  ཕས་རྒོལ་ཝ་སྐྱེས་ཟིལ་གནོན་གདོང་ལྔ་བཞིན༎  ཆགས་ཐོགས་ཀུན་བྲལ་མཚུངས་མེད་འཇམ་དབྱངསམཐུས༎  མཧཱ་མཁས་པའི་གཙོ་བོ་ཉིད་འགྱུར་ཅིག།</span>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Esperanto"><a href="/articles/Esperanto" title="Esperanto">Esperanto</a></span></h4>
+<ul>
+<li> Eble ĉiu kvazaŭ-deca fuŝĥoraĵo ĝojigos homtipon.
+<ul>
+<li> Maybe every quasi-fitting bungle-choir makes a human type happy.
+</li>
+</ul>
+</li>
+<li> Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj.
+<ul>
+<li> According to Ludwig Zamenhof, fresh Czech food with spices tastes good.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Estonian"><a href="/articles/Estonian_language" title="Estonian language">Estonian</a></span></h4>
+<ul>
+<li> Põdur Zagrebi tšellomängija-följetonist Ciqo külmetas kehvas garaažis
+<ul>
+<li> Ill-healthy cellist-feuilletonist Ciqo from <a href="/articles/Zagreb" title="Zagreb">Zagreb</a> was being cold in a poor garage. (used in <a href="/articles/KDE" title="KDE">KDE</a> font selection).
+</li>
+</ul>
+</li>
+<li> See väike mölder jõuab rongile hüpata
+<ul>
+<li> This small miller is able to jump to train (used in localized version of Microsoft Word in Office XP, contains all non-foreign letters)
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Eesti"><a href="/articles/Estonian_Language" title="Estonian Language" class="mw-redirect">Eesti</a></span></h4>
+<ul>
+<li>A new Estonian Pangram:
+</li>
+<li>Jubedalt möirgav lõukoer hüppas tänaval (Terribly roaring lion jumped on street)
+</li>
+</ul>
+<h4><span class="mw-headline" id="Finnish"><a href="/articles/Finnish_language" title="Finnish language">Finnish</a></span></h4>
+<ul>
+<li> (A perfect pangram which does not include characters only found in foreign or loanwords (b, c, f, q, w, x, z, å)): Törkylempijävongahdus
+<ul>
+<li> Muckysnogger booty-call.
+</li>
+</ul>
+</li>
+<li> (Without the foreign characters c, q, x, z, w, å) Albert osti fagotin ja töräytti puhkuvan melodian.
+<ul>
+<li> Albert bought a <a href="/articles/Bassoon" title="Bassoon">bassoon</a> and blasted a puffing melody. (used in older versions of <a href="/articles/Word_Perfect" title="Word Perfect" class="mw-redirect">Word Perfect</a>).
+</li>
+</ul>
+</li>
+<li> (Without the foreign characters b, c, f, q, w, x, z, å) Lorun sangen pieneksi hyödyksi jäivät suomen kirjaimet.
+<ul>
+<li> The quite small benefit of the rhyme was the letters of Finnish.
+</li>
+</ul>
+</li>
+<li> Hyvän lorun sangen pieneksi hyödyksi jäi suomen kirjaimet.
+<ul>
+<li> Modification of the previous one where the first letter is repeated (in the case the capital first letter is used but all the small letters are needed): The quite small benefit of the good rhyme was the letters of Finnish.
+</li>
+</ul>
+</li>
+<li> (All characters, including foreign ones): Fahrenheit ja Celsius yrjösivät Åsan backgammon-peliin, Volkswagenissa, daiquirin ja ZX81:n yhteisvaikutuksesta.
+<ul>
+<li> Fahrenheit and Celsius threw up on Åsa's Backgammon board, in a Volkswagen, due to the coeffect of daiquiri and a ZX81.
+</li>
+</ul>
+</li>
+<li> (All characters, including foreign ones): Charles Darwin jammaili Åken hevixylofonilla Qatarin yöpub Zeligissä.
+<ul>
+<li> Charles Darwin was jamming on Åke's heavy metal xylophone in the Qatar night pub Zelig.
+</li>
+</ul>
+</li>
+<li> (All characters, including foreign ones): Wieniläinen sioux'ta puhuva ökyzombie diggaa Åsan roquefort-tacoja.
+<ul>
+<li> The Sioux-speaking filthy rich zombie from Vienna digs Åsa's Roquefort tacos.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="French"><a href="/articles/French_language" title="French language">French</a></span></h4>
+<ul>
+<li> Buvez de ce whisky que le patron juge fameux. (36)
+<ul>
+<li> Drink some of this whisky which the boss finds excellent.
+</li>
+</ul>
+</li>
+<li> Portez ce vieux whisky au juge blond qui fume
+<ul>
+<li> Take this old whisky to the blond smoking judge
+</li>
+</ul>
+</li>
+<li> Bâchez la queue du wagon-taxi avec les pyjamas du fakir
+<ul>
+<li> Tarpaulin up the taxi-railcar tail with the fakir’s pajamas
+</li>
+</ul>
+</li>
+<li> Voyez le brick géant que j'examine près du wharf
+<ul>
+<li> See the giant brig which I examine near the wharf [<i>the person is looking at a ship</i>]
+</li>
+</ul>
+</li>
+<li> Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi
+<ul>
+<li> Ambiguous voice of a heart which prefers kiwis' bowls to a zephyr
+</li>
+</ul>
+</li>
+<li> Monsieur Jack, vous dactylographiez bien mieux que votre ami Wolf
+<ul>
+<li> Mister Jack, you type much better than your friend Wolf [<i>was used in the Swiss army to check the keyboard of typewriters before teletransmission</i>]
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="West_Frisian"><a href="/articles/West_Frisian_language" title="West Frisian language">West Frisian</a></span></h4>
+<ul>
+<li> Alve bazige froulju wachtsje op dyn komst
+<ul>
+<li> Eleven bossy women await your arrival
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="German"><a href="/articles/German_language" title="German language">German</a></span></h4>
+<ul>
+<li> (no <span>umlauts</span> or <a href="/articles/%C3%9F" title="ß">ß</a>): Sylvia wagt quick den Jux bei Pforzheim
+<ul>
+<li> Sylvia dares quickly the joke near <a href="/articles/Pforzheim" title="Pforzheim">Pforzheim</a>
+</li>
+</ul>
+</li>
+<li> (no umlauts or ß): Franz jagt im komplett verwahrlosten Taxi quer durch Bayern
+<ul>
+<li> Franz chases in the completely shabby cab straight through <a href="/articles/Bavaria" title="Bavaria">Bavaria</a>
+</li>
+</ul>
+</li>
+<li> (with umlauts and ß): Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich
+<ul>
+<li> Victor chases twelve boxers across the great dam of <a href="/articles/Sylt" title="Sylt">Sylt</a>
+</li>
+</ul>
+</li>
+<li> (with umlauts and ß, each letter exactly once, according to the <a href="/articles/German_spelling_reform_of_1996" title="German spelling reform of 1996" class="mw-redirect">pre-1996 spelling rules</a>): "Fix, Schwyz!" quäkt Jürgen blöd vom Paß
+<ul>
+<li> "Quick, <a href="/articles/Schwyz" title="Schwyz">Schwyz</a>!" Jürgen squawks zanily from the pass
+</li>
+</ul>
+</li>
+<li> "Falsches Üben von Xylophonmusik quält jeden größeren Zwerg" (used by <a href="/articles/KDE" title="KDE">KDE</a>)
+<ul>
+<li> Wrong practising of xylophone music bothers every larger dwarf
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Greek"><a href="/articles/Greek_language" title="Greek language">Greek</a></span></h4>
+<ul>
+<li> Τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός<br/><i>Tákhistè alôpèx vaphês psèménè gè, draskelízei ypér nòthroý kynós</i>
+<ul>
+<li> The quick brown fox jumps over the lazy dog (where brown is assigned by "colour of roasted earth")
+</li>
+</ul>
+</li>
+<li> Ξεσκεπάζω τὴν ψυχοφθόρα βδελυγμία.<br><i>Xeskepazó tin psychofthóra vdelygmía.</i>
+<ul>
+<li> I uncover the soul-destroying abhorrence.
+</li>
+</ul>
+</li>
+<li> Ζαφείρι δέξου πάγκαλο, βαθῶν ψυχῆς τὸ σῆμα.
+<ul>
+<li> Receive an excellent sapphire, denoting profundity of soul.
+</li>
+</ul>
+</li>
+<li> Notable pangrams found occurring in ancient Greek literature include:
+<ul>
+<li> <i><a href="/articles/Homeric_Hymn" title="Homeric Hymn" class="mw-redirect">Homeric Hymn</a> to Hermes</i> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0137:hymn=4">22-24</a>
+</li>
+<li> <a href="/articles/Pindar" title="Pindar">Pindar</a>, <i>Olympian 6</i> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0161:book=O.:poem=6">21-24</a>
+</li>
+<li> <a href="/articles/Aeschylus" title="Aeschylus">Aeschylus</a>, <i><a href="/articles/Oresteia" title="Oresteia">Agamemnon</a></i> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0003:card=437">439-444</a>
+</li>
+<li> <a href="/articles/Euripides" title="Euripides">Euripides</a>, <i><a href="/articles/Alcestis_(play)" title="Alcestis (play)">Alcestis</a></i> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0087:card=136">169-172</a>, <i><a href="/articles/Heracles_(Euripides)" title="Heracles (Euripides)" class="mw-redirect">Hercules</a></i> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0101:card=922">927-930</a>, <i><a href="/articles/The_Bacchae" title="The Bacchae">Bacchae</a></i> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0091:card=677">719b-723a</a>
+</li>
+<li> <a href="/articles/Isaeus" title="Isaeus">Isaeus</a>, <i>De Hagnia</i>, <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0141:speech=11:section=31">section 31</a> (ἐλέλυθεν...λήψεσθαι)
+</li>
+<li> <a href="/articles/Lycurgus_of_Athens" title="Lycurgus of Athens">Lycurgus</a>, <i>Against Leocrates</i> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0151:speech=1:section=100">100.3-6</a>
+</li>
+<li> <a href="/articles/Lysias" title="Lysias">Lysias</a> <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0153:speech=12:section=93">12.93.3-5</a>
+</li>
+<li> <a href="/articles/Thucydides" title="Thucydides">Thucydides</a>, <a rel="nofollow" class="external text" href="http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0199:book=4:chapter=115">from the last four words of 4.115.2 through the first ten words of 4.115.3</a>
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Hebrew"><a href="/articles/Hebrew_language" title="Hebrew language">Hebrew</a></span></h4>
+<ul>
+<li> דג סקרן שט בים מאוכזב ולפתע מצא חברה<br/><i>dg sqr<b>n</b> šṭ bjM mʾwkzb wlptʿ mṣʾ ḥbrh</i>
+<ul>
+<li> (A curious fish sailed the sea disappointedly, and suddenly found company)
+</li>
+</ul>
+</li>
+<li> כך התרסק נפץ על גוזל קטן, שדחף את צבי למים<br/><i>k<b>k</b> htrsq np<b>ṣ</b> ʿl gwzl qṭ<b>n</b>, šdḥ<b>p</b> ʾt ṣbj lmj<b>m</b></i>
+<ul>
+<li>An explosive crashed into a small chick, which pushed my turtle into the water. (Includes all medial and final forms, here indicated by bold letters.)
+</li>
+</ul>
+</li>
+<li> שפן אכל קצת גזר בטעם חסה, ודי.<br/><i>šp<b>n</b> ʾkl qṣt gzr bṭʿ<b>m</b> ḥsh, wdj</i>
+<ul>
+<li> (A <a href="/articles/Hyrax" title="Hyrax">hyrax</a> ate some lettuce flavored carrot and that's it)
+</li>
+<li> Each letter occurs exactly once.
+</li>
+</ul>
+</li>
+<li> עטלף אבק נס דרך מזגן שהתפוצץ כי חם
+<ul>
+<li> (A "dust bat" escaped through the air conditioner, which exploded due to the heat)
+</li>
+<li> All 22 in the Hebrew alphabet with all medial and final forms
+</li>
+</ul>
+</li>
+<li> או הנסה אלהים, לבוא לקחת לו גוי מקרב גוי, במסת באתת ובמופתים ובמלחמה וביד חזקה ובזרוע נטויה, ובמוראים גדלים:  ככל אשר-עשה לכם יהוה אלהיכם, במצרים—לעיניך (<a href="/articles/Deuteronomy" title="Deuteronomy" class="mw-redirect">Deuteronomy</a> 4:34)
+</li>
+<li> לכן חכו לי נאם יהוה ליום קומי לעד, כי משפטי לאסף גוים לקבצי ממלכות, לשפך עליהם זעמי כל חרון אפי, כי באש קנאתי תאכל כל הארץ (<a href="/articles/Book_of_Zephaniah" title="Book of Zephaniah">Zephaniah</a> 3:8 – the only verse in the <a href="/articles/Hebrew_Bible" title="Hebrew Bible">Hebrew Bible</a> that contains all medial forms of the letters plus all <a href="/articles/Final_form" title="Final form">final forms</a>)
+</li>
+</ul>
+<h4><span class="mw-headline" id="Hungarian"><a href="/articles/Hungarian_language" title="Hungarian language">Hungarian</a></span></h4>
+<ul>
+<li>Jó foxim és don Quijote húszwattos lámpánál ülve egy pár bűvös cipőt készít.
+<ul>
+<li>My good foxterrier and don Quixote are making a pair of magic shoes by a 20-watt lamp.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Icelandic"><a href="/articles/Icelandic_language" title="Icelandic language">Icelandic</a></span></h4>
+<ul>
+<li> Kæmi ný öxi hér, ykist þjófum nú bæði víl og ádrepa.
+<ul>
+<li> If a new axe were here, thieves would feel increasing deterrence and punishment.
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Svo hölt, yxna kýr þegði jú um dóp í fé á bæ.
+<ul>
+<li> A cow in heat with such a limp would admittedly keep silent about drugs in sheep on a farm.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Indonesian"><a href="/articles/Indonesian_language" title="Indonesian language">Indonesian</a></span></h4>
+<ul>
+<li> Muharjo seorang xenofobia universal yang takut pada warga jazirah, contohnya Qatar.
+<ul>
+<li> Muharjo is a universal xenophobic who fears the peninsula residents, such as Qatar.
+</li>
+</ul>
+</li>
+<li> Saya lihat foto Hamengkubuwono XV bersama enam zebra purba cantik yang jatuh dari Alquranmu.
+<ul>
+<li> I saw a photo of Hamengkubuwono XV along with six beautiful ancient zebra which fell from your Koran.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Irish"><a href="/articles/Irish_language" title="Irish language">Irish</a></span></h4>
+<ul>
+<li> D'fhuascail Íosa Úrmhac na hÓighe Beannaithe pór Éava agus Ádhaimh
+</li>
+<li> D'ḟuascail Íosa Úrṁac na hÓiġe Beannaiṫe pór Éaḃa agus Áḋaiṁ
+<ul>
+<li> Jesus, Son of the blessed Virgin, redeemed the seed of Eve and Adam.
+</li>
+</ul>
+</li>
+<li> Ċuaiġ bé ṁórṡáċ le dlúṫspád fíorḟinn trí hata mo ḋea-ṗorcáin ḃig
+<ul>
+<li> A greatly satisfied woman went with a truly white dense spade through the hat of my good little well-fattened pig (uses both regular and lenited (with dot above) letters)
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Italian"><a href="/articles/Italian_language" title="Italian language">Italian</a></span></h4>
+<p>Pangrams in Italian normally omit the foreign letters j, k, w, x, and y.
+</p>
+<ul>
+<li> Quel fez sghembo copre davanti
+<ul>
+<li> That slanted <a href="/articles/Fez_(hat)" title="Fez (hat)">fez</a> covers the front.
+</li>
+</ul>
+</li>
+<li> Ma la volpe, col suo balzo, ha raggiunto il quieto Fido.
+<ul>
+<li> But the fox with her leap has reached the still Fido. [*"Fido" is a name commonly given to dogs.*]
+</li>
+</ul>
+</li>
+<li> Quel vituperabile xenofobo zelante assaggia il whisky ed esclama: alleluja!
+<ul>
+<li> That blameworthy, zealous xenophobe tastes his whisky and exclaims: Alleluja!
+</li>
+</ul>
+</li>
+<li> Pranzo d'acqua fa volti sghembi.
+<ul>
+<li> Lunch of water makes lopsided faces.
+</li>
+</ul>
+</li>
+<li> O templi, quarzi, vigne, fidi boschi!
+<ul>
+<li> O temples, quartzes, vines, faithful woods!
+</li>
+</ul>
+</li>
+<li> Che tempi brevi, zio, quando solfeggi.
+<ul>
+<li> Such short times, uncle, when you sol-fa.
+</li>
+</ul>
+</li>
+<li> Qualche notizia pavese mi fa sbadigliare.
+<ul>
+<li> Some news from Pavia makes me yawn.
+</li>
+</ul>
+</li>
+<li> In quel campo si trovan funghi in abbondanza.
+<ul>
+<li> In that field, mushrooms are to be found in abundance.
+</li>
+</ul>
+</li>
+<li> Qualche vago ione tipo zolfo, bromo, sodio.
+<ul>
+<li> Some vague ions, like sulfur, bromine, sodium.
+</li>
+</ul>
+</li>
+<li> Berlusconi? Quiz, tv, paghe da fame. (<a href="/articles/Umberto_Eco" title="Umberto Eco">Umberto Eco</a>)<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup>
+</li>
+<li> Tv? Quiz, Br, Flm, Dc... Oh, spenga! (<a href="/articles/Umberto_Eco" title="Umberto Eco">Umberto Eco</a>, 1979, without foreign letters)
+</li>
+</ul>
+<h4><span class="mw-headline" id="Japanese"><a href="/articles/Japanese_language" title="Japanese language">Japanese</a></span></h4>
+<p>Since there are tens of thousands of <a href="/articles/Kanji" title="Kanji">kanji</a> characters, Japanese pangrams are ones containing all <a href="/articles/Kana" title="Kana">kana</a>.
+</p>
+<ul>
+<li> <a href="/articles/Iroha" title="Iroha">Iroha Uta</a>
+<ul>
+<li> <span lang="ja">いろはにほへと ちりぬるを わかよたれそ つねならむ うゐのおくやま けふこえて あさきゆめみし ゑひもせす（ん）</span><br/><i>irohanihoheto chirinuruwo wakayotareso tsunenaramu uwinookuyama kefukoete asakiyumemishi yehimosesu(n)</i>
+</li>
+<li> <span lang="ja">色は匂へど 散りぬるを 我が世誰ぞ 常ならむ 有為の奥山 今日越えて 浅き夢見じ 酔ひもせず（ん）</span>
+</li>
+<li> * The poem <a href="/articles/Iroha" title="Iroha">Iroha</a> uses all 47 classical kana characters exactly once, and it comes in the form of a poem.  (The characters <a href="/articles/Wi_(kana)" title="Wi (kana)">ゐ</a> and <a href="/articles/We_(kana)" title="We (kana)">ゑ</a> are obsolete in modern Japanese.) Iroha is so classically entrenched that any modern construction of a Japanese pangram in classical form is called <i>iroha-uta</i>.
+</li>
+</ul>
+</li>
+<li> Tori Naku Uta
+<ul>
+<li> <span lang="ja">とりなくこゑす ゆめさませ みよあけわたる ひんかしを そらいろはえて おきつへに ほふねむれゐぬ もやのうち</span><br/><i>torinakukowesu yumesamase miyoakewataru hinkashiwo sorairohaete okitsuheni hofunemurewinu moyanōchi.</i>
+</li>
+<li> <span lang="ja">鳥啼く声す 夢覚ませ 見よ明け渡る 東を 空色栄えて 沖つ辺に 帆船群れゐぬ 靄の中</span>
+</li>
+<li> * Awaken from dreaming to the voice of the crying bird and see the coming daylight turning the east sky-blue; shrouded in mist is a flock of ships on the open sea
+</li>
+</ul>
+</li>
+<li> <a href="/articles/Ametsuchi_No_Uta" title="Ametsuchi No Uta" class="mw-redirect">Ametsuchi No Uta</a>
+<ul>
+<li> <span lang="ja"> あめ つち ほし そら / やま かは みね たに / くも きり むろ こけ / ひと いぬ うへ すゑ / ゆわ さる おふ せよ / えのえを なれ ゐて</span>
+</li>
+<li> <span lang="ja"> 天 地 星 空 / 山 川 峰 谷 / 雲 霧 室 苔 / 人 犬 上 末 / 硫黄 猿 生ふ 為よ / 榎の 枝を 馴れ 居て</span>
+</li>
+</ul>
+</li>
+<li> Taini no Uta
+<ul>
+<li> <span lang="ja">たゐにいて なつむわれをそ きみめすと あさりおひゆく やましろの うちゑへるこら もはほせよ えふねかけぬ</span>
+</li>
+<li> <span lang="ja">田居に出で 菜摘むわれをぞ 君召すと 求食り追ひゆく 山城の 打酔へる子ら 藻葉干せよ え舟繋けぬ</span>
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Javanese"><a href="/articles/Javanese_language" title="Javanese language">Javanese</a></span></h4>
+<ul>
+<li> ꧋ ꦲꦤꦕꦫꦏ꧈ ꦢꦠꦱꦮꦭ꧈ ꦥꦝꦗꦪꦚ꧈ ꦩꦒꦧꦛꦔ꧉<br/><i>Hanacaraka, datasawala, padhajayanya, magabathanga.</i>
+<ul>
+<li> There (were) two messengers; (they) had animosity (among each other); (they were) equally powerful (in fight); here are the corpses.
+<ul>
+<li>This poem is used as the ordering of the <a href="/articles/Javanese_Script#Alphabet_as_poem" title="Javanese Script" class="mw-redirect">Javanese script</a>.
+</li>
+<li>This poem is a perfect <a href="/articles/Pangram" title="Pangram">pangram</a>, which means there is only one instance of each letter.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Klingon"><a href="/articles/Klingon_language" title="Klingon language">Klingon</a></span></h4>
+<ul>
+<li> <span style="font-family:'pIqaD','Code2000';">    </span> [qajunpaQHeylIjmo' batlh DuSuvqang charghwI' 'It]
+<ul>
+<li> Because of your apparent audacity the depressed conqueror is willing to fight you.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Korean"><a href="/articles/Korean_language" title="Korean language">Korean</a></span></h4>
+<ul>
+<li> 키스의 고유조건은 입술끼리 만나야 하고 특별한 기술은 필요치 않다.<br/><i>Kiseu-ui goyujogeoneun ipsulkkiri mannaya hago teukbyeolhan gisureun pilyochi antha.</i>
+<ul>
+<li> The essential condition for a kiss is that lips meet and there is no special technique required.
+<ul>
+<li> In current usage, <a href="/articles/Hangul" title="Hangul">Hangul</a> has 14 simple consonant letters, 6 simple vowel letters, and 4 iotized vowel letters; there are also 5 double consonant letters, 11 consonant clusters, and 11 diphthongs, made from combinations of the simple consonants or simple vowels. Of these, the above phrase contains all the simple consonant letters, simple vowel letters, and iotized vowel letters, along with 1 double consonant letter (ㄲ "gg"), 1 consonant cluster (ㄶ "nh"), and one diphthong (ㅢ "ui").
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Latin"><a href="/articles/Latin_language" title="Latin language" class="mw-redirect">Latin</a></span></h4>
+<ul>
+<li> Sic fugiens, dux, zelotypos, quam Karus haberis.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup>
+<ul>
+<li> Thus fleeing, O leader, you are regarded with jealousy like Karus.
+</li>
+<li> Includes the letters k, y and z, used for words derived from Greek, but not the letters j, v or w, consonants that evolved from the vowels i and u.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Latvian"><a href="/articles/Latvian_language" title="Latvian language">Latvian</a></span></h4>
+<ul>
+<li> Muļķa hipiji mēģina brīvi nogaršot celofāna žņaudzējčūsku.
+<ul>
+<li> Silly hippies try to freely taste the cellophane python.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Glāžšķūņa rūķīši dzērumā čiepj Baha koncertflīģeļu vākus.
+<ul>
+<li> Glass shack gnomes steal Bach piano covers while inebriated.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Četri psihi faķīri vēlu vakarā zāģēja guļbūvei durvis, fonā šņācot mežam.
+<ul>
+<li> Late at night, four psycho conjurors were sawing the doors of a log cabin as the wind hummed in the background.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Lithuanian"><a href="/articles/Lithuanian_language" title="Lithuanian language">Lithuanian</a></span></h4>
+<ul>
+<li> Įlinkdama fechtuotojo špaga sublykčiojusi pragręžė apvalų arbūzą
+<ul>
+<li> Incurving fencer sword sparkled and perforated a round watermelon
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Lojban"><a href="/articles/Lojban" title="Lojban">Lojban</a></span></h4>
+<ul>
+<li> .o'i mu xagji sofybakni cu zvati le purdi
+<ul>
+<li> Watch out, five hungry <a href="/articles/Soviet_Union" title="Soviet Union">Soviet</a>-<a href="/articles/Cow" title="Cow" class="mw-redirect">cows</a> are in the garden!
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Macedonian"><a href="/articles/Macedonian_language" title="Macedonian language">Macedonian</a></span></h4>
+<ul>
+<li> Ѕидарски пејзаж: шугав билмез со чудење џвака ќофте и кељ на туѓ цех.
+<ul>
+<li> A mason's landscape: a mangy fool wonderingly munches on meatball and kale at someone else's expense.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Бучниов жолт џин ѕида куќа со фурна меѓу полиња за цреши, хмељ и грозје.
+<ul>
+<li> [This] noisy yellow giant is building a house with an oven in the midst of fields of cherries, hops and grapes.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Долг Џош, сторив женење, црн ѕид! Фрчат хмељ, ќумбе, ѓупки, зајак.
+<ul>
+<li> Long Josh, I've done a reaping, a black wall! Hops, Gypsy women, rabbit are whizzing.
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> Мојот дружељубив коњ со тих галоп фаќа брз џиновски глушец по туѓо ѕидче.
+<ul>
+<li> My friendly horse with a quiet gallop catches a quick giant mouse over someone else's little wall.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Mapudungun"><a href="/articles/Mapudungun" title="Mapudungun" class="mw-redirect">Mapudungun</a></span></h4>
+<ul>
+<li> (Ragileo alphabet) Gvxam mincetu apocikvyeh: ñizol ce mamvj ka raq kuse bafkeh mew
+<ul>
+<li> Tale under the full moon: the chief <a href="/articles/Chemamull" title="Chemamull">chemamull</a> and the clay old woman at the lake/sea.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Mongolian"><a href="/articles/Mongolian_language" title="Mongolian language">Mongolian</a></span></h4>
+<ul>
+<li> Щётканы фермд пийшин цувъя. Бөгж зогсч хэльюү.
+<ul>
+<li> Let's echelon fireplaces in brush farm. Ring says standing.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Myanmar"><a href="/articles/Myanmar_language" title="Myanmar language" class="mw-redirect">Myanmar</a></span></h4>
+<ul>
+<li> သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေးဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။
+<ul>
+<li> The genius from Sri Lanka read the formula of elixir of life thoroughly in the almond tree next to Zalun market.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Norwegian"><a href="/articles/Norwegian_language" title="Norwegian language">Norwegian</a></span></h4>
+<p>Since Norwegian orthography does not include c, q, w, x or z, except in foreign borrowings that haven't been naturalised, the possible pangrams including <i>all</i> the 29 letters of the <a href="/articles/Norwegian_alphabet" title="Norwegian alphabet" class="mw-redirect">Norwegian alphabet</a> will require using two or more words with a distinctly foreign spelling.
+</p>
+<ul>
+<li> Vår sære Zulu fra badeøya spilte jo whist og quickstep i min taxi.
+<ul>
+<li> Our strange Zulu from the bathing island actually played whist and quickstep in my taxi.
+</li>
+</ul>
+</li>
+<li> Høvdingens kjære squaw får litt pizza i Mexico by.
+<ul>
+<li> The chief's dear squaw gets a little pizza in Mexico City.
+</li>
+</ul>
+</li>
+<li> IQ-løs WC-boms uten hørsel skjærer god pizza på xylofon.
+<ul>
+<li> IQ-less WC-bum without hearing cuts good pizza on xylophone.
+</li>
+</ul>
+</li>
+<li> Sær golfer med kølle vant sexquiz på wc i hjemby.
+<ul>
+<li> Strange golfer with club won sex quiz on W.C. in hometown.
+</li>
+</ul>
+</li>
+<li> Jeg begynte å fortære en sandwich mens jeg kjørte taxi på vei til quiz
+<ul>
+<li> I started to devour a sandwich while I was riding a taxi on the way to the quiz
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Polish"><a href="/articles/Polish_language" title="Polish language">Polish</a></span></h4>
+<ul>
+<li> (each letter exactly once) Jeżu klątw, spłódź Finom część gry hańb! (by <a href="/articles/Stanis%C5%82aw_Bara%C5%84czak" title="Stanisław Barańczak">Stanisław Barańczak</a>)
+<ul>
+<li> O hedgehog of curses, generate for the Finns a part of the game of ignominies!
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Pójdźże, kiń tę chmurność w głąb flaszy!
+<ul>
+<li> Go, cast this melancholy into the depth of a bottle!
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Mężny bądź, chroń pułk twój i sześć flag.
+<ul>
+<li> Be brave, protect your regiment and six flags.
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Filmuj rzeź żądań, pość, gnęb chłystków!
+<ul>
+<li> Film the slaughter of demands, abstain from food, oppress the greenhorns!
+</li>
+</ul>
+</li>
+<li> Ich dalekopis fałszuje, gdy próby QXV nie wytrzymuje.
+<ul>
+<li> Their teleprinter misprints, if it does not stand the QXV test.
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Pchnąć w tę łódź jeża lub ośm skrzyń fig.
+<ul>
+<li> To push a hedgehog or eight crates of figs into this boat. (ośm – the original form of the numeral  <a rel="nofollow" class="external text" href="/articles/osiem">osiem</a>)
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Dość gróźb fuzją, klnę, pych i małżeństw!
+<ul>
+<li> "Enough of these threats with the shotgun," swear I, "haughtinesses and marriages!"
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Pójdź w loch zbić małżeńską gęś futryn!
+<ul>
+<li> Go to the dungeon to batter the marital goose of doorframes!
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Chwyć małżonkę, strój bądź pleśń z fugi.
+<ul>
+<li> Seize your wife, the garment, or the mold from the grout.
+</li>
+</ul>
+</li>
+<li> Koń i żółw grali w kości z piękną ćmą u źródła.
+<ul>
+<li> A horse and a tortoise played dice with a beautiful moth near the spring.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Portuguese"><a href="/articles/Portuguese_language" title="Portuguese language">Portuguese</a></span></h4>
+<ul>
+<li> <b>without diacritics</b>
+<ul>
+<li> Um pequeno jabuti xereta viu dez cegonhas felizes. (<a href="/articles/Brazilian_Portuguese" title="Brazilian Portuguese">BP</a>)
+<ul>
+<li> A curious little <a href="/articles/Tortoise" title="Tortoise">tortoise</a> saw ten happy storks.
+</li>
+</ul>
+</li>
+<li> Blitz prende ex-vesgo com cheque fajuto. (<a href="/articles/Brazilian_Portuguese" title="Brazilian Portuguese">BP</a>)
+<ul>
+<li> Cop arrests ex-cross-eye with fake check in a checkpoint.
+</li>
+</ul>
+</li>
+<li> Gazeta publica hoje no jornal uma breve nota de faxina na quermesse. (<a href="/articles/Brazilian_Portuguese" title="Brazilian Portuguese">BP</a>)
+<ul>
+<li> The journalists publish today at the newspaper a short note about the cleaning at the kirmiss.
+</li>
+</ul>
+</li>
+<li> Zebras caolhas de Java querem passar fax para moças gigantes de New York. (<a href="/articles/Brazilian_Portuguese" title="Brazilian Portuguese">BP</a>)
+<ul>
+<li> One-eyed zebras from Java want to fax for giant ladies from New York.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li> <b>with diacritics</b>
+<ul>
+<li> Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.
+<ul>
+<li> Luís argued to Júlia that “big arms, faith, tea, oxide, to put, bee” were Portuguese words.
+</li>
+</ul>
+</li>
+<li> À noite, vovô Kowalsky vê o ímã cair no pé do pingüim queixoso e vovó põe açúcar no chá de tâmaras do jabuti feliz. (<a href="/articles/Brazilian_Portuguese" title="Brazilian Portuguese">BP</a>)
+<ul>
+<li> At night, grandpa Kowalsky sees the magnet falling on the complaining penguin's foot and grandma puts sugar in the happy tortoise's date tea.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Romanian"><a href="/articles/Romanian_language" title="Romanian language">Romanian</a></span></h4>
+<ul>
+<li>Muzicologă în bej vând whisky și tequila, preț fix.
+<ul>
+<li>(Female) musicologist in beige, sells whisky and tequila, fixed price.
+</li>
+</ul>
+</li>
+<li>Bând whisky, jazologul șprițuit vomă fix în tequila.
+<ul>
+<li>Drinking whisky, the drunken jazzman threw up right in the tequila.
+</li>
+</ul>
+</li>
+<li>Ex-sportivul își fumează jucăuș țigara bând whisky cu tequila.
+<ul>
+<li>The ex-sportsman playfully smokes his cigarette, drinking whisky with tequila.
+</li>
+</ul>
+</li>
+<li>Înjurând pițigăiat, zoofobul comandă vexat whisky și tequila.
+<ul>
+<li>Swearing in high pitch, the zoophobic man vexedly ordered whisky and tequila.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Russian"><a href="/articles/Russian_language" title="Russian language">Russian</a></span></h4>
+<ul>
+<li> (traditional telegraph test; lacks ъ and ё) В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+<ul>
+<li> Would a citrus live in the thickets of the south? Yes, but only a fake one!
+</li>
+</ul>
+</li>
+<li> (Using quasiobsolete spelling for last word to include ъ) В чащах юга жил бы цитрус? Да, но фальшивый экземпляръ!
+<ul>
+<li> same
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Эх, чужак, общий съём цен шляп (юфть) – вдрызг!
+<ul>
+<li> Hey, stranger, the general takings from prices of hats (made from a thick leather) have completely crashed!
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) — Любя, съешь щипцы, — вздохнёт мэр, — Кайф жгуч!
+<ul>
+<li> The mayor will sigh, "Eat the pliers with love; pleasure burns!"
+</li>
+</ul>
+</li>
+<li> (Microsoft used it in fontview.exe for Cyrillic fonts without «же») Съешь же ещё этих мягких французских булок, да выпей чаю.<br/><i>S’eš’ že eŝë ètih mjagkih francuzskih bulok, da vypej čaju.</i>
+<ul>
+<li> So eat more of these soft French loaves, and have some tea!
+</li>
+</ul>
+</li>
+<li> (Used in <a href="/articles/KDE" title="KDE">KDE</a>) Широкая электрификация южных губерний даст мощный толчок подъёму сельского хозяйства.
+<ul>
+<li> Widespread electrification of southern <a href="/articles/Guberniya" title="Guberniya">guberniyas</a> will give a powerful incentive to the rise of agriculture.
+</li>
+</ul>
+</li>
+<li> Разъяренный чтец эгоистично бьёт пятью жердями шустрого фехтовальщика.
+<ul>
+<li> An enraged narrator selfishly beats a nimble fencer with five poles.
+</li>
+</ul>
+</li>
+<li> Наш банк вчера же выплатил Ф.Я. Эйхгольду комиссию за ценные вещи.
+<ul>
+<li> As of yesterday, our bank already remitted to F.J. Eichhold a commission payment for the valuables.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Scottish_Gaelic"><a href="/articles/Scottish_Gaelic" title="Scottish Gaelic">Scottish Gaelic</a></span></h4>
+<ul>
+<li> <span lang="gd">Mus d'fhàg Cèit-Ùna ròp Ì le ob.</span>
+<ul>
+<li> Before Kate-Una left the <a href="/articles/Iona" title="Iona">Iona</a> cattle auction with hops.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Serbian"><a href="/articles/Serbian_language" title="Serbian language">Serbian</a></span></h4>
+<p>(also applies to Croatian and Bosnian)
+</p>
+<ul>
+<li> <span lang="sr">Gojazni đačić s biciklom drži hmelj i finu vatu u džepu nošnje.</span>
+<ul>
+<li> The overweight little schoolboy with a bike is holding hops and fine cotton in the pocket of his attire.
+</li>
+</ul>
+</li>
+<li> <span lang="sr">Fin džip, gluh jež i čvrst konjić dođoše bez moljca.</span>
+<ul>
+<li> A nice jeep, a deaf hedgehog and a tough horse came without a moth.
+</li>
+</ul>
+</li>
+<li> <span lang="sr">Љубазни фењерџија чађавог лица хоће да ми покаже штос.</span>
+</li>
+<li> <span lang="sr">Ljubazni fenjerdžija čađavog lica hoće da mi pokaže štos.</span>
+<ul>
+<li> A kind lamplighter with grimy face wants to show me a stunt.
+</li>
+</ul>
+</li>
+<li> <span lang="sr">Ајшо, лепото и чежњо, за љубав срца мога дођи у Хаџиће на кафу.</span>
+</li>
+<li> <span lang="sr">Ajšo, lepoto i čežnjo, za ljubav srca moga dođi u Hadžiće na kafu.</span>
+<ul>
+<li> Aicha, (you that are my) beauty and longing, for the love of my heart, come to (the town of) Hadžići for a cup of coffee.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Slovak"><a href="/articles/Slovak_language" title="Slovak language">Slovak</a></span></h4>
+<ul>
+<li> Kŕdeľ ďatľov učí koňa žrať kôru. (contains only all accented letters except š)
+<ul>
+<li> A flock of woodpeckers teach a horse to feed on bark.
+</li>
+</ul>
+</li>
+<li> Kŕdeľ šťastných ďatľov učí pri ústí Váhu mĺkveho koňa obhrýzať kôru a žrať čerstvé mäso.
+<ul>
+<li> A flock of happy woodpeckers by the mouth of the river <a href="/articles/Vah" title="Vah" class="mw-redirect">Vah</a> is teaching a silent horse to nibble on bark and feed on fresh meat <i>(This is a modified sentence that not only contains modified letters with diacritics but also those without)</i>
+</li>
+</ul>
+</li>
+</ul>
+<p>Even in the expansion, <i>c</i> is missing, only occurring as part of the digraph <i>ch</i>, which is a separate letter. Also <i>f g j l q w x</i> as well as accented vowels <i>á ó</i> and unaccented <i>y</i>.
+</p>
+<h4><span class="mw-headline" id="Slovenian"><a href="/articles/Slovenian_language" title="Slovenian language" class="mw-redirect">Slovenian</a></span></h4>
+<ul>
+<li> Hišničin bratec vzgaja polže pod fikusom.
+<ul>
+<li> The little brother of the [female] concierge cultivates snails under the ficus.
+</li>
+</ul>
+</li>
+<li> Besni dirkač iz formule žuga cehu poštarjev.
+<ul>
+<li> Out of the racing car, the furious racer threatens [with the waving of his index finger] a guild of postmen.
+</li>
+</ul>
+</li>
+<li> Fučka se mi hladna goveja žolca brez pršuta.
+<ul>
+<li> I don't care [pretty offensive construction] for the cold bovine aspic without smoked ham (prosciutto).
+</li>
+</ul>
+</li>
+<li> Šerif bo za vajo spet kuhal domače žgance.
+<ul>
+<li> For an exercise, sheriff will again make home-made mush (žganci).
+</li>
+</ul>
+</li>
+<li> Piškur molče grabi fižol z dna cezijeve hoste.
+<ul>
+<li> Lambry silently grasps beans from the bottom of caesium forest.
+</li>
+</ul>
+</li>
+<li> V kožuščku hudobnega fanta stopiclja mizar. (Used by Microsoft Word 2002 as sample text for Slovene language.)
+<ul>
+<li> A cabinetmaker steps lightly through a malicious boy's fur coat.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Spanish"><a href="/articles/Spanish_language" title="Spanish language">Spanish</a></span></h4>
+<ul>
+<li> (with ñ and diacritics) El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja. (Used in <a href="/articles/Microsoft_Windows" title="Microsoft Windows">Windows</a> as sample text)
+<ul>
+<li> The quick Hindu bat was happily eating golden thistle and kiwi. The stork was playing the saxophone behind the straw arena.
+</li>
+</ul>
+</li>
+<li> (with ch, ñ, rr and ll) El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío; añoraba a su querido cachorro.
+<ul>
+<li> Wenceslao the penguin traveled kilometers under exhaustive rain and cold; he longed for his dear puppy.
+</li>
+</ul>
+</li>
+<li> Jovencillo emponzoñado de whisky: ¡qué figurota exhibe!
+<ul>
+<li> Whisky-intoxicated youngster – what a figure he's showing!
+</li>
+</ul>
+</li>
+<li> Ese libro explica en su epígrafe las hazañas y aventuras de Don Quijote de la Mancha en Kuwait.
+<ul>
+<li> That book explains in its epigraph the deeds and adventures of <a href="/articles/Don_Quixote" title="Don Quixote">Don Quijote</a> de la Mancha in <a href="/articles/Kuwait" title="Kuwait">Kuwait</a>.
+</li>
+</ul>
+</li>
+<li> Queda gazpacho, fibra, látex, jamón, kiwi y viñas.
+<ul>
+<li> There are still <a href="/articles/Gazpacho" title="Gazpacho">gazpacho</a>, fibre, latex, ham, kiwi and vineyards.
+</li>
+</ul>
+</li>
+<li> Whisky bueno: ¡excitad mi frágil pequeña vejez!
+<ul>
+<li> Good whisky, excite my frail, little old age!
+</li>
+</ul>
+</li>
+<li> Es extraño mojar queso en la cerveza o probar whisky de garrafa.
+<ul>
+<li> It is strange to dip cheese in beer or to try a whisky out of a carafe.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Swedish"><a href="/articles/Swedish_language" title="Swedish language">Swedish</a></span></h4>
+<ul>
+<li> (lacks q, x and z, old spelling 'hw') Flygande bäckasiner söka hwila på mjuka tuvor.
+<ul>
+<li> Flying snipes seek rest on soft tufts [of grass].
+</li>
+</ul>
+</li>
+<li> (each letter exactly once) Yxskaftbud, ge vår WC-zonmö IQ-hjälp.
+<ul>
+<li> Axe handle courier, give our WC zone maiden IQ help.
+</li>
+</ul>
+</li>
+<li> (each letter once, old spelling 'qv', lacks foreign letter 'w') Gud hjälpe Zorns mö qvickt få byxa.
+<ul>
+<li> God help Zorn's maiden get trousers quickly.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Thai"><a href="/articles/Thai_language" title="Thai language">Thai</a></span></h4>
+<ul>
+<li> เป็นมนุษย์สุดประเสริฐเลิศคุณค่า กว่าบรรดาฝูงสัตว์เดรัจฉาน จงฝ่าฟันพัฒนาวิชาการ อย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร ไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า หัดอภัยเหมือนกีฬาอัชฌาสัย ปฏิบัติประพฤติกฎกำหนดใจ พูดจาให้จ๊ะๆ จ๋าๆ น่าฟังเอยฯ<br/><i>bpenM maH nootH sootL bpraL saehR ritH leertF khoonM khaaF gwaapL raawnM daaM fuungR satL daehM ratH chaanR johngM faaL fanM phatH naaM wiH chaaM gaanM aL yaaF laangH phlaanR reuuM khenL khaaF beeM thaaM khraiM maiF theuuR tho:htF gro:htL chaaengF satH heutH hatH daaL hatL aL phaiM meuuanR geeM laaM atL chaaM saiR bpaL dtiL batL bpraL phriH dtikL daL gamM nohtL jaiM phuutF jaaM haiF jaH jaH jaaR jaaR naaF fangM eeuyM</i><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup>
+<ul>
+<li> Humans are most superb and worth more than any animal or beast. Do develop your academic expertise. Do not destroy or kill anyone. Do not be angry or execrate anyone. Practice forgiveness as you would good sportsmanship. Do behave under morals and rules. Speak and confer politely and with servility. (These phrases owned by <i>The Computer Association of Thailand under the Royal Patronage of His Majesty the King</i>)
+</li>
+</ul>
+</li>
+<li> นายสังฆภัณฑ์ เฮงพิทักษ์ฝั่ง ผู้เฒ่าซึ่งมีอาชีพเป็นฅนขายฃวด ถูกตำรวจปฏิบัติการจับฟ้องศาล ฐานลักนาฬิกาคุณหญิงฉัตรชฎา ฌานสมาธิ<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup><sup class="reference plainlinks nourlexpansion" id="ref_.7B.7B.7B1.7D.7D.7D"><a rel="nofollow" class="external autonumber" href="/articles/List_of_pangrams#endnote_">[2]</a></sup>
+<ul>
+<li> Mr.Sangkapan Hengpitakfang, an elderly man who sells bottles, was sued by police because he pilfered Lady Chatchada Chansamati's watch.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Tibetan"><a href="/articles/Classical_Tibetan" title="Classical Tibetan">Tibetan</a></span></h4>
+<ul>
+<li> ༈ དཀར་མཛེས་ཨ་ཡིག་ལས་འཁྲུངས་ཡེ་ཤེས་གཏེར།  །ཕས་རྒོལ་ཝ་སྐྱེས་ཟིལ་གནོན་གདོང་ལྔ་བཞིན། །ཆགས་ཐོགས་ཀུན་བྲལ་མཚུངས་མེད་འཇམ་བྱངས་མཐུས། །མ་ཧཱ་མཁས་པའི་གཙོ་བོ་ཉིད་གྱུར་ཅིག།
+</li>
+</ul>
+<h4><span class="mw-headline" id="Turkish"><a href="/articles/Turkish_language" title="Turkish language">Turkish</a></span></h4>
+<ul>
+<li> Pijamalı hasta yağız şoföre çabucak güvendi. (38 letters, most common)
+<ul>
+<li> The patient in pajamas quickly trusted the swarthy driver.
+</li>
+</ul>
+</li>
+<li>Saf ve haydut kız çocuğu bin plaj görmüş. (33 letters)
+<ul>
+<li>The naive and thuggish little girl has seen a thousand beaches.
+</li>
+</ul>
+</li>
+<li>Öküz ajan hapse düştü yavrum, ocağı felç gibi. (37 letters)
+<ul>
+<li>The ox agent landed in prison, my little one, where the furnace is like paralysis.
+</li>
+</ul>
+</li>
+<li>Hayvancağız tüfekçide bagaj törpüsü olmuş. (37 letters)
+<ul>
+<li>The poor animal has become a baggage file at the gunsmith's.
+</li>
+</ul>
+</li>
+<li>Vakfın çoğu bu huysuz genci plajda görmüştü. (37 letters)
+<ul>
+<li>Most of the religious endowment had seen the mean youth on the beach.
+</li>
+</ul>
+</li>
+<li>Fahiş bluz güvencesi yağdırma projesi çöktü. (38 letters)
+<ul>
+<li>The project of making fancy shirt guarantees rain collapsed.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Ukrainian"><a href="/articles/Ukrainian_language" title="Ukrainian language">Ukrainian</a></span></h4>
+<ul>
+<li> Чуєш їх, доцю, га? Кумедна ж ти, прощайся без ґольфів!
+<ul>
+<li> Daughter, do you hear them, eh? Oh, you are funny! Say good-bye without knee-length socks.
+</li>
+</ul>
+</li>
+<li> (with apostrophe sign) Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п'яне знаємо.
+<ul>
+<li> The philosophers beg near the porch of the church in Hadiach, and we even know their drunk tent.
+</li>
+</ul>
+</li>
+</ul>
+<h4><span class="mw-headline" id="Urdu"><a href="/articles/Urdu" title="Urdu">Urdu</a></span></h4>
+<ul>
+<li> <span class="Nastaliq" title="Nastaliq" style="font-size:125%; font-family:'Jameel Noori Nastaleeq', 'Urdu Typesetting', IranNastaliq, 'Nafees Nastaleeq', 'Nafees Nastaleeq v1.01', Nafees, 'Pak Nastaleeq', 'PDMS_Jauhar', 'Alvi Lahori Nastaleeq';">ٹھنڈ میں، ایک قحط زده گاؤں سے گذرتے وقت ایک چڑچڑے، باأثر وفارغ شخص کو بعض جلپری نما اژدہے نظر آئے۔</span> (Total 76 letters) — <span title="Urdu transliteration" class="Unicode" style="white-space:normal; text-decoration: none"><i>Ṫḣanḋ mēⁿ ēk qẹḥẹṭ zadah gā'ōⁿ sē gużartē waqt ēk čiṙčiṙē, bāʾas̱ar ō-fāriġ šaxṣ kō baʿⱬ jalparī numā aždahē naẓar ā'ē.</span></i>
+</li>
+</ul>
+<dl>
+<dd>In the cold, passing through an arid village, an irritable, influential and leisurely person saw some mermaid-like pythons.
+</dd>
+</dl>
+<ul>
+<li> ژالہ باری میں ر‌ضائی کو غلط اوڑھے بیٹھی قرأة العین اور عظمٰی کے پاس گھر کے ذخیرے سے آناً فاناً ڈش میں ثابت جو، صراحی میں چائے اور پلیٹ میں زرده آیا۔
+</li>
+</ul>
+<h4><span class="mw-headline" id="Uyghur"><a href="/articles/Uyghur_language" title="Uyghur language">Uyghur</a></span></h4>
+<ul>
+<li> ئاۋۇ بىر جۈپ خوراز فرانسىيەنىڭ پارىژ شەھرىگە يېقىن تاغقا كۆچەلمىدى. 
+</li>
+</ul>
+<p>Uyghur Latin Script: Awu bir jüp xoraz Fransiyening Parizh shehrige yëqin taghqa köchelmidi.
+</p><p>Those two roosters were not able to move to the mountain near Paris in France.
+</p>
+<ul>
+<li> زۆھرەگۈل ئابدۇۋاجىت فرانسىيەنىڭ پارىژدىكى خېلى بىشەم ئوقۇغۇچى.
+</li>
+</ul>
+<p>Uyghur Latin Script: Zöhregül Abduwajit Fransiyening Parizhdiki xëli bishem oqughuchi.
+</p><p>Zöhregül Abduwajit is a quite unpleasant student in Paris, France.
+</p>
+<h3><span class="mw-headline" id="Only_letters_with_diacritical_marks_and_other_national_specific_letters">Only letters with diacritical marks and other national specific letters</span></h3>
+<p>A variant tries to make a word or phrase containing at least all letters with diacritical marks:
+</p>
+<ul>
+<li> <a href="/articles/Czech_language" title="Czech language">Czech</a>:
+<ul>
+<li> Příliš žluťoučký kůň úpěl ďábelské ódy
+<ul>
+<li> A horse which was too yellow moaned devilish odes
+</li>
+</ul>
+</li>
+<li> Příšerně žluťoučký kůň úpěl ďábelské ódy
+<ul>
+<li> Terribly yellow horse groaned devilish odes
+</li>
+</ul>
+</li>
+<li> Hleď, toť přízračný kůň v mátožné póze šíleně úpí
+<ul>
+<li> Lo! 'Tis a ghostlike horse in a feable pose groaning maddeningly
+</li>
+</ul>
+</li>
+<li> Zvlášť zákeřný učeň s ďolíčky běží podél zóny úlů
+<ul>
+<li> An exceptionally insidious pupil with dimples runs along the <a href="/articles/Beehive" title="Beehive">beehive</a> zone
+</li>
+</ul>
+</li>
+<li> Loď čeří kýlem tůň obzvlášť v Grónské úžině
+<ul>
+<li> A ship is churning up water by the <a href="/articles/Keel" title="Keel">keel</a> especially in the Strait of <a href="/articles/Greenland" title="Greenland">Greenland</a>
+</li>
+</ul>
+</li>
+<li> Ój, náhlý déšť teď zvířil prach a čilá laň běží s houfcem gazel k úkrytům.
+<ul>
+<li> Oh, sudden rain has  whirled dust now and a lively <a href="/articles/Red_deer" title="Red deer">hind</a> with a herd of <a href="/articles/Gazelle" title="Gazelle">gazelles</a> is running to the shelters – only "foreign" letters q, w and x absents.
+</li>
+</ul>
+</li>
+<li> Červený střízlíček a špinavá žlůva ďobali šťavnaté ocúny.
+<ul>
+<li> Small red wren and a dirty oriole picked juicy autumn crocus.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> <a href="/articles/Danish_language" title="Danish language">Danish</a>:
+<ul>
+<li> Ærøål
+<ul>
+<li> Eel from the island Ærø
+</li>
+</ul>
+</li>
+<li> Færøbåd
+<ul>
+<li> A Faroese boat
+</li>
+</ul>
+</li>
+<li> Kødpålæg
+<ul>
+<li> Meats
+</li>
+</ul>
+</li>
+<li> Smørepålæg
+<ul>
+<li> Spreads
+</li>
+</ul>
+</li>
+<li> Blåbærgrød
+<ul>
+<li> Porridge from blue berries
+</li>
+</ul>
+</li>
+<li> Lærerhåndbøger
+<ul>
+<li> Handbooks for teachers
+</li>
+</ul>
+</li>
+<li> Forårsjævndøgn
+<ul>
+<li> Spring equinox
+</li>
+</ul>
+</li>
+<li> Efterårsjævndøgn
+<ul>
+<li> Autumn equinox
+</li>
+</ul>
+</li>
+<li> Masseødelæggelsesvåben
+<ul>
+<li> Weapons of mass destruction
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li> <a href="/articles/Esperanto" title="Esperanto">Esperanto</a>: Eĥoŝanĝo ĉiuĵaŭde ("echo change every Thursday"), preskaŭ freŝa ĉeĥa manĝaĵo ("nearly fresh Czech food")
+</li>
+<li> <a href="/articles/German_language" title="German language">German</a>: <span lang="de"><i>Heizölrückstoßabdämpfung </i></span>("fuel oil recoil absorber") (which is also an <a href="/articles/Isogram" title="Isogram">isogram</a>)
+</li>
+<li> <a href="/articles/Hungarian_language" title="Hungarian language">Hungarian</a>: <span lang="hu"><i>árvíztűrő tükörfúrógép </i></span>("flood-proof mirror-drilling machine")
+</li>
+<li> <a href="/articles/Icelandic_language" title="Icelandic language">Icelandic</a>: Sævör grét áðan því úlpan var ónýt ("Sævör cried earlier because the jacket was ruined")
+</li>
+<li> <a href="/articles/Norwegian_language" title="Norwegian language">Norwegian</a>: Blåbærsyltetøy ("Blueberry jam")
+</li>
+<li> <a href="/articles/Polish_language" title="Polish language">Polish</a>: Zażółć gęślą jaźń ("make fiddle's ego yellow")
+</li>
+<li> <a href="/articles/Turkish_language" title="Turkish language">Turkish</a>: Şişli'de büyük çöp yığınları ("Large piles of garbage in <a href="/articles/%C5%9Ei%C5%9Fli" title="Şişli">Şişli</a>")
+</li>
+<li> <a href="/articles/Slovak_language" title="Slovak language">Slovak</a>: Päťtýždňové vĺčatá nervózne štekajú na môjho ďatľa v tŕní. (Five weeks old wolf-cubs nervously bark at my woodpecker in a shrub.)
+</li>
+<li> <a href="/articles/Swedish_language" title="Swedish language">Swedish</a>: Räksmörgås ("Shrimp sandwich"), Ölälskaråsna ("Beer-loving donkey"), Läderfåtölj ("leather easy-chair"), Åland är österut, señor Müller ("Aaland Islands are Eastward, señor Müller")
+</li>
+</ul>
+<h3><span class="mw-headline" id="Sample_font_displays_in_other_languages_using_pangrams">Sample font displays in other languages using pangrams</span></h3>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-1"><!----></span></strong>
+</p>
+<table class="wikitable sortable">
+<tr>
+<th>Language
+</th>
+<th>Phrase
+</th>
+<th>Translation
+</th>
+<th>Uses all letters?
+</th></tr>
+<tr>
+<td> <a href="/articles/Bulgarian_Language" title="Bulgarian Language" class="mw-redirect">Bulgarian</a> </td>
+<td> Под южно дърво, цъфтящо в синьо, бягаше малко пухкаво зайче. </td>
+<td> А little fluffy young rabbit ran under a southern tree blooming in blue </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Czech_language" title="Czech language">Czech</a> </td>
+<td> Příliš žluťoučký kůň úpěl ďábelské ódy. </td>
+<td> A too yellow horse moaned devil odes. </td>
+<td> no (but it uses all characters with diacritics)
+</td></tr>
+<tr>
+<td> <a href="/articles/Chinese_language" title="Chinese language">Chinese (Traditional)</a> </td>
+<td> 視野無限廣，窗外有藍天 </td>
+<td> The view is infinitely wide. There is blue sky outside the window.<sup id="cite_ref-cpn_8-0" class="reference"><a href="#cite_note-cpn-8"><span>[</span>8<span>]</span></a></sup> </td>
+<td> no (such a sentence would be impractical; there are several thousands of Chinese characters.)
+</td></tr>
+<tr>
+<td> <a href="/articles/Chinese_language" title="Chinese language">Chinese (Traditional)</a> (in <a href="/articles/Windows_Vista" title="Windows Vista">Windows Vista</a>)</td>
+<td> 微風迎客，軟語伴茶 </td>
+<td> The breeze sees the guest in. Soft voice accompanies the tea.<sup id="cite_ref-cpn2_9-0" class="reference"><a href="#cite_note-cpn2-9"><span>[</span>9<span>]</span></a></sup> </td>
+<td> same as above
+</td></tr>
+<tr>
+<td> <a href="/articles/Chinese_language" title="Chinese language">Chinese (Simplified)</a> (in <a href="/articles/Windows_7" title="Windows 7">Windows 7</a>) </td>
+<td> 中国智造，慧及全球 </td>
+<td> Innovation in China benefits the whole world.<sup id="cite_ref-cpn3_10-0" class="reference"><a href="#cite_note-cpn3-10"><span>[</span>10<span>]</span></a></sup> </td>
+<td> same as above
+</td></tr>
+<tr>
+<td> <a href="/articles/Danish_language" title="Danish language">Danish</a> </td>
+<td> Quizdeltagerne spiste jordbær med fløde, mens cirkusklovnen Walther spillede på xylofon. </td>
+<td> The quiz contestants ate strawberries with cream while Walther the clown was playing the xylophone. </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Dutch_language" title="Dutch language">Dutch</a> </td>
+<td> <span lang="nl">Pa's wijze lynx bezag vroom het fikse aquaduct.</span> </td>
+<td> Dad's wise lynx piously regarded the substantial aqueduct. </td>
+<td> yes (and not including accents)
+</td></tr>
+<tr>
+<td> <a href="/articles/Esperanto" title="Esperanto">Esperanto</a> </td>
+<td> Eĥoŝanĝo ĉiuĵaŭde. </td>
+<td> Change of echo every Thursday. </td>
+<td> no (but contains all characters specific to Esperanto)
+</td></tr>
+<tr>
+<td> <a href="/articles/Estonian_language" title="Estonian language">Estonian</a> </td>
+<td> See väike mölder jõuab rongile hüpata </td>
+<td> This small miller is able to jump to train </td>
+<td> no (without c, f, q, w, x, y, z, š, ž)
+</td></tr>
+<tr>
+<td> <a href="/articles/Finnish_language" title="Finnish language">Finnish</a> </td>
+<td> Viekas kettu punaturkki laiskan koiran takaa kurkki.</td>
+<td> The cunning red-coated fox peeped from behind the lazy dog.</td>
+<td> no
+</td></tr>
+<tr>
+<td> <a href="/articles/French_language" title="French language">French</a> </td>
+<td> Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwis. </td>
+<td> Ambiguous voice of a heart which prefers dishes of kiwis in the breeze [used in Windows XP] </td>
+<td> yes, including diacritics except <a href="/articles/Circumflex" title="Circumflex">circumflex</a> and <a href="/articles/Cedilla" title="Cedilla">cedilla</a>
+</td></tr>
+<tr>
+<td> <a href="/articles/French_language" title="French language">French</a> </td>
+<td> Portez ce vieux whisky au juge blond qui fume. </td>
+<td> Bring this old whisky to the blond smoking judge. </td>
+<td> yes, but no diacritics
+</td></tr>
+<tr>
+<td> <a href="/articles/German_language" title="German language">German</a> </td>
+<td> Zwölf Boxkämpfer jagen Viktor quer über den großen Sylter Deich </td>
+<td> Twelve boxing fighters drive Viktor over the great <a href="/articles/Sylt" title="Sylt">Sylt</a> Dike </td>
+<td> yes (including umlauts and ß)
+</td></tr>
+<tr>
+<td> <a href="/articles/German_language" title="German language">German</a> </td>
+<td> Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. </td>
+<td> Franz drives all across Bavaria in a totally run-down taxi. </td>
+<td> yes (lacking umlauts and ß)
+</td></tr>
+<tr>
+<td> <a href="/articles/Greek_language" title="Greek language">Greek</a> </td>
+<td> Θέλει αρετή και τόλμη η ελευθερία. (Ανδρέας Κάλβος) </td>
+<td> Liberty requires virtue and mettle. (Andreas Kalvos) </td>
+<td> no
+</td></tr>
+<tr>
+<td> <a href="/articles/Greek_language" title="Greek language">Greek</a> </td>
+<td> Ο καλύμνιος σφουγγαράς ψιθύρισε πως θα βουτήξει χωρίς να διστάζει. </td>
+<td> The Calymnian spongeman whispered that he'll dive without hesitating. </td>
+<td> yes (not all accented letters included)
+</td></tr>
+<tr>
+<td> <a href="/articles/Hebrew_Language" title="Hebrew Language" class="mw-redirect">Hebrew</a>  </td>
+<td> <span dir="rtl">דג סקרן שט לו בים זך אך לפתע פגש חבורה נחמדה שצצה כך.</span> </td>
+<td> A curious fish sailed a clear sea, and suddenly found nice company that just popped up. </td>
+<td> yes, but with no distinction between regular and final forms.
+</td></tr>
+<tr>
+<td> <a href="/articles/Hungarian_language" title="Hungarian language">Hungarian</a> (in <a href="/articles/Windows" title="Windows" class="mw-redirect">Windows</a>) </td>
+<td> Árvíztűrő tükörfúrógép </td>
+<td> Flood-resistant mirror drill </td>
+<td> no (but contains all characters specific to Hungarian)
+</td></tr>
+<tr>
+<td> <a href="/articles/Hungarian_language" title="Hungarian language">Hungarian</a> </td>
+<td> Egy hűtlen vejét fülöncsípő, dühös mexikói úr Wesselényinél mázol Quitóban. </td>
+<td> An angry Mexican man, who caught his faithless son-in-law, is painting Wesselényi's house in Quito. </td>
+<td> without digraphs, which are considered letters of their own
+</td></tr>
+<tr>
+<td><a href="/articles/Indonesian_language" title="Indonesian language">Indonesian</a> </td>
+<td> Saya lihat foto Hamengkubuwono XV bersama enam zebra purba cantik yang jatuh dari Al Quranmu. </td>
+<td> I saw a photo of Hamengkubuwono XV along with six beautiful ancient Zebra which fell from your Al Quran </td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Italian_language" title="Italian language">Italian</a> </td>
+<td> Ma la volpe, col suo balzo, ha raggiunto il quieto Fido. </td>
+<td> But the fox, with its jump, reached the calm dog </td>
+<td> yes (without foreign characters j,k,w,x,y)
+</td></tr>
+<tr>
+<td> <a href="/articles/Japanese_language" title="Japanese language">Japanese</a> </td>
+<td> いろはにほへと ちりぬるを わかよたれそ つねならむ うゐのおくやま けふこえて あさきゆめみし ゑひもせす </td>
+<td> Even the blossoming flowers / Will eventually scatter / Who in this world / is unchanging? / The deep mountains of vanity-- / We cross them today / And we shall not see superficial dreams / Nor be deluded. (from <a href="/articles/Iroha" title="Iroha">Iroha</a>-uta) </td>
+<td> all non-voiced hiragana except ん
+</td></tr>
+<tr>
+<td> <a href="/articles/Korean_language" title="Korean language">Korean</a> </td>
+<td> 다람쥐 헌 쳇바퀴에 타고파 </td>
+<td> (I) Wanna ride on the chipmunk's old <a href="/articles/Hamster_wheel" title="Hamster wheel">hamster wheel</a>. <i>or</i><br/>Because Hamster want to ride on old Hamster wheel… </td>
+<td> uses all consonants but not all vowels
+</td></tr>
+<tr>
+<td> <a href="/articles/Latvian_language" title="Latvian language">Latvian</a> </td>
+<td> Sarkanās jūrascūciņas peld pa jūru. </td>
+<td> Red seapigs swim in the sea. </td>
+<td> no
+</td></tr>
+<tr>
+<td> <a href="/articles/Norwegian_language" title="Norwegian language">Norwegian (bokmål)</a> </td>
+<td> En god stil må først og fremst være klar. Den må være passende. Aristoteles. </td>
+<td> A good essay must first and foremost be clear. It must be appropriate. <a href="/articles/Aristotle" title="Aristotle">Aristotle</a>. </td>
+<td> no
+</td></tr>
+<tr>
+<td> <a href="/articles/Portuguese_language" title="Portuguese language">Portuguese</a> </td>
+<td> A rápida raposa castanha salta por cima do cão lento. </td>
+<td> The quick brown fox jumps over the slow dog. </td>
+<td> no
+</td></tr>
+<tr>
+<td> <a href="/articles/Brazilian_Portuguese" title="Brazilian Portuguese">Brazilian Portuguese</a> </td>
+<td> A ligeira raposa marrom ataca o cão preguiçoso. </td>
+<td> The quick brown fox attacks the lazy dog. </td>
+<td> no
+</td></tr>
+<tr>
+<td> <a href="/articles/Brazilian_Portuguese" title="Brazilian Portuguese">Brazilian Portuguese</a> </td>
+<td> Zebras caolhas de Java querem passar fax para moças gigantes de New York </td>
+<td> Strabic zebras from Java want to pass a fax to giant girls from New York. </td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Polish_language" title="Polish language">Polish</a> </td>
+<td> Pchnąć w tę łódź jeża lub ośm skrzyń fig  </td>
+<td> Push into this boat a hedgehog or eight boxes of figs. </td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Romanian_language" title="Romanian language">Romanian</a> </td>
+<td> Agera vulpe maronie sare peste câinele cel leneş. </td>
+<td> The quick brown fox jumps over the lazy dog. </td>
+<td> no
+</td></tr>
+<tr>
+<td> <a href="/articles/Russian_language" title="Russian language">Russian</a> </td>
+<td> Съешь ещё этих мягких французских булок да выпей же чаю </td>
+<td> Eat some more of these soft French buns and drink some tea [used in Windows XP] </td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Serbian_Cyrillic_alphabet" title="Serbian Cyrillic alphabet">Serbian (Cyrillic alphabet)</a> </td>
+<td> Чешће цeђење мрeжастим џаком побољшава фертилизацију генских хибрида. </td>
+<td> More frequent filtering through the reticular bag improves fertilization of genetic hybrids.</td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Gaj%27s_Latin_alphabet" title="Gaj's Latin alphabet">Serbian (Latin alphabet)</a> </td>
+<td> Češće ceđenje mrežastim džakom poboljšava fertilizaciju genskih hibrida. </td>
+<td> More frequent filtering through the reticular bag improves fertilization of genetic hybrids.</td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Slovak_language" title="Slovak language">Slovak</a> </td>
+<td> Kŕdeľ šťastných ďatľov učí pri ústí Váhu mĺkveho koňa obhrýzať kôru a žrať čerstvé mäso. </td>
+<td> A flock of happy woodpeckers by the mouth of the river Vah is teaching a silent horse to nibble on bark and feed on fresh meat. <i>(Modified sentence which contains all accents and diacritics.)</i></td>
+<td> except unaccented Y, C (as distinct from part of the digraph and separate letter CH), J, unaccented L, and the foreign letters F, G, Ó, Q, W, X
+</td></tr>
+<tr>
+<td> <a href="/articles/Slovene_language" title="Slovene language">Slovene</a> </td>
+<td> V kožuščku hudobnega fanta stopiclja mizar in kliče 0619872345. </td>
+<td> A cabinetmaker steps lightly through a malicious boy fur coat and calls 0619872345. </td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Spanish_language" title="Spanish language">Spanish</a> </td>
+<td> El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja. </td>
+<td> The quick Hindu bat was happily eating thistle and kiwi. The stork played the saxophone behind the straw palisade.</td>
+<td> yes
+</td></tr>
+<tr>
+<td> <a href="/articles/Swedish_language" title="Swedish language">Swedish</a> </td>
+<td> Flygande bäckasiner söka hwila på mjuka tuvor </td>
+<td> Flying snipes soon look to rest on soft grass beds <i>(with obsolete Swedish spelling and grammar)</i> </td>
+<td> except Q, X and Z
+</td></tr>
+<tr>
+<td> <a href="/articles/Thai_language" title="Thai language">Thai</a> </td>
+<td> เป็นมนุษย์สุดประเสริฐเลิศคุณค่า<br/>กว่าบรรดาฝูงสัตว์เดรัจฉาน<br/>จงฝ่าฟันพัฒนาวิชาการ อย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร<br/>ไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า<br/>หัดอภัยเหมือนกีฬาอัชฌาสัย<br/>ปฏิบัติประพฤติกฎกำหนดใจ<br/>พูดจาให้จ๊ะ ๆ จ๋า ๆ น่าฟังเอยฯ </td>
+<td>
+<p>Being a man is worthy<br/>
+Beyond senseless animal<br/>
+Begin educate thyself<br/>
+Begone from killing and trouble<br/>
+Bear not thy grudge, damn and, curse<br/>
+Bestow forgiving and sporting<br/>
+Befit with rules<br/>
+Benign speech speak thou <br/>
+</p>
+</td>
+<td> except ฦ
+</td></tr>
+<tr>
+<td> <a href="/articles/Turkish_Language" title="Turkish Language" class="mw-redirect">Turkish</a>  </td>
+<td> Pijamalı hasta, yağız şoföre çabucak güvendi </td>
+<td> Patient with pajamas, trusted swarthy driver quickly  </td>
+<td> Without the <a href="/articles/Circumflex" title="Circumflex">circumflex</a> diacritic and the foreign characters Q, W, and X
+</td></tr>
+<tr>
+<td> <span>Uyghur</span>  </td>
+<td> 1) ئاۋۇ بىر جۈپ خوراز فرانسىيەنىڭ پارىژ شەھرىگە يېقىن تاغقا كۆچەلمىدى. <br/> 2) زۆھرەگۈل ئابدۇۋاجىت فرانسىيەنىڭ پارىژدىكى خېلى بىشەم ئوقۇغۇچى.</td>
+<td>  1) Those two roosters were not able to move to the mountain near Paris in France. <br/>2) Zöhregül Abduwajit is a quite unpleasant student in Paris, France. </td>
+<td> yes
+</td></tr></table>
+<h2><span class="mw-headline" id="Perfect_pangrams_from_restricted_sets">Perfect pangrams from restricted sets</span></h2>
+<h3><span class="mw-headline" id="Chemical_element_symbols">Chemical element symbols</span></h3>
+<p>It is not possible to make a perfect pangram out of current <a href="/articles/Chemical_element" title="Chemical element">chemical element</a> symbols, but it is possible using two disused ones.  Unq, for unnilquadium, now known as <a href="/articles/Rutherfordium" title="Rutherfordium">rutherfordium</a>, Rf, is in every pangram, as it is only one of two chemical symbols with a Q.  The two Us in Uuq (ununquadium, now known as <a href="/articles/Flerovium" title="Flerovium">flerovium</a>, Fl) prevent its use. The other letter necessitating disused symbols is J; the available symbols are J (for <a href="/articles/Iodine" title="Iodine">iodine</a>, I), Jg (for argonium/<a href="/articles/Hafnium" title="Hafnium">hafnium</a>, Hf), or Jo (for joliotium/<a href="/articles/Dubnium" title="Dubnium">dubnium</a>, Db).
+</p><p>Here is one of many possibilities using Jo:
+</p>
+<ul>
+<li> <a href="/articles/Aluminum" title="Aluminum" class="mw-redirect">Al</a>, <a href="/articles/Berkelium" title="Berkelium">Bk</a>, <a href="/articles/Californium" title="Californium">Cf</a>, <a href="/articles/Gadolinium" title="Gadolinium">Gd</a>, <a href="/articles/Hydrogen" title="Hydrogen">H</a>, <a href="/articles/Dubnium" title="Dubnium">Jo</a>, <a href="/articles/Meitnerium" title="Meitnerium">Mt</a>, <a href="/articles/Phosphorus" title="Phosphorus">P</a>, <a href="/articles/Silicon" title="Silicon">Si</a>, <a href="/articles/Unnilquadium" title="Unnilquadium" class="mw-redirect">Unq</a>, <a href="/articles/Vanadium" title="Vanadium">V</a>, <a href="/articles/Tungsten" title="Tungsten">W</a>, <a href="/articles/Xenon" title="Xenon">Xe</a>, <a href="/articles/Yttrium" title="Yttrium">Y</a>, <a href="/articles/Zirconium" title="Zirconium">Zr</a>
+</li>
+</ul>
+<h3><span class="mw-headline" id="Country_codes">Country codes</span></h3>
+<p>All countries have a two letter <a href="/articles/ISO_3166-1_alpha-2" title="ISO 3166-1 alpha-2">ISO 3166-1 alpha-2</a> code.  Here is an example of a pangram using these:
+</p>
+<ul>
+<li> <a href="/articles/Bangladesh" title="Bangladesh">BD</a>, <a href="/articles/Cape_Verde" title="Cape Verde">CV</a>, <a href="/articles/Ethiopia" title="Ethiopia">ET</a>, <a href="/articles/France" title="France">FR</a>, <a href="/articles/Honduras" title="Honduras">HN</a>, <a href="/articles/Israel" title="Israel">IL</a>, <a href="/articles/Japan" title="Japan">JP</a>, <a href="/articles/Kyrgyzstan" title="Kyrgyzstan">KG</a>, <a href="/articles/Mexico" title="Mexico">MX</a>, <a href="/articles/Qatar" title="Qatar">QA</a>, <a href="/articles/Somalia" title="Somalia">SO</a>, <a href="/articles/Uruguay" title="Uruguay">UY</a>, <a href="/articles/Zimbabwe" title="Zimbabwe">ZW</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Self-enumerating_pangrams">Self-enumerating pangrams</span></h2>
+<p>A self-enumerating pangram, or a pangrammic <a href="/articles/Autogram" title="Autogram">autogram</a>, is a pangram which describes the number of letters it itself contains.  
+The first such sentences were constructed in 1984 by <a href="/articles/Rudy_Kousbroek" title="Rudy Kousbroek">Rudy Kousbroek</a> and <span>Lee Sallows</span>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup>
+</p>
+<h2><span class="mw-headline" id="Initial_letter_pangrams">Initial letter pangrams</span></h2>
+<p>An initial letter pangram is a sense in which all the letters of the alphabet occur as first letter of each word - preferably in alphabetical order. Thus a sentence will count 26 words. Some examples in Dutch:
+</p>
+<ul>
+<li> Achter Beatrix’ cementen demente echtgenoot fluisteren geen heiligen in Japanse kimono’s langzame mantra’s, noch preken quasi-intellectuele rijmpjesvertellers Sinterklaasachtige terzines uit versboeken, wel xylofoneren yogaleraren zangstukken. (Translation: Behind Beatrix demented husband made of cement whisper no saints in Japanese kimonos slow mantras, nor preach quasi-intellectual rhyme tellers Christmas-like tercets from verse books, but play yoga teachers vocal pieces on the xylophone).
+</li>
+</ul>
+<ul>
+<li> Als buitenzintuiglijke chirurgen drugs en fantastische geestverruimende heroïne in jouw kop loslaten, mag Nederland, ondanks protesten, quota regulerend stellen tot uiterlijk voorbij waar xtc-slikkende yuppies zeggen. (Translation: If extrasensory surgeons release fantastic hallucinogenic drugs and heroin in your head, the Netherlands may set, despite protests, regulating quotas to the point where ecstasy swallowing yuppies say).
+</li>
+</ul>
+<p>A three-sentence example in English, containing three consecutive initial letter pangram sentences which alternate in descending, ascending, descending order:
+</p>
+<ul>
+<li> Zidane, Yiddish xylophone wonder, vanquished undesirables through simply rendering quisling patterns on neatly maintained long keys, justly instigating heartfelt gratitude for exemplary deeds captured by audio. Adoring brilliant creativity, daring entrepreneurs funded grand halls, inducing judicious kibitzing, lessened measurably night one; perhaps quelled rapidly since tickets usually vanished when xylophonophilics yelled “Zidane!” Zealots yodeled xylophone whimsies, violently upending the standard rigor quieter patrons observed, neatly mutilating long-kept jive interactions, harmony gone, frantically enabling dire change by armfuls.
+</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+
+<tr>
+<td class="mbox-image"><img alt="" src="http://read.images.worldlibrary.net/articles/images/thumb/f/f8/-logo-en.svg/37px--logo-en.svg.png" width="37" height="40" srcset="http://read.images.worldlibrary.net/articles/images/thumb/f/f8/-logo-en.svg/55px--logo-en.svg.png 1.5x, /articles/images/thumb/f/f8/-logo-en.svg/73px--logo-en.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Look up <i><b><a href="/articles/pangram" class="extiw" title=":pangram">pangram</a></b></i> in , the free dictionary.</td>
+</tr>
+
+</table>
+<ul>
+<li> <a href="/articles/Lorem_ipsum" title="Lorem ipsum">Lorem ipsum</a>
+</li>
+<li> <a href="/articles/Pangram" title="Pangram">Pangram</a>
+</li>
+<li> <a href="/articles/Lipogram#Pangrammatic_lipogram" title="Lipogram">Pangrammatic lipogram</a>
+</li>
+<li> <a href="/articles/Pangrammatic_window" title="Pangrammatic window">Pangrammatic window</a>
+</li>
+<li> <a href="/articles/Isogram" title="Isogram">Isogram</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+
+
+
+
+
+
+
+
+
+
+
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span></h2>
+<ul>
+<li> <a rel="nofollow" class="external text" href="http://rec-puzzles.org/Pangram">Pangrams at rec.puzzles</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://www.cl.cam.ac.uk/~mgk25/ucs/examples/quickbrown.txt">A list of pangrams in several languages</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://www.fatrazie.com/EWpangram.html">Another account of Lee Sallow's efforts</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://www.fun-with-words.com/pang_example.html">Pangrams at Fun with Words</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://users.tinyonline.co.uk/gswithenbank/pangrams.htm">A pangram list</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://www.p22.com/products/pangramcontest.html">Pangram contest winners</a>
+</li>
+<li> <a rel="nofollow" class="external text" href="http://dailypangram.tumblr.com/">"Daily Pangram" list by Craig Eliason</a>
+</li>
+</ul>
+
+
+
+
+
+
+<div style='width: 100%;  margin-top: 25px;'>
+						<div style='text-align: center; float: right;'>
+							
+							Sourced from World Heritage Encyclopedia&trade; licensed under <a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_top' rel='nofollow' alt='CC BY-SA 3.0'>CC BY-SA 3.0</a> <br>
+							Help to improve this article, make contributions at the <a href='http://en.wikipedia.org/wiki/List of pangrams?action=history' target='_top' rel='nofollow' alt='Citational Source' title='Citational Source'>Citational Source</a>
+		
+						</div>
+					</div>
+											</div>
+										<!--/Blog Content -->
+
+
+
+
+
+									</div>
+								<!--/Post Content -->
+							</div>
+						<!--/Blog Posts Content -->
+					</div>
+				</div>
+			<!--/Container -->
+		</div>
+
+	<!--/Blog Content -->
+
+	<!-- End ContentWrap -->
+
+
+ 	<!-- Footer -->
+ 	<footer>
+ 		<div class="container no-padding">
+ 			<a id="back-top"><div id="menu_top"><div id="menu_top_inside"></div></div></a>
+ 			<ul class="socials-icons">
+				<li><a href="#"><img src="/images/facebook.png" alt="" /></a></li>
+ 				<li><a href="#"><img src="/images/twitter.png" alt="" /></a></li>
+ 				<li><a href="#"><img src="/images/google.png" alt="" /></a></li>
+ 			</ul>
+
+
+ 			<p style="font-size: 9px; max-width: 800px; margin: auto;">This article was sourced from Creative Commons Attribution-ShareAlike License; additional terms may apply. World Heritage Encyclopedia content is assembled from numerous content providers, Open Access Publishing, and in compliance with The Fair Access to Science and Technology Research Act (FASTR), Wikimedia Foundation, Inc., Public Library of Science, The Encyclopedia of Life, Open Book Publishers (OBP), PubMed, U.S. National Library of Medicine, National Center for Biotechnology Information, U.S. National Library of Medicine, National Institutes of Health (NIH), U.S. Department of Health & Human Services, and USA.gov, which sources content from all federal, state, local, tribal, and territorial government publication portals (.gov, .mil, .edu). Funding for USA.gov and content contributors is made possible from the U.S. Congress, E-Government Act of 2002.</p>
+<br>
+ 			<p style="font-size: 9px; max-width: 800px; margin: auto;">Crowd sourced content that is contributed to World Heritage Encyclopedia is peer reviewed and edited by our editorial staff to ensure quality scholarly research articles.</p>
+<br>
+ 			<p style="font-size: 9px; max-width: 800px; margin: auto;">By using this site, you agree to the Terms of Use and Privacy Policy. World Heritage Encyclopedia is a registered trademark of the World Public Library Association, a non-profit organization.</p>
+<br>
+
+
+ 			<p class="copyright">2014 &copy; World Heritage Encyclopedia. All rights reserved.</p>
+ 		</div>
+ 	</footer>
+ 	<!--/Footer --> 
+
+	
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-12285650-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function () {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+		<script type="text/javascript">
+			function googleTranslateElementInit() 
+			{
+				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-12285650-1'}, 'google_translate_element');
+			}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+
+
+	<script type="text/javascript">
+$("img.bttrlazyloading").lazyload({
+    threshold : 600
+});
+
+bttrlazyloading({
+			delay: 0
+			,threshold: 600
+			,placeholder: 'data:image/gif;base64,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'
+		});
+	</script>
+	<script type="text/javascript">
+		var nt = "footer links";
+		var div = "";
+
+		if (window.top!=window.self)
+		{
+			div = ".sticky-wrapper { display: none; } #blog-header { padding-top: 0; padding-bottom: 50px; } footer { display: none; } #sidebar { display: none; } .post-content { width: auto; } .blog-posts-content {width: 800px;} .container {margin-left: 40px;} ";
+			$("#breadcrumb").parent().show();
+		}
+
+		var node = document.createElement('style');
+		node.innerHTML = div;
+		document.body.appendChild(node);
+	</script>
+</body>
+</html>

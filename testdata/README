@@ -1,0 +1,48 @@
+testdata/unicode/ contains various files of Unicode characters to verify our C
+UTF-8 parsing against Python.
+
+    The whole Unicode alphabet:
+
+    * all_unicode.bin
+      (List of every valid Unicode character according to UCS-4 Python.)
+
+    UTF-8 samplers:
+
+    * madore_org.html
+      http://www.madore.org/~david/misc/unitest/
+
+    * postscript-utf-8.html
+      http://www.w3.org/2001/06/utf-8-test/postscript-utf-8.html
+
+    * i18nguy.html
+      http://www.i18nguy.com/unicode-example.html
+
+    * columbia_sampler.html
+      http://www.columbia.edu/~fdc/utf8/
+
+    * quickbrown.txt
+      https://www.cl.cam.ac.uk/~mgk25/ucs/examples/quickbrown.txt
+
+    * wikipedia_list.html
+      https://en.wikipedia.org/wiki/List_of_Unicode_characters
+
+    * UTF-8-demo.txt
+      https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
+
+    * dunno.html
+      http://crism.maden.org/dunno.html
+
+    * confusables.html
+      http://unicode.org/cldr/utility/confusables.jsp?a=paypal&n=on&x=on
+
+    Pangrams:
+
+    * wordreference.html
+      http://forum.wordreference.com/showthread.php?t=497376
+
+    * world_heritage_pangrams.html
+      http://www.worldheritage.org/articles/List_of_pangrams
+
+    TODO (not used yet due to invalid UTF-8 characters):
+
+    * https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-test.txt
