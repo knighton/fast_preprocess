@@ -18,11 +18,24 @@ python_extension:
 	@CFLAGS="$(CFLAGS)" python setup.py build_ext --build-temp $(EXT_TMP_BUILD_DIR) --build-lib $(EXT_OUT_DIR) > /dev/null
 	@rm -rf $(EXT_TMP_BUILD_DIR)
 
+CC=clang
+BIN_DIR=bin/
+
+dump_codepoints:
+	mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) c_ext/dump_codepoints.c c_ext/lib/util.c c_ext/lib/unicode.c -o $(BIN_DIR)/dump_codepoints
+
+ASCII_EXAMPLE=tools/dump_codepoints.py
+
+test_unicode: dump_codepoints
+	python tools/dump_codepoints.py tools/dump_codepoints.py
+
 clean:
 	rm -rf $(EXT_TMP_BUILD_DIR)
 	rm -rf $(EXT_OUT_DIR)
+	rm -rf $(BIN_DIR)
 
-all: python_extension
+all: dump_codepoints python_extension
 
 go:
 	python go.py

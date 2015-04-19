@@ -5,4 +5,5 @@
 # We give binary test executables "test" extension
 *.test
 
+bin/
 build/
